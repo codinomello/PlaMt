@@ -1,0 +1,713 @@
+/* main */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 16px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Poppins, Inter, Noto Color Emoji, Times New Roman;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+}
+
+#título{
+  font: 2.5vw 'Poppins', 'Inter, Noto Color Emoji', 'Times New Roman';
+  font-weight: 550;
+}
+
+#título:hover{
+  animation: 4s changeCor infinite;
+}
+
+#div-center{
+  text-align: center;
+}
+
+.plamt-container{
+  width: 2.65vw;
+  height: 2.5vw;
+  background-image: url('./imagens/ícones/plamt-icon.png');
+  background-size: cover;
+  transition: background-image 0.8s ease;
+  display: flex;
+  margin-right: 0.5vw;
+  border: none;
+}
+
+.plamt-container:hover {
+  background-image: url('./imagens/ícones/plamt-icon.png');
+}
+
+nav{
+  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav li{
+  height: 5vw;
+  font-weight: 550;
+}
+
+nav a{
+  height: 100%;
+  padding: 0vw 1vw;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+#divnav{
+  font-size: 0.95vw;
+  font-weight: 550;
+  padding: 0.3vw;
+  border: none;
+  border-radius: 0.5vw;
+}
+
+#divnav:hover{
+  transition: 0.8s;
+  background-color: rgb(80, 80, 80);
+  color: white;
+}
+
+nav li:first-child{
+  margin-right: auto;
+}
+
+main{
+  display: flex;
+  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+}
+
+aside{
+  height: 100%;
+  width: 20%;
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+}
+
+section{
+  justify-content: center;
+}
+
+article{
+  height: inherit;
+  width: 25%;
+}
+
+footer{
+  display: flex;
+  background-color: rgb(80, 80, 80);
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+
+/* sidebar */
+
+.pesquisar-container{
+  display: inline-flex;
+  margin: 1vw 0vw 0vw 0vw;
+  background-color: inherit;
+  color: inherit;
+}
+
+#sidebar-icon{
+  font-size: 1.5vw;
+  background-color: inherit;
+  color: inherit;
+  border-radius: 10px;
+  padding: 1%; 
+  cursor: pointer;
+  margin: 0vw 1vw 0vw 1vw;
+}
+
+.pesquisar{
+  font-family: Poppins, Inter, Noto Color Emoji, Times New Roman;
+  height: 2vw;
+  width: 10vw;
+  text-align: center;
+  font-size: 0.83vw;
+  font-weight: 525;
+  background-color: inherit;
+  color: inherit;
+  border: 0.1vw solid #ccc;
+  border-radius: 10px;
+  margin: 0vw 0vw 0.2vw 0vw;
+}
+
+.pesquisar::placeholder{
+  color: inherit;
+}
+
+#lupa{
+  height: 2vw;
+  width: 2vw;
+  font-size: 0.83vw;
+  font-weight: bolder;
+  background-color: inherit;
+  color: inherit;
+  border: 0.1vw solid #ccc;
+  border-radius: 10px; 
+  margin-left: 0.4vw;
+  cursor: pointer;
+}
+
+#reinos-container{
+  display: inline-block;
+  padding: 1%;
+}
+
+.reinos{
+  justify-content: center;
+}
+
+.reinos #animalia{
+  height: 2vw;
+  width: 5vw;
+  font: 0.95vw Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font-weight: 550;
+  color: red;
+  border: transparent 0.2vw;
+  border-radius: 0.5vw;
+  transition-duration: 0.4s;
+  background-color: inherit;
+  padding: 1%;
+}
+
+.reinos #animalia:hover{
+  background-color: red;
+  cursor: pointer;
+  color: white;
+}
+
+.reinos #plantae{
+  height: 2vw;
+  width: 5vw;
+  font: 0.95vw Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font-weight: 550;
+  color: green;
+  border: transparent 0.2vw;
+  border-radius: 0.5vw;
+  transition-duration: 0.4s;
+  background-color: inherit;
+  padding: 1%;
+}
+
+.reinos #plantae:hover{
+  background-color: green;
+  cursor: pointer;
+  color: white;
+}
+
+.reinos #fungi{
+  height: 2vw;
+  width: 5vw;
+  font: 0.95vw Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font-weight: 550;
+  color: blue;
+  border: transparent 0.2vw;
+  border-radius: 0.5vw;
+  transition-duration: 0.4s;
+  background-color: inherit;
+  padding: 1%;
+}
+
+.reinos #fungi:hover{
+  background-color: blue;
+  cursor: pointer;
+  color: white;
+}
+
+.espécies{
+  font-size: 0.78vw;
+  font-weight: 550;
+  justify-content: center;
+  text-align: center;
+}
+
+/* notícias */
+
+#notícias{
+  font-size: 0.95vw;
+  font-weight: 550;
+  justify-content: center;
+  text-align: center;
+  padding: 1vw;
+}
+
+/* baixo */
+
+#baixo{
+  height: 11vw;
+  text-align: center;
+  justify-content: center;
+  padding: 1.5% 0% 0% 0%;
+  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+}
+
+#legenda{
+  font-size: 0.95vw;
+  font-weight: 550;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5vw;
+}
+
+#ulcores{
+  display: flex;
+  clear: both;
+  text-decoration: none;
+  justify-content: center;
+  text-align: center;
+}
+
+#licores{
+  font-size: 0.83vw;
+  font-weight: 525;
+  list-style: none;
+  margin: 0vh 1vh 0vh 1vh;
+  clear: auto;
+}
+
+#imgcores{
+  width: 1.3vw;
+  height: 1.3vw;
+  position: flex;
+}
+
+#seções{
+  font-size: 0.95vw;
+  font-weight: 550;
+  justify-content: center;
+  text-align: center;
+  padding: 0.95vw;
+}
+
+#olseções{
+  font-size: 0.95vw;
+  font-weight: 550;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#liseções{
+  font-size: 0.83vw;
+  font-weight: 525;
+  list-style: none;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  clear: auto;
+}
+
+#imgseções{
+  width: 1.3vw;
+  height: 1.3vw;
+  position: flex;
+}
+
+/* conteúdo */
+
+#biomas{
+  font: 1.6vw;
+  color: green;
+  text-align: center;
+  padding: 0.5%;
+}
+
+#amazônia{
+  font: 2vw;
+  color: #2c922c;
+  outline: none;
+  padding: 0.1%;
+}
+
+#caatinga{
+  font: 2vw;
+  color: #e7d424;
+  outline: none;
+  padding: 0.1%;
+}
+
+#cerrado{
+  font: 2vw;
+  color: #dd883d;
+  outline: none;
+  padding: 0.1%;
+}
+
+#mata-atlântica{
+  font: 2vw;
+  color: #689edb;
+  outline: none;
+  padding: 0.1%;
+}
+
+#pampa{
+  font: 2vw;
+  color: #cad61a;
+  outline: none;
+  padding: 0.1%;
+}
+
+#pantanal{
+  font: 2vw;
+  color: #20d3eb;
+  outline: none;
+  padding: 0.1%;
+}
+
+#zona-marinha{
+  font: 2vw;
+  color: #e723d7;
+  outline: none;
+  padding: 0.1%;
+}
+
+#container-biomas{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2vw;
+}
+
+.biomas-img{
+  height: 40vw;
+  width: 60vw;
+  border-radius: 4vw;
+  max-width: 100%;
+}
+
+#biomas-mini-1{
+  width: 100%;
+  height: 19.5vw;
+  border-radius: 4vw;
+  flex-direction: column;
+  margin-left: 1.5vw;
+  margin-right: 1.75vw;
+  margin-bottom: 1vw;
+}
+
+#biomas-mini-2{
+  width: 100%;
+  height: 19.5vw;
+  border-radius: 4vw;
+  flex-direction: column;
+  margin-right: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+#biomas-container-texto{
+  display: inline-flex;
+}
+
+#biomas-texto{
+  width: 33.33%;
+  font-size: 0.83vw;
+  font-weight: 550;
+  text-align: justify;
+  padding: 1%;
+  box-shadow: 0vw 0vw 0.15vw rgba(0, 0, 0, 0.1);
+}
+
+#biomas-itálico{
+  font-style: italic;
+}
+
+#fauna{
+  font: 1.6vw;
+  color: red;
+  text-align: center;
+  padding: 0.5%;
+}
+
+#flora{
+  font: 1.6vw;
+  color: gold;
+  text-align: center;
+  padding: 0.5%;
+}
+
+#clima{
+  font: 1.6vw;
+  color: blue;
+  text-align: center;
+  padding: 0.5%;
+}
+
+#clima-btn{
+  font: 0.95vw Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font-weight: 550;
+  border: transparent 0.2vw;
+  border-radius: 0.5vw;
+  transition-duration: 0.2s;
+  padding: 0.3vw;
+  color: inherit;
+  background-color: inherit;
+  margin-bottom: 1vw;
+}
+
+#clima-btn:hover{
+  background: linear-gradient(90deg, #4a7dff, #21d356);
+  cursor: pointer;
+  color: white;
+}
+
+#jogos{
+  font: 1.6vw;
+  color: blueviolet;
+  text-align: center;
+  padding: 0.5%;
+}
+
+#jogos-btn{
+  font: 0.95vw Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font-weight: 550;
+  border: transparent 0.2vw;
+  border-radius: 0.5vw;
+  transition-duration: 0.2s;
+  padding: 0.3vw;
+  color: inherit;
+  background-color: inherit;
+  margin-bottom: 1vw;
+}
+
+#jogos-btn:hover{
+  background: linear-gradient(90deg, #4a7dff, blueviolet);
+  cursor: pointer;
+  color: white;
+}
+
+/* rodapé */
+
+#ícones{
+  width: 2vw;
+  height: 2vw;
+  margin-right: 1.4vw;
+  justify-content: center;
+}
+
+#copyright{
+  font-size: 0.83vw;
+  display: flex;
+  align-items: center;
+  padding-left: 1vw;
+  text-align: center;
+}
+
+/* cards */
+
+#contcards{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container{
+  height: 13.542vw;
+  width: 20.313vw;
+  perspective: 41.66vw;
+  grid-row: 3;
+  padding: 1vw;
+}
+
+.container:hover > .card{
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front, .back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.26vw 0.104vw rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-image: url(https://source.unsplash.com/random/350x500);
+}
+
+.back{
+  background-color: #000000;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+}
+
+.back h1{
+  font-size: 1.6vw;
+  margin-top: 1.042vw;
+}
+
+.back p{
+  font-size: 0.75vw;
+  padding: 0.521vw 1.042vw 1.042vw 1.042vw;
+  justify-content: center;
+}
+
+/* modo escuro */
+
+#btn-dark-mode{
+  position: inherit;
+  display: flex;
+}
+
+#dark-mode-label{
+  width: 2.6vw;
+  height: 1.042vw;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 1.042vw;
+  box-shadow: inset 0vw 0.26vw 0.781vw rgba(0,0,0,0.4), inset 0vw -0.26vw 0.781vw rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+
+#dark-mode-label:after{
+  content: "";
+  width: 0.9vw;
+  height: 0.9vw;
+  position: absolute;
+  top: 0.052vw;
+  left: 0.052vw;
+  background: linear-gradient(180deg,#ffcc89,#d8860b);
+  border-radius: 9.375vw;
+  box-shadow: 0vw 0.26vw 0.521vw rgba(0,0,0,0.2);
+}
+
+#darkmode-toggle{
+  width: 0vw;
+  height: 0vw;
+  visibility: hidden;
+}
+
+#dark-mode-label:after{
+  content: "";
+  width: 0.9vw;
+  height: 0.9vw;
+  position: flex;
+  top: 0.052vw;
+  left: 0.052vw;
+  background: linear-gradient(180deg,#ffcc89,#d8860b);
+  border-radius: 0.9vw;
+  box-shadow: 0px 0.26vw 10px rgba(0,0,0,0.2);
+}
+
+#darkmode-toggle:checked + label{
+  background: #242424;
+}
+
+#darkmode-toggle:checked + label:after{
+  left: 2.552vw;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg,#777,#3a3a3a);
+}
+
+#dark-mode-label, #dark-mode-label:after{
+  transition: 0.3s
+}
+
+#dark-mode-label:active:after{ 
+  width: 1.354vw; 
+}
+
+#darkmode-toggle:checked + #dark-mode-label + .background{
+  background: #121212;
+}
+
+body.light-mode{
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+  box-shadow: 0.15vw 0.15vw 0.3vw #ffffff;
+}
+
+/* animações & transições */
+
+@keyframes changeCor{
+  10%{color: red;}
+  20%{color: orange;}
+  40%{color: gold;}
+  60%{color: green;}
+  80%{color: blue;}
+  100%{color: purple;}
+}
+
+/* media querries */
+
+/* mobile */
+@media (max-width: 600px) {
+
+}
+
+/* tablet */
+@media (min-width: 600px) and (max-width: 768px) {
+
+}
+
+/* desktop */
+@media (min-width: 768px) {
+
+}
+
+/* alta definição */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+}
+
+/* orientação */
+@media (orientation: landscape) {
+
+}
+
+@media (orientation: portrait) {
+
+}
+
+/* tipos de dispositivos */
+@media screen {
+
+}
+
+@media print {
+
+}
