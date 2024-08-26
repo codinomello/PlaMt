@@ -76,7 +76,7 @@
 <div id="alert"></div>
 </div>
 
-<a href="/main.html"><i id="retornar" class="fas fa-undo"></i></a>
+<i id="retornar" onclick="history.back()" class="fas fa-undo"></i>
 
 <style>
 
@@ -115,6 +115,10 @@ a{
   color: white;
   margin: 0vw 0vw 0vw 2vw;
   display: inline-block;
+}
+
+#retornar:hover{
+  cursor: pointer;
 }
 
 /* clima */

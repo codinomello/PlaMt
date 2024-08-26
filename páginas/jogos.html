@@ -104,9 +104,10 @@
         <button class="btn restart">Restart Quiz</button>
       </div>
     </div>
+  <i id="retornar" onclick="history.back()" class="fas fa-undo"></i>
+</body>
 
 <style>
-
 /* main */
 
 *{
@@ -131,6 +132,17 @@ body{
 a{
   text-decoration: none;
   color: inherit;
+}
+
+#retornar{
+  font-size: 1.2vw;
+  color: white;
+  margin: 0vw 0vw 0vw 2vw;
+  display: inline-block;
+}
+
+#retornar:hover{
+  cursor: pointer;
 }
 
 /* jogos */
@@ -320,7 +332,6 @@ select {
     border-radius: 0;
   }
 }
-
 </style>
 
 <script src="script.js">
@@ -542,7 +553,5 @@ const progressBar = document.querySelector(".progress-bar"),
       const audio = new Audio(src);
       audio.play();
     };
-
-    </script>
-  </body>
+</script>
 </html>
