@@ -334,7 +334,7 @@ footer{
   font: 1.6vw;
   color: green;
   text-align: center;
-  padding: 0.5%;
+  padding-top: 1%;
 }
 
 #amazônia{
@@ -452,21 +452,21 @@ footer{
   font: 1.6vw;
   color: red;
   text-align: center;
-  padding: 0.5%;
+  padding-top: 1%;
 }
 
 #flora{
   font: 1.6vw;
   color: gold;
   text-align: center;
-  padding: 0.5%;
+  padding-top: 1%;
 }
 
 #clima{
   font: 1.6vw;
   color: blue;
   text-align: center;
-  padding: 0.5%;
+  padding-top: 1%;
 }
 
 #clima-btn{
@@ -491,7 +491,7 @@ footer{
   font: 1.6vw;
   color: blueviolet;
   text-align: center;
-  padding: 0.5%;
+  padding-top: 1%;
 }
 
 #jogos-btn{
