@@ -18,94 +18,102 @@
 </head>
 
 <body>
-<div class="wrapper">
- <nav class="nav">
-  <div id="título" style="color: white;"><a><div class="plamt-container"></div>plaMt</a></div>
-   <div class="nav-logo">
-    </div>
-     <div class="nav-menu" id="navMenu">
-      <ul>
-       <li><a href="#" class="link active">Home</a></li>
-       <li><a href="main.html" class="link">Página</a></li>
-       <li><a href="./páginas/contato.html" class="link">Contato</a></li>
-       <li><a href="./páginas/atualizações.html" class="link">Atualizações</a></li>
-       <li><a href="./páginas/sobre.html" class="link">Sobre</a></li>
-      </ul>
-     </div>
-    <div class="nav-button">
-     <button class="btn white-btn" id="loginBtn" onclick="login()">Entrar</button>
-     <button class="btn" id="registerBtn" onclick="register()">Inscrever-se</button>
-    </div>
-  <div class="nav-menu-btn">
-   <i class="bx bx-menu" onclick="myMenuFunction()"></i>
- </div>
+  <div class="wrapper">
+  <nav class="nav">
+    <div id="título" style="color: white;"><a><div class="plamt-container"></div>plaMt</a></div>
+    <div class="nav-logo">
+  </div>
+  <div class="nav-menu" id="navMenu">
+    <ul>
+      <li><a href="#" class="link active">Home</a></li>
+      <li><a href="main.html" class="link">Página</a></li>
+      <li><a href="./páginas/serviços.html" class="link">Serviços</a></li>
+      <li><a href="./páginas/contato.html" class="link">Contato</a></li>
+      <li><a href="./páginas/sobre.html" class="link">Sobre</a></li>
+    </ul>
+  </div>
+  <div class="nav-button">
+    <button class="btn white-btn" id="loginBtn" onclick="login()">Entrar</button>
+    <button class="btn" id="registerBtn" onclick="register()">Inscrever-se</button>
+  </div>
+<div class="nav-menu-btn">
+  <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+</div>
 
- </nav>
+</nav>
 
- <!-- CAIXA DO FORMULÁRIO -->  
+<!-- CAIXA DO FORMULÁRIO -->  
 
-  <div class="form-box">
+<div class="form-box">
         
- <!-- FORMULÁRIO DE LOGIN -->
+<!-- FORMULÁRIO DE LOGIN -->
 
 <div class="login-container" id="login">
   <div class="top">
-   <span>Não tem uma conta? <a href="#" onclick="register()">Inscrever-se</a></span>
-   <header>Login</header>
+    <span>Não tem uma conta? <a href="#" onclick="register()">Inscrever-se</a></span>
+    <header>Login</header>
   </div>
+<div class="input-box">
+  <input type="text" class="input-field" placeholder="Nome de Usuário ou E-mail">
+  <i class="bx bx-user"></i>
+</div>
   <div class="input-box">
-   <input type="text" class="input-field" placeholder="Nome de Usuário ou E-mail">
-   <i class="bx bx-user"></i>
-  </div>
-   <div class="input-box">
     <input type="password" class="input-field" placeholder="Senha">
     <i class="bx bx-lock-alt"></i>
-   </div>
-  <div class="input-box">
-    <input type="submit" class="submit" value="Entrar">
   </div>
+<div class="input-box">
+  <input type="submit" class="submit" value="Entrar">
+</div>
   <div class="two-col">
-   <div class="one">
-    <input type="checkbox" id="login-check">
-    <label for="login-check">Lembrar-me</label>
-   </div>
-   <div class="two"><label><a href="#">Esqueceu sua senha?</a></label></div>
- </div>
+  <div class="one">
+  <input type="checkbox" id="login-check">
+  <label for="login-check">Lembrar-me</label>
+</div>
+  <div class="two">
+    <label><a href="#">Esqueceu sua senha?</a></label>
+  </div>
+  </div>
 </div>
 
- <!-- FORMULÁRIO DE REGISTRO -->
+<!-- FORMULÁRIO DE REGISTRO -->
 
 <div class="register-container" id="register">
- <div class="top">
+  <div class="top">
   <span>Tem uma conta? <a href="#" onclick="login()">Login</a></span>
-  <header>Inscrever-se</header></div>
- <div class="two-forms">
+  <header>Inscrever-se</header>
+</div>
+<div class="two-forms">
   <div class="input-box">
-    <input type="text" class="input-field" placeholder="Firstname">
+    <input type="text" class="input-field" placeholder="Primeiro nome">
     <i class="bx bx-user"></i>
   </div>
   <div class="input-box">
-    <input type="text" class="input-field" placeholder="Lastname">
-    <i class="bx bx-user"></i></div>
+  <input type="text" class="input-field" placeholder="Último nome">
+    <i class="bx bx-user"></i>
   </div>
-  <div class="input-box">
-    <input type="text" class="input-field" placeholder="E-mail">
-    <i class="bx bx-envelope"></i>
+</div>
+<div class="input-box">
+  <input type="text" class="input-field" placeholder="E-mail">
+  <i class="bx bx-envelope"></i>
+</div>
+<div class="input-box">
+  <input type="password" class="input-field" placeholder="Senha">
+  <i class="bx bx-lock-alt"></i>
+</div>
+<div class="input-box">
+  <input type="submit" class="submit" value="Registrar-se">
+</div>
+<div class="two-col">
+  <div class="one">
+    <input type="checkbox" id="register-check">
+    <label for="register-check">Lembrar-me</label>
   </div>
-  <div class="input-box">
-    <input type="password" class="input-field" placeholder="Senha">
-    <i class="bx bx-lock-alt"></i>
+  <div class="two">
+    <label><a href="#">Termos & Condições</a></label>
   </div>
-  <div class="input-box">
-    <input type="submit" class="submit" value="Register"></div>
-  <div class="two-col">
-   <div class="one">
-      <input type="checkbox" id="register-check">
-      <label for="register-check">Lembrar-me</label></div>
-    <div class="two"> <label><a href="#">Termos & Condições</a></label></div>
-   </div>
-  </div>
- </div>
+</div>
+</div>
+</div>
 </div>   
 
 <style>
@@ -243,6 +251,7 @@ body{
   display: flex;
   justify-content: center;
 }
+
 .top span a{
   font-weight: 500;
   color: #fff;
@@ -334,7 +343,7 @@ header{
   .nav-button{
     display: none;
   }
-  
+    
   .nav-menu.responsive{
     top: 100px;
   }
@@ -350,7 +359,7 @@ header{
     backdrop-filter: blur(20px);
     transition: .3s;
   }
-  
+
   .nav-menu ul{
     flex-direction: column;
     text-align: center;
@@ -369,7 +378,7 @@ header{
     cursor: pointer;
     transition: .3s;
   }
-
+    
   .nav-menu-btn i:hover{
     background: rgba(255, 255, 255, 0.15);
   }
@@ -384,7 +393,7 @@ header{
     width: 100%;
     height: 500px;
   }
-
+  
   .register-container, .login-container{
     width: 100%;
     padding: 0 20px;
@@ -395,21 +404,20 @@ header{
     gap: 0;
   }
 }
-
 </style>
 
-<script>
-   
-function myMenuFunction() {
+<script>   
+function myMenuFunction(){  
   var i = document.getElementById("navMenu");
+  
   if(i.className === "nav-menu") {
     i.className += " responsive";
-  } 
-  else{
+  }
+
+  else {
     i.className = "nav-menu";
   }
 }
-
   var a = document.getElementById("loginBtn");
   var b = document.getElementById("registerBtn");
   var x = document.getElementById("login");
@@ -421,10 +429,10 @@ function login() {
   a.className += " white-btn";
   b.className = "btn";
   x.style.opacity = 1;
-  y.style.opacity = 0;
+  y.style.opacity = 0;   
 }
 
-function register(){
+function register() {
   x.style.left = "-510px";
   y.style.right = "5px";
   a.className = "btn";
@@ -432,7 +440,6 @@ function register(){
   x.style.opacity = 0;
   y.style.opacity = 1;
 }
-
 </script>
 
 </body>

@@ -19,7 +19,7 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font-family: 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
   transition: background-color 0.3s, color 0.3s;
   box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
 }
@@ -44,7 +44,7 @@ body{
   background-size: cover;
   transition: background-image 0.8s ease;
   display: flex;
-  margin-right: 0.5vw;
+  margin-right: 0.8rem;
   border: none;
 }
 
@@ -102,8 +102,8 @@ main{
 aside{
   height: 100%;
   width: 20%;
-  margin-right: 0.5vw;
-  margin-left: 0.5vw;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 section{
@@ -144,7 +144,7 @@ footer{
 }
 
 .pesquisar{
-  font-family: Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font-family: 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
   height: 2vw;
   width: 10vw;
   text-align: center;
@@ -338,55 +338,63 @@ footer{
 }
 
 #amazônia{
+  text-align: center;
   font: 2vw;
   color: #2c922c;
   outline: none;
-  padding: 0.1%;
 }
 
 #caatinga{
+  text-align: center;
   font: 2vw;
-  color: #e7d424;
+  color: #ebd40b;
   outline: none;
-  padding: 0.1%;
 }
 
 #cerrado{
+  text-align: center;
   font: 2vw;
-  color: #dd883d;
+  color: #dd7113;
   outline: none;
-  padding: 0.1%;
 }
 
 #mata-atlântica{
+  text-align: center;
   font: 2vw;
-  color: #689edb;
+  color: #2b70c0;
   outline: none;
-  padding: 0.1%;
 }
 
 #pampa{
+  text-align: center;
   font: 2vw;
-  color: #cad61a;
+  color: #264a80;
   outline: none;
-  padding: 0.1%;
 }
 
 #pantanal{
+  text-align: center;
   font: 2vw;
-  color: #20d3eb;
+  color: #b90dee;
   outline: none;
-  padding: 0.1%;
 }
 
 #zona-marinha{
+  text-align: center;
   font: 2vw;
-  color: #e723d7;
+  color: #ee1adc;
   outline: none;
-  padding: 0.1%;
 }
 
 #container-biomas{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 2vw;
+  margin: 5vw 0vw 5vw 0vw;
+}
+
+#container-biomas-img{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -395,7 +403,7 @@ footer{
 
 .biomas-img{
   height: 40vw;
-  width: 60vw;
+  width: 108vw;
   border-radius: 4vw;
   max-width: 100%;
 }
