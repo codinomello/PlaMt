@@ -31,10 +31,13 @@
 
 <main>
 <aside id="sidebar">
-  <div class="pesquisar-container">
-    <i id="sidebar-icon" class="fa-solid fa-bars"></i>
-    <input style="color: inherit;" class="pesquisar" placeholder="pesquisar">
-  <button id="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+<div id="container-pesquisar">
+  <form id="pesquisar">
+  <input type="pesquisar" placeholder="Pesquisar">
+  <button type="submit">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+  </form>
 </div>
   
 <!-- ANIMALIA -->
@@ -44,13 +47,13 @@
 <h1 class="reinos"><a href="https://pt.wikipedia.org/wiki/Animalia" target="_blank"><button id="animalia">Animalia</button></a></h1>
   
 <div class="espécies">
-  <div>Arara-azul</div>
-  <div>Onça-pintada</div>
-  <div>Capivara</div>
-  <div>Dourado</div>
-  <div>Sucuri </div>
-  <div>Carcará</div>
-  <div>Jaburu</div>
+<div>Arara-azul</div>
+<div>Onça-pintada</div>
+<div>Capivara</div>
+<div>Dourado</div>
+<div>Sucuri </div>
+<div>Carcará</div>
+<div>Jaburu</div>
 </div>
 </div>
 
@@ -61,13 +64,13 @@
 <h1 class="reinos"><a href="https://pt.wikipedia.org/wiki/Plantae" target="_blank"><button id="plantae">Plantae</button></a></h1>
   
 <div class="espécies">
-  <div>Alamanda</div>
-  <div>Ipê-amarelo</div>
-  <div>Jacarandá</div>
-  <div>Pacová</div>
-  <div>Pitangueira</div>
-  <div>Lírio da paz</div>
-  <div>Bromélia</div>
+<div>Alamanda</div>
+<div>Ipê-amarelo</div>
+<div>Jacarandá</div>
+<div>Pacová</div>
+<div>Pitangueira</div>
+<div>Lírio da paz</div>
+<div>Bromélia</div>
 </div>
 </div>
   
@@ -78,14 +81,23 @@
 <h1 class="reinos"><a href="https://pt.wikipedia.org/wiki/Fungi" target="_blank"><button id="fungi">Fungi</button></a></h1>
   
 <div class="espécies">
-  <div>Agárico</div>
-  <div>Cantarelo</div>
-  <div>Champignon</div>
-  <div>Amanita</div>
-  <div>Mofo-branco</div>
-  <div>Repolga</div>
-  <div>Morchella</div>
+<div>Agárico</div>
+<div>Cantarelo</div>
+<div>Champignon</div>
+<div>Amanita</div>
+<div>Mofo-branco</div>
+<div>Repolga</div>
+<div>Morchella</div>
 </div>
+</div>
+
+<div class="container-slide">
+  <div class="wrapper-slide">
+  <img src="./imagens/animalia/anta-brasileira.jpg">
+  <img src="./imagens/animalia/arara-azul.jpg">
+  <img src="./imagens/animalia/arara-canindé.jpg">
+  <img src="./imagens/animalia/ariranha.jpg">
+  </div>
 </div>
 </aside>
 
@@ -94,7 +106,9 @@
 </section>
    
 <article>
-  <h1 id="notícias"><a target="_blank">Notícias</a></h1>
+
+<h1 id="notícias"><a target="_blank">Notícias</a></h1>
+
 </article>
 </main>
   
@@ -521,7 +535,6 @@
   Para solicitações de permissão, por favor entre em contato conosco através do site https://codinomello.github.io/PlaMt/.
   </p>
 </footer>
-
 </body>
 
 <style>
@@ -587,7 +600,7 @@ var circle = L.circle([-20.159, -47.153, 13], {
 }).addTo(map);
 circle.bindPopup("Mata Atlântica");
 
-var circle = L.circle([-29.54,-53.17, 13], {
+var circle = L.circle([-29.54, -53.17, 13], {
   color: 'darkcyan',
   fillColor: 'darkcyan',
   fillOpacity: 0.5,
@@ -595,7 +608,7 @@ var circle = L.circle([-29.54,-53.17, 13], {
 }).addTo(map);
 circle.bindPopup("Pampa");
 
-var circle = L.circle([-20.838,-54.822, 13], {
+var circle = L.circle([-20.838, -54.822, 13], {
   color: 'pink',
   fillColor: 'pink',
   fillOpacity: 0.5,

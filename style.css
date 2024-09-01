@@ -174,6 +174,40 @@ footer{
   cursor: pointer;
 }
 
+#container-pesquisar{
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  margin: 1vw 0vw 1vw 0vw;
+}
+
+#pesquisar{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #bdbdbd;
+  border-radius: 10px;
+  padding: 4px 12px;
+}
+
+#pesquisar input{
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  width: 100%;
+}
+
+#pesquisar input:focus-visible{
+  outline: none;
+}
+
+#pesquisar button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 #reinos-container{
   display: inline-block;
   padding: 1%;
@@ -245,6 +279,54 @@ footer{
   font-weight: 550;
   justify-content: center;
   text-align: center;
+}
+
+/* carrossel */
+
+.container-slide{
+  height: 10vw;
+  width: 15vw;
+  margin-top: 3.5vw;
+  overflow: hidden;
+  border: 20px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+}
+
+.wrapper-slide{
+  width: 100%;
+  display: flex;
+  animation: slide 16s infinite;
+}
+
+@keyframes slide{
+  0%{
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(0);
+  }
+  30%{
+    transform: translateX(-100%);
+  }
+  50%{
+    transform: translateX(-100%);
+  }
+  55%{
+    transform: translateX(-200%);
+  }
+  75%{
+    transform: translateX(-200%);
+  }
+  80%{
+    transform: translateX(-300%);
+  }
+  100%{
+    transform: translateX(-300%);
+  }
+}
+img{
+  width: 100%;
 }
 
 /* notícias */
@@ -388,7 +470,6 @@ footer{
 
 #container-biomas{
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   padding-left: 2vw;
   margin: 2vw 0vw 0.5vw 0vw;
@@ -408,14 +489,14 @@ footer{
 .biomas-img{
   height: 40vw;
   width: 108vw;
-  border-radius: 4vw;
+  border-radius: 4rem;
   max-width: 100%;
 }
 
 #biomas-mini-1{
   width: 100%;
-  height: 19.5vw;
-  border-radius: 4vw;
+  height: 19.3vw;
+  border-radius: 4rem;
   flex-direction: column;
   margin-left: 1.5vw;
   margin-right: 1.75vw;
@@ -424,8 +505,8 @@ footer{
 
 #biomas-mini-2{
   width: 100%;
-  height: 19.5vw;
-  border-radius: 4vw;
+  height: 19.3vw;
+  border-radius: 4rem;
   flex-direction: column;
   margin-right: 1.5vw;
   margin-bottom: 1vw;
@@ -470,7 +551,7 @@ footer{
 }
 
 #clima-btn{
-  font: 0.95vw Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font: 0.95vw 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
   font-weight: 550;
   border: transparent 0.2vw;
   border-radius: 0.5vw;
@@ -495,7 +576,7 @@ footer{
 }
 
 #jogos-btn{
-  font: 0.95vw Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font: 0.95vw 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
   font-weight: 550;
   border: transparent 0.2vw;
   border-radius: 0.5vw;
