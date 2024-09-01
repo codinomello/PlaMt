@@ -93,10 +93,7 @@
 
 <div class="container-slide">
   <div class="wrapper-slide">
-  <img src="./imagens/animalia/anta-brasileira.jpg">
-  <img src="./imagens/animalia/arara-azul.jpg">
-  <img src="./imagens/animalia/arara-canindé.jpg">
-  <img src="./imagens/animalia/ariranha.jpg">
+    <img class="side-images" src="./imagens/animalia/arara-canindé.jpg"><img class="side-images" src="./imagens/animalia/ariranha.jpg"><img class="side-images" src="./imagens/animalia/asa-branca.jpg"><img class="side-images" src="./imagens/animalia/bicho-preguiça.jpg"><img class="side-images" src="./imagens/animalia/cascavel.jpg"><img class="side-images" src="./imagens/animalia/curicaca.jpg"><img class="side-images" src="./imagens/animalia/gavião-real.jpg"><img class="side-images" src="./imagens/animalia/graxaim-do-campo.jpeg"><img class="side-images" src="./imagens/animalia/jaguatirica.jpg"><img class="side-images" src="./imagens/animalia/jararaca-da-mata.jpg"><img class="side-images" src="./imagens/animalia/macaco-prego.jpg"><img class="side-images" src="./imagens/animalia/macaco-uacari.jpg"><img class="side-images" src="./imagens/animalia/murucututu-de-barriga-amarela.jpg"><img class="side-images" src="./imagens/animalia/paca.jpg"><img class="side-images" src="./imagens/animalia/peixe-boi.jpg"><img class="side-images" src="./imagens/animalia/sapo-cururu.jpg"><img class="side-images" src="./imagens/animalia/seriema.jpg"><img class="side-images" src="./imagens/animalia/sucuri-amarela.jpg"><img class="side-images" src="./imagens/animalia/tamanduá-mirim.jpg"><img class="side-images" src="./imagens/animalia/tartaruga-da-amazônia.jpg"><img class="side-images" src="./imagens/animalia/tatu-canastra.jpg">
   </div>
 </div>
 </aside>
@@ -540,10 +537,10 @@
 <style>
 
 #mapa{
-  font-family: Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font-family: 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
   font-weight: 500;
-  height: 34vw;
-  width: 56vw;
+  height: 33vw;
+  width: 58vw;
 }
 
 </style>
@@ -553,7 +550,6 @@
 const map = L.map('mapa').setView([-14.179, -53.174], 4);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 L.marker([-23.47260, -46.53110, 19]).addTo(map)

@@ -128,11 +128,11 @@ footer{
 /* sidebar */
 
 #container-pesquisar{
-  background-color: #ffffff;
   border-radius: 20px;
-  padding: 18px;
+  padding: 12px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   margin: 1vw 0vw 1vw 0vw;
+  background: #fff;
 }
 
 #pesquisar{
@@ -230,7 +230,7 @@ footer{
 
 .espécies{
   font-size: 0.78vw;
-  font-weight: 550;
+  font-weight: 525;
   justify-content: center;
   text-align: center;
 }
@@ -238,12 +238,12 @@ footer{
 /* carrossel */
 
 .container-slide{
-  height: 12vw;
+  height: 12.5vw;
   width: 18vw;
-  margin-top: 3.5vw;
+  margin-top: 2.5rem;
   overflow: hidden;
-  border: 20px solid #ffffff;
-  border-radius: 8px;
+  border: 10px solid #fff;
+  border-radius: 1rem;
   box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
 }
 
@@ -280,7 +280,7 @@ footer{
   }
 }
 
-img{
+.side-images{
   width: 100%;
 }
 
@@ -297,10 +297,10 @@ img{
 /* baixo */
 
 #baixo{
-  height: 11vw;
+  height: 10vw;
   text-align: center;
   justify-content: center;
-  padding: 1.5% 0% 0% 0%;
+  padding: 0.5% 0% 0% 0%;
   box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
 }
 
@@ -309,7 +309,7 @@ img{
   font-weight: 550;
   justify-content: center;
   text-align: center;
-  padding: 0.5vw;
+  padding: 0.5%;
 }
 
 #ulcores{
@@ -339,7 +339,7 @@ img{
   font-weight: 550;
   justify-content: center;
   text-align: center;
-  padding: 0.95vw;
+  padding: 0.5%;
 }
 
 #olseções{
@@ -553,7 +553,7 @@ img{
 #ícones{
   width: 2vw;
   height: 2vw;
-  margin-right: 1.4vw;
+  margin-right: 1vw;
   justify-content: center;
 }
 
@@ -561,7 +561,6 @@ img{
   font-size: 0.83vw;
   display: flex;
   align-items: center;
-  padding-left: 1vw;
   text-align: center;
 }
 
@@ -573,9 +572,9 @@ img{
 }
 
 .container{
-  height: 13.542vw;
-  width: 20.313vw;
-  perspective: 41.66vw;
+  height: 15.5vw;
+  width: 22vw;
+  perspective: 42vw;
   grid-row: 3;
   padding: 1vw;
 }
