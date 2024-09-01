@@ -3,6 +3,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html{
@@ -126,54 +127,6 @@ footer{
 
 /* sidebar */
 
-.pesquisar-container{
-  display: inline-flex;
-  margin: 1vw 0vw 0vw 0vw;
-  background-color: inherit;
-  color: inherit;
-}
-
-#sidebar-icon{
-  font-size: 1.5vw;
-  background-color: inherit;
-  color: inherit;
-  border-radius: 10px;
-  padding: 1%; 
-  cursor: pointer;
-  margin: 0vw 1vw 0vw 1vw;
-}
-
-.pesquisar{
-  font-family: 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
-  height: 2vw;
-  width: 10vw;
-  text-align: center;
-  font-size: 0.83vw;
-  font-weight: 525;
-  background-color: inherit;
-  color: inherit;
-  border: 0.1vw solid #ccc;
-  border-radius: 10px;
-  margin: 0vw 0vw 0.2vw 0vw;
-}
-
-.pesquisar::placeholder{
-  color: inherit;
-}
-
-#lupa{
-  height: 2vw;
-  width: 2vw;
-  font-size: 0.83vw;
-  font-weight: bolder;
-  background-color: inherit;
-  color: inherit;
-  border: 0.1vw solid #ccc;
-  border-radius: 10px; 
-  margin-left: 0.4vw;
-  cursor: pointer;
-}
-
 #container-pesquisar{
   background-color: #ffffff;
   border-radius: 20px;
@@ -192,6 +145,7 @@ footer{
 }
 
 #pesquisar input{
+  font-family: 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
   border: none;
   background-color: transparent;
   font-size: 16px;
@@ -220,7 +174,7 @@ footer{
 .reinos #animalia{
   height: 2vw;
   width: 5vw;
-  font: 0.95vw Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font: 0.95vw 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
   font-weight: 550;
   color: red;
   border: transparent 0.2vw;
@@ -239,7 +193,7 @@ footer{
 .reinos #plantae{
   height: 2vw;
   width: 5vw;
-  font: 0.95vw Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font: 0.95vw 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
   font-weight: 550;
   color: green;
   border: transparent 0.2vw;
@@ -258,7 +212,7 @@ footer{
 .reinos #fungi{
   height: 2vw;
   width: 5vw;
-  font: 0.95vw Poppins, Inter, Noto Color Emoji, Times New Roman;
+  font: 0.95vw 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
   font-weight: 550;
   color: blue;
   border: transparent 0.2vw;
