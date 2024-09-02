@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.body.classList.add('light-mode');
 });
 
-// carrossel de imagens
+// slider
 
 const slides = document.querySelectorAll(".slides img");
 let slideIndex = 0;
@@ -51,3 +51,20 @@ function nextSlide(){
 }
 
 // notícias
+
+
+
+// carrossel de imagens
+
+var swiper = new Swiper(".swiper", {
+  cssMode: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  keyboard: true,
+});

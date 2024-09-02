@@ -497,6 +497,35 @@ footer{
   padding-bottom: 0.5%;
 }
 
+#flora-main{
+  align-content: center;
+  justify-content: center;
+}
+
+#flora-imagens{
+  width: 45vw;
+  border-radius: 2rem;
+}
+
+.swiper{
+  height: 75vh;
+}
+
+.swiper-slide{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next{
+  margin-right: 40vh;
+}
+
+.swiper-button-prev{
+  margin-left: 40vh;
+}
+
 #clima{
   font: 1.6vw;
   color: blue;
