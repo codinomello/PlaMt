@@ -22,7 +22,7 @@ body{
   background-position: center;
   font-family: 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
   transition: background-color 0.3s, color 0.3s;
-  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+  box-shadow: 0.15vw 0.15vw 0.15vw rgba(0, 0, 0, 0.1);
 }
 
 #título{
@@ -54,7 +54,7 @@ body{
 }
 
 nav{
-  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+  box-shadow: 0.15vw 0.15vw 0.15vw rgba(0, 0, 0, 0.1);
 }
 
 nav ul{
@@ -97,7 +97,7 @@ nav li:first-child{
 
 main{
   display: flex;
-  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+  box-shadow: 0.15vw 0.15vw 0.15vw rgba(0, 0, 0, 0.1);
 }
 
 aside{
@@ -244,7 +244,7 @@ footer{
   overflow: hidden;
   border: 10px solid #fff;
   border-radius: 1rem;
-  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+  box-shadow: 0.15vw 0.15vw 0.15vw rgba(0, 0, 0, 0.1);
 }
 
 .wrapper-slide{
@@ -254,30 +254,14 @@ footer{
 }
 
 @keyframes slide{
-  0%{
-    transform: translateX(0);
-  }
-  25%{
-    transform: translateX(0);
-  }
-  30%{
-    transform: translateX(-100%);
-  }
-  50%{
-    transform: translateX(-100%);
-  }
-  55%{
-    transform: translateX(-200%);
-  }
-  75%{
-    transform: translateX(-200%);
-  }
-  80%{
-    transform: translateX(-300%);
-  }
-  100%{
-    transform: translateX(-300%);
-  }
+  0%{transform: translateX(0);}
+  25%{transform: translateX(0);}
+  30%{transform: translateX(-100%);}
+  50%{transform: translateX(-100%);}
+  55%{transform: translateX(-200%);}
+  75%{transform: translateX(-200%);}
+  80%{transform: translateX(-300%);}
+  100%{transform: translateX(-300%);}
 }
 
 .side-images{
@@ -301,7 +285,7 @@ footer{
   text-align: center;
   justify-content: center;
   padding: 0.5% 0% 0% 0%;
-  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+  box-shadow: 0.15vw 0.15vw 0.15vw rgba(0, 0, 0, 0.1);
 }
 
 #legenda{
@@ -371,7 +355,7 @@ footer{
   font: 1.6vw;
   color: green;
   text-align: center;
-  padding-top: 1%;
+  padding-top: 0.5%;
 }
 
 #amazônia{
@@ -421,6 +405,11 @@ footer{
   font: 2vw;
   color: #ee1adc;
   outline: none;
+}
+
+#biomas-seções{
+  box-shadow: 0vw 0.15vw 0.3vw 0vw rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.8%;
 }
 
 #container-biomas{
@@ -491,6 +480,11 @@ footer{
   padding-top: 1%;
 }
 
+#fauna-seções{
+  box-shadow: 0vw 0.15vw 0.3vw 0vw rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5%;
+}
+
 #flora{
   font: 1.6vw;
   color: gold;
@@ -498,11 +492,21 @@ footer{
   padding-top: 1%;
 }
 
+#flora-seções{
+  box-shadow: 0vw 0.15vw 0.3vw 0vw rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5%;
+}
+
 #clima{
   font: 1.6vw;
   color: blue;
   text-align: center;
   padding-top: 1%;
+}
+
+#clima-seções{
+  box-shadow: 0vw 0.15vw 0.3vw 0vw rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5%;
 }
 
 #clima-btn{
@@ -528,6 +532,11 @@ footer{
   color: blueviolet;
   text-align: center;
   padding-top: 1%;
+}
+
+#jogos-seções{
+  box-shadow: 0vw 0.15vw 0.3vw 0vw rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5%;
 }
 
 #jogos-btn{
@@ -569,17 +578,18 @@ footer{
 #contcards{
   display: flex;
   justify-content: space-evenly;
+  padding-top: 1%;
 }
 
-.container{
-  height: 15.5vw;
-  width: 22vw;
+.container-cards{
+  height: 16vw;
+  width: 21vw;
   perspective: 42vw;
   grid-row: 3;
-  padding: 1vw;
+  padding: 1%;
 }
 
-.container:hover > .card{
+.container-cards:hover > .card{
   cursor: pointer;
   transform: rotateY(180deg);
 }
@@ -617,13 +627,13 @@ footer{
 }
 
 .back h1{
-  font-size: 1.6vw;
-  margin-top: 1.042vw;
+  font-size: 1.45vw;
+  margin-top: 1.2vw;
 }
 
 .back p{
   font-size: 0.75vw;
-  padding: 0.521vw 1.042vw 1.042vw 1.042vw;
+  padding: 0.2vw 1vw 1vw 1vw;
   justify-content: center;
 }
 
