@@ -1,0 +1,186 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="icon" type="image.png" href="./imagens/contato.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Noto+Color+Emoji&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="leaflet\dist\leaflet-heat.js"></script>
+  <title>Contato | PlaMt</title>
+</head>
+
+<body>
+<header id="hdr">
+  <nav>
+    <ul>
+    <li id="título"><a><div class="plamt-container"></div>plaMt</a></li>
+    <li><a target="_self" href="index.html"><div id="divnav">Home</div></a></li>
+    <li><a target="_self" href="./páginas/serviços.html"><div id="divnav">Serviços</div></a></li>
+    <li><a target="_self" href="./páginas/contato.html"><div id="divnav">Contato</div></a></li>
+    <li><a target="_self" href="./páginas/sobre.html"><div id="divnav">Sobre</div></a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+</main>
+
+<footer>
+  <a href="https://github.com/Codinomello/PlaMt" target="_blank"><img id="ícones" src="./imagens/ícones/github.png"></a>
+  <a href="https://www.instagram.com/projetoplamt/" target="_blank"><img id="ícones" src="./imagens/ícones/instagram.png"></a>
+  <a href="https://stackoverflow.com/users/23629787/gabriel-mello" target="_blank"><img id="ícones" src="./imagens/ícones/stack-overflow.png"></a>
+  <a href="https://www.linkedin.com/in/gabriel-h-mello/" target="_blank"><img id="ícones" src="./imagens/ícones/linkedin.png"></a>
+  <p id="copyright">
+  &copy; 2024 PlaMt. Todos os direitos reservados.
+
+  O conteúdo deste site, incluindo, sem limitação, textos, gráficos, imagens, logotipos, ícones, e software, é de propriedade exclusiva da PlaMt e está protegido pelas leis de direitos autorais e outras leis de propriedade intelectual. Qualquer uso não autorizado do material contido neste site, incluindo reprodução, distribuição, exibição ou transmissão de qualquer conteúdo é estritamente proibido, a menos que explicitamente permitido por escrito pela PlaMt.
+
+  Para solicitações de permissão, por favor entre em contato conosco através do site https://codinomello.github.io/PlaMt/.
+  </p>
+</footer>
+</body>
+
+<style>
+
+/* main */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+}
+
+#título{
+  font: 2.5vw 'Poppins', 'Inter, Noto Color Emoji', 'Times New Roman';
+  font-weight: 550;
+}
+
+#título:hover{
+  animation: 4s changeCor infinite;
+}
+
+#div-center{
+  text-align: center;
+}
+
+.plamt-container{
+  width: 2.65vw;
+  height: 2.5vw;
+  background-image: url('./imagens/ícones/plamt-icon.png');
+  background-size: cover;
+  transition: background-image 0.8s ease;
+  display: flex;
+  margin-right: 0.8rem;
+  border: none;
+}
+
+.plamt-container:hover {
+  background-image: url('./imagens/ícones/plamt-icon.png');
+}
+
+nav{
+  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav li{
+  height: 5vw;
+  font-weight: 550;
+}
+
+nav a{
+  height: 100%;
+  padding: 0vw 1vw;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+#divnav{
+  font-size: 0.95vw;
+  font-weight: 550;
+  padding: 0.3vw;
+  border: none;
+  border-radius: 0.5vw;
+}
+
+#divnav:hover{
+  transition: 0.8s;
+  background-color: rgb(80, 80, 80);
+  color: white;
+}
+
+nav li:first-child{
+  margin-right: auto;
+}
+
+main{
+  display: flex;
+  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+}
+
+aside{
+  height: 100%;
+  width: 20%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+section{
+  justify-content: center;
+}
+
+article{
+  height: inherit;
+  width: 25%;
+}
+
+footer{
+  display: flex;
+  background-color: rgb(80, 80, 80);
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+
+</style>
+
+<script>
+
+</script>
+
+</html>
