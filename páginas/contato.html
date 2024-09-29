@@ -15,47 +15,48 @@
   <script src="leaflet\dist\leaflet-heat.js"></script>
   <title>Contato | PlaMt</title>
 </head>
-
 <body>
-<header id="hdr">
-  <nav>
+<nav class="nav">
+  <a><div class="plamt-container"></div>
+  <div id="plamt">
+    <span class="arco-íris">p</span>
+    <span class="arco-íris">l</span>
+    <span class="arco-íris">a</span>
+    <span class="arco-íris">M</span>
+    <span class="arco-íris">t</span>
+  </div>
+  </a>
+  <div class="nav-logo"></div>
+  <div class="nav-menu" id="navMenu">
     <ul>
-    <li id="título"><a><div class="plamt-container"></div>plaMt</a></li>
-    <li><a target="_self" href="index.html"><div id="divnav">Home</div></a></li>
-    <li><a target="_self" href="./páginas/serviços.html"><div id="divnav">Serviços</div></a></li>
-    <li><a target="_self" href="./páginas/contato.html"><div id="divnav">Contato</div></a></li>
-    <li><a target="_self" href="./páginas/sobre.html"><div id="divnav">Sobre</div></a></li>
+      <li><a href="../index.html" class="link">Home</a></li>
+      <li><a href="../main.html" class="link">Página</a></li>
+      <li><a href="#" class="link active">Contato</a></li>
+      <li><a href="./serviços.html" class="link">Serviços</a></li>
+      <li><a href="./sobre.html" class="link">Sobre</a></li>
     </ul>
-  </nav>
-</header>
-
+  </div>
+</nav>
 <main>
 
 </main>
-
 <footer>
-  <a href="https://github.com/Codinomello/PlaMt" target="_blank"><img id="ícones" src="./imagens/ícones/github.png"></a>
-  <a href="https://www.instagram.com/projetoplamt/" target="_blank"><img id="ícones" src="./imagens/ícones/instagram.png"></a>
-  <a href="https://stackoverflow.com/users/23629787/gabriel-mello" target="_blank"><img id="ícones" src="./imagens/ícones/stack-overflow.png"></a>
-  <a href="https://www.linkedin.com/in/gabriel-h-mello/" target="_blank"><img id="ícones" src="./imagens/ícones/linkedin.png"></a>
-  <p id="copyright">
-  &copy; 2024 PlaMt. Todos os direitos reservados.
-
-  O conteúdo deste site, incluindo, sem limitação, textos, gráficos, imagens, logotipos, ícones, e software, é de propriedade exclusiva da PlaMt e está protegido pelas leis de direitos autorais e outras leis de propriedade intelectual. Qualquer uso não autorizado do material contido neste site, incluindo reprodução, distribuição, exibição ou transmissão de qualquer conteúdo é estritamente proibido, a menos que explicitamente permitido por escrito pela PlaMt.
-
-  Para solicitações de permissão, por favor entre em contato conosco através do site https://codinomello.github.io/PlaMt/.
-  </p>
+  <a href="https://github.com/codinomello/PlaMt" target="_blank"><img id="ícones" src="./imagens/github.png"></a>
+  <a href="https://www.instagram.com/projetoplamt/" target="_blank"><img id="ícones" src="./imagens/instagram.png"></a>
+  <a href="https://stackoverflow.com/users/23629787/gabriel-mello" target="_blank"><img id="ícones" src="./imagens/stack-overflow.png"></a>
+  <a href="https://www.linkedin.com/in/gabriel-h-mello/" target="_blank"><img id="ícones" src="./imagens/linkedin.png"></a>
+  <p id="copyright">&copy; 2024 PlaMt. Todos os direitos reservados. O conteúdo deste site, incluindo, sem limitação, textos, gráficos, imagens, logotipos, ícones, e software, é de propriedade exclusiva da PlaMt e está protegido pelas leis de direitos autorais e outras leis de propriedade intelectual. Qualquer uso não autorizado do material contido neste site, incluindo reprodução, distribuição, exibição ou transmissão de qualquer conteúdo é estritamente proibido, a menos que explicitamente permitido por escrito pela PlaMt. Para solicitações de permissão, por favor entre em contato conosco através do site https://codinomello.github.io/PlaMt/.</p>
 </footer>
 </body>
 
 <style>
-
 /* main */
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
 }
 
 html{
@@ -67,94 +68,101 @@ a{
   color: inherit;
 }
 
-body{
-  min-height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-family: 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
-  transition: background-color 0.3s, color 0.3s;
-  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
-}
-
-#título{
-  font: 2.5vw 'Poppins', 'Inter, Noto Color Emoji', 'Times New Roman';
-  font-weight: 550;
-}
-
-#título:hover{
-  animation: 4s changeCor infinite;
-}
-
-#div-center{
-  text-align: center;
-}
-
 .plamt-container{
-  width: 2.65vw;
-  height: 2.5vw;
-  background-image: url('./imagens/ícones/plamt-icon.png');
-  background-size: cover;
-  transition: background-image 0.8s ease;
+  width: 3.35rem;
+  height: 3.25rem;
   display: flex;
-  margin-right: 0.8rem;
+  margin-right: 1rem;
   border: none;
+  background-image: url('./imagens/plamt-icon.png');
+  transition: background-image 0.8s ease-in-out;
+  background-size: cover;
 }
 
-.plamt-container:hover {
-  background-image: url('./imagens/ícones/plamt-icon.png');
+.plamt-container div:hover{
+  background-image: url('./imagens/plamt-icon.png');
 }
 
-nav{
-  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
-}
-
-nav ul{
-  width: 100%;
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
-nav li{
-  height: 5vw;
+#plamt{
+  font-size: 0;
   font-weight: 550;
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
-nav a{
+.arco-íris{
+  font-size: 2.8rem;
+  animation: 4s changeCor infinite ease-in-out;
+}
+
+.arco-íris:nth-child(1){animation-delay: 0s;} .arco-íris:nth-child(2){animation-delay: 0.2s;} .arco-íris:nth-child(3){animation-delay: 0.4s;} .arco-íris:nth-child(4){animation-delay: 0.6s;} .arco-íris:nth-child(5){animation-delay: 0.8s;} .arco-íris:nth-child(6){animation-delay: 1s;}
+
+.nav{
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  z-index: 100;
+  font-size: 1.2rem;
+  box-shadow: 5px 2.5px 2.5px #0000001a;
+}
+
+.nav a{
   height: 100%;
-  padding: 0vw 1vw;
+  padding: 0rem 1.5rem;
   text-decoration: none;
   display: flex;
   align-items: center;
-}
-
-#divnav{
-  font-size: 0.95vw;
-  font-weight: 550;
-  padding: 0.3vw;
-  border: none;
-  border-radius: 0.5vw;
-}
-
-#divnav:hover{
-  transition: 0.8s;
-  background-color: rgb(80, 80, 80);
-  color: white;
-}
-
-nav li:first-child{
   margin-right: auto;
+}
+
+.nav-logo p{
+  font-size: 2rem;
+}
+
+.nav-menu ul{
+  display: flex;
+}
+
+.nav-menu ul li{
+  margin-top: 5px;
+  list-style-type: none;
+}
+
+.nav-menu ul li .link{
+  text-decoration: none;
+  font-weight: 550;
+  padding-bottom: 0px;
+  margin: 0 25px;
+}
+
+.link:hover, .active{
+  border-bottom: 2px solid;
+}
+
+.nav-button .btn{
+  width: 120px;
+  height: 40px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: #ffffff66;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .3s ease;
 }
 
 main{
   display: flex;
-  box-shadow: 0.15vw 0.15vw 0.3vw rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  box-shadow: 5px 2.5px 2.5px #0000001a;
 }
 
 aside{
   height: 100%;
-  width: 20%;
+  width: 25%;
   margin-right: 1rem;
   margin-left: 1rem;
 }
@@ -166,21 +174,59 @@ section{
 article{
   height: inherit;
   width: 25%;
+  padding: 1%;
 }
 
 footer{
   display: flex;
-  background-color: rgb(80, 80, 80);
+  background-color: rgb(85, 85, 85);
   color: white;
   justify-content: space-between;
   align-items: center;
   padding: 1%;
 }
 
+#ícones{
+  width: 2rem;
+  height: 2rem;
+  margin: 0rem 1rem 0rem 0.5rem;
+  justify-content: center;
+}
+
+#copyright{
+  font-size: 0.9rem;
+  display: flex;
+  text-align: center;
+}
+
+/* animações & transições */
+
+@keyframes changeCor{
+  10%{color: #ff0000;}
+  20%{color: #ffa500;}
+  40%{color: #ffd700;}
+  60%{color: #008000;}
+  80%{color: #0000ff;}
+  100%{color: #8a2be2;}
+}
+
+@keyframes slide{
+  0%{transform: translateX(0);} 5%{transform: translateX(0);} 10%{transform: translateX(-100%);} 15%{transform: translateX(-100%);} 20%{transform: translateX(-200%);} 25%{transform: translateX(-200%);} 30%{transform: translateX(-300%);} 35%{transform: translateX(-300%);} 40%{transform: translateX(-400%);} 45%{transform: translateX(-400%);} 50%{transform: translateX(-500%);} 55%{transform: translateX(-500%);} 60%{transform: translateX(-600%);} 65%{transform: translateX(-600%);} 70%{transform: translateX(-700%);} 75%{transform: translateX(-700%);} 80%{transform: translateX(-800%);} 85%{transform: translateX(-800%);} 90%{transform: translateX(-900%);} 95%{transform: translateX(-900%);} 100%{transform: translateX(-1000%);}
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0; 
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 </style>
 
 <script>
 
 </script>
-
 </html>

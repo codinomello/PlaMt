@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.body.classList.add('light-mode');
 });
 
-// slider
+// carrossel de imagens
 
 const slides = document.querySelectorAll(".slides img");
 let slideIndex = 0;
@@ -50,21 +50,36 @@ function nextSlide(){
   showSlide(slideIndex);
 }
 
-// notícias
+// slider
 
+const slide = document.querySelector('.slides');
+const images = document.querySelectorAll('.slides img');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
+let currentIndex = 0;
+const totalSlides = images.length;
+const sliderWidth = document.querySelector('.slider').clientWidth; // Update this line
+const slideWidth = sliderWidth; // Update this line
 
-// carrossel de imagens
+function goToNextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlidePosition();
+}
 
-var swiper = new Swiper(".swiper", {
-  cssMode: true,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  keyboard: true,
-});
+function goToPrevSlide() {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateSlidePosition();
+}
+
+function updateSlidePosition() {
+  slide.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+}
+
+// Add this line to update the slider on page load
+updateSlidePosition();
+
+nextBtn.addEventListener('click', goToNextSlide);
+prevBtn.addEventListener('click', goToPrevSlide);
+
+setInterval(goToNextSlide, 3000);
