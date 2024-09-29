@@ -283,14 +283,13 @@ article{
 /* carrossel */
 
 .container-slide{
-  height: 16rem;
-  width: 25rem;
-  margin-top: 1rem;
+  height: 17.5rem;
+  width: 26rem;
+  margin-top: 0.5rem;
   text-align: center;
   overflow: hidden;
-  border: 0.5vw solid #fff;
+  border: 0.25rem solid #fff;
   border-radius: 2rem;
-  border-width: 0.25vw;
   box-shadow: 5px 2.5px 2.5px #0000001a;
 }
 
