@@ -60,7 +60,7 @@ const nextBtn = document.getElementById('nextBtn');
 let currentIndex = 0;
 const totalSlides = images.length;
 const sliderWidth = document.querySelector('.slider').clientWidth; // Update this line
-const slideWidth = sliderWidth; // Update this line
+const slideWidth = sliderWidth;
 
 function goToNextSlide() {
   currentIndex = (currentIndex + 1) % totalSlides;
@@ -76,10 +76,46 @@ function updateSlidePosition() {
   slide.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
 }
 
-// Add this line to update the slider on page load
 updateSlidePosition();
 
 nextBtn.addEventListener('click', goToNextSlide);
 prevBtn.addEventListener('click', goToPrevSlide);
 
 setInterval(goToNextSlide, 3000);
+
+// brasil
+
+const description = document.querySelector(".tooltip");
+
+document.querySelectorAll('path').forEach((el) => {
+
+el.addEventListener('mouseover', (event) => {
+  event.target.className = ("enabled");
+  description.classList.add("active");
+  description.innerHTML = event.target.id;
+})
+
+el.addEventListener("mouseout", () => {
+  description.classList.remove("active");
+})
+
+el.addEventListener("click", () => {
+
+const estadoSelecionado = event.target.id;
+const link = `https://www.google.com.br/search?q=${estadoSelecionado}`;	
+  window.open(link, "_blank");
+  })
+});
+
+document.onmousemove = function (e) {
+  description.style.left = e.pageX + "px";
+  description.style.top = (e.pageY - 70) + "px";
+}
+
+// google maps layer
+
+//googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+//maxZoom: 20,
+//subdomains:['mt0','mt1','mt2','mt3']
+//});
+//googleStreets.addTo(map);
