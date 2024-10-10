@@ -10,6 +10,48 @@ document.addEventListener('DOMContentLoaded', function() {
 document.body.classList.add('light-mode');
 });
 
+// notícias
+
+const apiKey = 'ad2140a21f824444b421b955f62f76df';
+const apiUrl = `https://newsapi.org/v2/top-headlines?country=br&apiKey=${apiKey}`;
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetchNews();
+});
+
+function fetchNews() {
+  fetch(apiUrl)
+  .then(response => {
+  if (!response.ok) {
+    throw new Error(`Erro na requisição: ${response.status}`);
+  }
+    return response.json();
+  })
+  .then(data => {
+    const newsSection = document.getElementById('news-section');
+    if (data.articles.length === 0) {
+      newsSection.innerHTML = '<p>Não há notícias disponíveis no momento.</p>';
+      return;
+    }
+  data.articles.forEach(article => {
+    const newsItem = document.createElement('div');
+    newsItem.classList.add('news-item');
+    newsItem.innerHTML = `
+    <img src="${article.urlToImage}" alt="Imagem da notícia">
+    <h2>${article.title}</h2>
+    <p>${article.description || 'Sem descrição disponível'}</p>
+    <a href="${article.url}" target="_blank">Leia mais</a>
+    `;
+    newsSection.appendChild(newsItem);
+    });
+  })
+  .catch(error => {
+    console.error('Erro ao buscar as notícias:', error);
+    const newsSection = document.getElementById('news-section');
+    newsSection.innerHTML = `<p>Ocorreu um erro ao carregar as notícias. Tente novamente mais tarde.</p>`;
+  });
+}
+
 // carrossel de imagens
 
 const slides = document.querySelectorAll(".slides img");
@@ -52,60 +94,46 @@ function nextSlide(){
 
 // slider
 
-const slide = document.querySelector('.slides');
-const images = document.querySelectorAll('.slides img');
+const slider = document.querySelector('.slides');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 let currentIndex = 0;
-const totalSlides = images.length;
-const sliderWidth = document.querySelector('.slider').clientWidth; // Update this line
-const slideWidth = sliderWidth;
+const totalSlides = document.querySelectorAll('.slides img').length;
 
-function goToNextSlide() {
-  currentIndex = (currentIndex + 1) % totalSlides;
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
   updateSlidePosition();
-}
+});
 
-function goToPrevSlide() {
-  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
   updateSlidePosition();
-}
+});
 
 function updateSlidePosition() {
-  slide.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+  const slideWidth = document.querySelector('.slides img').clientWidth;
+  slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
 }
-
-updateSlidePosition();
-
-nextBtn.addEventListener('click', goToNextSlide);
-prevBtn.addEventListener('click', goToPrevSlide);
-
-setInterval(goToNextSlide, 3000);
 
 // brasil
 
 const description = document.querySelector(".tooltip");
 
-document.querySelectorAll('path').forEach((el) => {
-
-el.addEventListener('mouseover', (event) => {
-  event.target.className = ("enabled");
-  description.classList.add("active");
-  description.innerHTML = event.target.id;
-})
-
-el.addEventListener("mouseout", () => {
-  description.classList.remove("active");
-})
-
-el.addEventListener("click", () => {
-
-const estadoSelecionado = event.target.id;
-const link = `https://www.google.com.br/search?q=${estadoSelecionado}`;	
-  window.open(link, "_blank");
+document.querySelectorAll('path').forEach((el) =>
+  el.addEventListener('mouseover', (event) => {
+    event.target.className = ("enabled");
+    description.classList.add("active");
+    description.innerHTML = event.target.id;
   })
-});
+
+);
+
+document.querySelectorAll('path').forEach((el) =>
+  el.addEventListener("mouseout", () => {
+    description.classList.remove("active");
+  })
+);
 
 document.onmousemove = function (e) {
   description.style.left = e.pageX + "px";

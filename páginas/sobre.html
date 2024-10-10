@@ -26,7 +26,6 @@
     <span class="arco-íris">t</span>
   </div>
   </a>
-  <div class="nav-logo"></div>
   <div class="nav-menu" id="navMenu">
     <ul>
       <li><a href="../index.html" class="link">Home</a></li>
@@ -38,372 +37,49 @@
   </div>
 </nav>
 <main>
-  <nav id="desktop-nav">
-    <div class="logo">John Doe</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<header>
+  <h1>Sobre Nós</h1>
+  <p>Nossa missão é criar um impacto positivo no mundo e contribuir para os Objetivos de Desenvolvimento Sustentável (ODS).</p>
+</header>
+
+<section class="about-container">
+  <div class="about-us">
+    <h2>Quem Somos</h2>
+      <p>Somos uma organização comprometida com a sustentabilidade e o desenvolvimento social. Acreditamos que a inovação e a responsabilidade ambiental devem caminhar lado a lado. Nosso trabalho é guiado pelos <strong>Objetivos de Desenvolvimento Sustentável (ODS)</strong> da ONU, buscando soluções que promovam a justiça social e a preservação do meio ambiente.</p>
+      <p>Fundada em 2020, nossa equipe é composta por especialistas em diferentes áreas, incluindo tecnologia, meio ambiente, educação e desenvolvimento social. Juntos, trabalhamos para transformar a sociedade por meio de ações práticas que fazem a diferença.</p>
+  </div>
+
+  <div class="ods-section">
+    <h2>Nossa Contribuição para os ODS</h2>
+    <p>Nosso trabalho está alinhado com os Objetivos de Desenvolvimento Sustentável, em especial:</p>
+
+  <div class="ods-grid">
+    <div class="ods-item">
+      <img src="./imagens/ods4.png" alt="ODS 1">
+      <h3>ODS 4: Educação de Qualidade</h3>
+      <p>Promovemos projetos de inclusão social, oferecendo oportunidades de educação e emprego para comunidades vulneráveis.</p>
     </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">John Doe</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
+
+    <div class="ods-item">
+      <img src="./imagens/ods13.png" alt="ODS 13">
+      <h3>ODS 13: Educação de Qualidade</h3>
+      <p>Investimos em programas educacionais que garantem o acesso à educação de qualidade para crianças e adultos em áreas desfavorecidas.</p>
     </div>
-  </nav>
-  <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+
+    <div class="ods-item">
+      <img src="./imagens/ods14.png" alt="ODS 14">
+      <h3>ODS 14: Energia Limpa e Acessível</h3>
+      <p>Desenvolvemos soluções sustentáveis para expandir o acesso à energia limpa e renovável em áreas remotas.</p>
     </div>
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">John Doe</h1>
-      <p class="section__text__p2">Frontend Developer</p>
-      <div class="btn-container">
-        <button
-          class="btn btn-color-2"
-          onclick="window.open('./assets/resume-example.pdf')"
-        >
-          Download CV
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contact Info
-        </button>
-      </div>
-      <div id="socials-container">
-        <img
-          src="./assets/linkedin.png"
-          alt="My LinkedIn profile"
-          class="icon"
-          onclick="location.href='https://linkedin.com/'"
-        />
-        <img
-          src="./assets/github.png"
-          alt="My Github profile"
-          class="icon"
-          onclick="location.href='https://github.com/'"
-        />
-      </div>
+
+    <div class="ods-item">
+      <img src="./imagens/ods15.png" alt="ODS 15">
+      <h3>ODS 15: Ação Contra a Mudança Global do Clima</h3>
+      <p>Nossas iniciativas estão focadas em reduzir a pegada de carbono, por meio de práticas de produção sustentável e inovação verde.</p>
     </div>
-  </section>
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img
-          src="./assets/about-pic.png"
-          alt="Profile picture"
-          class="about-pic"
-        />
-      </div>
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <img
-              src="./assets/experience.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <h3>Experience</h3>
-            <p>2+ years <br />Frontend Development</p>
-          </div>
-          <div class="details-container">
-            <img
-              src="./assets/education.png"
-              alt="Education icon"
-              class="icon"
-            />
-            <h3>Education</h3>
-            <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
-          </div>
-        </div>
-        <div class="text-container">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-            reprehenderit et laborum, rem, dolore eum quod voluptate
-            exercitationem nobis, nihil esse debitis maxime facere minus sint
-            delectus velit in eos quo officiis explicabo deleniti dignissimos.
-            Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-            reiciendis ea magnam? Nulla, impedit fuga!
-          </p>
-        </div>
-      </div>
-    </div>
-    <img
-      src="./assets/arrow.png"
-      alt="Arrow icon"
-      class="icon arrow"
-      onclick="location.href='./#experience'"
-    />
-  </section>
-  <section id="experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Experience</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title">Frontend Development</h2>
-          <div class="article-container">
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>HTML</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>CSS</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>SASS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>JavaScript</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>TypeScript</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Material UI</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Frontend Development</h2>
-          <div class="article-container">
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>PostgreSQL</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Node JS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Express JS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Git</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img
-      src="./assets/arrow.png"
-      alt="Arrow icon"
-      class="icon arrow"
-      onclick="location.href='./#projects'"
-    />
-  </section>
-  <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img
-              src="./assets/project-1.png"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <h2 class="experience-sub-title project-title">Project One</h2>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/'"
-            >
-              Github
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img
-              src="./assets/project-2.png"
-              alt="Project 2"
-              class="project-img"
-            />
-          </div>
-          <h2 class="experience-sub-title project-title">Project Two</h2>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/'"
-            >
-              Github
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img
-              src="./assets/project-3.png"
-              alt="Project 3"
-              class="project-img"
-            />
-          </div>
-          <h2 class="experience-sub-title project-title">Project Three</h2>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/'"
-            >
-              Github
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img
-      src="./assets/arrow.png"
-      alt="Arrow icon"
-      class="icon arrow"
-      onclick="location.href='./#contact'"
-    />
-  </section>
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img
-          src="./assets/email.png"
-          alt="Email icon"
-          class="icon contact-icon email-icon"
-        />
-        <p><a href="mailto:examplemail@gmail.com">gabriel@gmail.com</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img
-          src="./assets/linkedin.png"
-          alt="LinkedIn icon"
-          class="icon contact-icon"
-        />
-        <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>  
+  </div>
+</div>
+</section>
 </main>
 <footer id="rodapé">
   <a href="https://github.com/Codinomello/PlaMt" target="_blank"><img id="ícones" src="./imagens/github.png"></a>
@@ -415,7 +91,83 @@
 </body>
 
 <style>
+header{
+  text-align: center;
+  padding: 20px;
+  background-color: #47a124;
+  color: #fff;
+}
 
+header h1{
+  margin-bottom: 10px;
+}
+
+header p{
+  font-size: 1.2em;
+}
+
+.about-container{
+  margin: 30px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.about-us{
+  margin-bottom: 40px;
+}
+
+.about-us h2{
+  font-size: 1.8em;
+  color: #47a124;
+  margin-bottom: 15px;
+}
+
+.about-us p{
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.ods-section h2{
+  font-size: 1.8em;
+  color: #47a124;
+  margin-bottom: 15px;
+}
+
+.ods-section p{
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.ods-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.ods-item{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0000001a;
+  text-align: center;
+}
+
+.ods-item img{
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.ods-item h3{
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  color: #47a124;
+}
+
+.ods-item p{
+  font-size: 1em;
+}
 </style>
 
 <script>

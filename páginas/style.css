@@ -11,6 +11,10 @@ html{
   font-size: 16px;
 }
 
+body{
+  min-height: 100vh;
+}
+
 a{
   text-decoration: none;
   color: inherit;
@@ -38,9 +42,12 @@ a{
   margin-top: 0.5rem;
 }
 
+#plamt .arco-íris:hover{
+  animation: 4s changeCor infinite ease-in-out;
+}
+
 .arco-íris{
   font-size: 2.8rem;
-  animation: 4s changeCor infinite ease-in-out;
 }
 
 .arco-íris:nth-child(1){animation-delay: 0s;} .arco-íris:nth-child(2){animation-delay: 0.2s;} .arco-íris:nth-child(3){animation-delay: 0.4s;} .arco-íris:nth-child(4){animation-delay: 0.6s;} .arco-íris:nth-child(5){animation-delay: 0.8s;} .arco-íris:nth-child(6){animation-delay: 1s;}
@@ -103,7 +110,6 @@ a{
 }
 
 main{
-  display: flex;
   overflow: auto;
   box-shadow: 5px 2.5px 2.5px #0000001a;
 }

@@ -27,7 +27,6 @@
     <span class="arco-íris">t</span>
   </div>
   </a>
-  <div class="nav-logo"></div>
   <div class="nav-menu" id="navMenu">
     <ul>
       <li><a href="../index.html" class="link">Home</a></li>
@@ -39,6 +38,49 @@
   </div>
 </nav>
 <main>
+<header>
+  <h1>Nossos Serviços</h1>
+  <p>Confira abaixo os serviços que oferecemos para atender suas necessidades.</p>
+</header>
+
+<section class="services-container">
+  <div class="service-item">
+    <img src="icons/web_design.png" alt="Web Design">
+    <h2>Web Design</h2>
+    <p>Criação de sites personalizados e responsivos, otimizados para todas as plataformas e dispositivos.</p>
+  </div>
+
+  <div class="service-item">
+    <img src="icons/development.png" alt="Desenvolvimento Web">
+    <h2>Desenvolvimento Web</h2>
+    <p>Desenvolvimento de sites e aplicativos com tecnologia de ponta e desempenho superior.</p>
+  </div>
+
+  <div class="service-item">
+    <img src="icons/seo.png" alt="SEO">
+    <h2>SEO</h2>
+    <p>Otimização de sites para motores de busca, garantindo melhor visibilidade e aumento de tráfego orgânico.</p>
+  </div>
+
+  <div class="service-item">
+    <img src="icons/social_media.png" alt="Marketing Digital">
+    <h2>Marketing Digital</h2>
+    <p>Planejamento estratégico para campanhas de marketing nas redes sociais e no Google Ads.</p>
+  </div>
+
+  <div class="service-item">
+    <img src="icons/consulting.png" alt="Consultoria">
+    <h2>Consultoria</h2>
+    <p>Consultoria especializada para melhorar sua presença digital e estratégias de negócios online.</p>
+  </div>
+
+  <div class="service-item">
+    <img src="icons/maintenance.png" alt="Manutenção de Sites">
+    <h2>Manutenção de Sites</h2>
+    <p>Serviços de manutenção e atualização de sites, garantindo segurança e performance contínua.</p>
+  </div>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfNearEfaB4g2dwgWjsg5ZB8kMEG41YayqH9pmZ8I-QVsAaYw/viewform?embedded=true" width="575" height="250" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+</section>
 
 </main>
 <footer id="rodapé">
@@ -51,7 +93,54 @@
 </body>
 
 <style>
+header{
+  text-align: center;
+  padding: 20px;
+  background-color: #0056b3;
+  color: #fff;
+}
 
+header h1{
+  margin-bottom: 10px;
+}
+
+header p{
+  font-size: 1.2em;
+}
+
+.services-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.service-item{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0000001a;
+  text-align: center;
+}
+
+.service-item img{
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.service-item h2{
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #0056b3;
+}
+
+.service-item p{
+  font-size: 1em;
+  color: #666;
+}
 </style>
 
 <script>

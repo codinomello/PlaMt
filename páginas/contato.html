@@ -26,7 +26,6 @@
     <span class="arco-íris">t</span>
   </div>
   </a>
-  <div class="nav-logo"></div>
   <div class="nav-menu" id="navMenu">
     <ul>
       <li><a href="../index.html" class="link">Home</a></li>
@@ -38,7 +37,89 @@
   </div>
 </nav>
 <main>
+<header>
+  <h1>Entre em Contato</h1>
+  <p>Estamos aqui para ajudar! Preencha o formulário abaixo ou utilize as informações ao lado para nos contatar.</p>
+</header>
 
+<div class="container">
+  <div class="contact-form">
+    <form action="submit_contact.php" method="post">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Seu email" required>
+
+      <label for="subject">Assunto:</label>
+      <input type="text" id="subject" name="subject" placeholder="Assunto da mensagem" required>
+
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <div class="contact-info">
+    <h2>Informações de Contato</h2>
+    <p><strong>Telefone:</strong> (11) 91192-1772</p>
+    <p><strong>Email:</strong> 103662024@eniac.edu.br</p>
+    <p><strong>Endereço:</strong> Avenida Força Pública, 89, Centro, Guarulhos - SP</p>
+
+    <h2>Orientadores</h2>
+    <p><strong>Lúcio Luzetti</strong></p>
+    <p><strong>Nelson Luzetti</strong></p>
+    <p><strong>Paulo Procópio</strong></p>
+  </div>
+</div>
+   <!-- Seção de Criadores -->
+   <section class="team-section">
+    <h2>Nossa Equipe</h2>
+    <p>Conheça os criadores do nosso projeto!</p>
+
+    <div class="creators-container">
+        <!-- Criadores -->
+        <div class="team-member creator">
+            <img src="creators/creator1.jpg" alt="Criador 1">
+            <h3>Criador 1</h3>
+            <p>Desenvolvedor Full-Stack e idealizador do projeto.</p>
+        </div>
+
+        <div class="team-member creator">
+            <img src="creators/creator2.jpg" alt="Criador 2">
+            <h3>Criador 2</h3>
+            <p>Designer UI/UX e responsável pela experiência do usuário.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Orientadores -->
+<section class="mentors-section">
+    <h2>Nossos Orientadores</h2>
+    <p>Os especialistas que nos orientam no caminho para o sucesso!</p>
+
+    <div class="mentors-container">
+        <!-- Orientadores -->
+        <div class="team-member mentor">
+            <img src="mentors/mentor1.jpg" alt="Orientador 1">
+            <h3>Orientador 1</h3>
+            <p>Professor e especialista em desenvolvimento web.</p>
+        </div>
+
+        <div class="team-member mentor">
+            <img src="mentors/mentor2.jpg" alt="Orientador 2">
+            <h3>Orientador 2</h3>
+            <p>Consultor de negócios e estratégia digital.</p>
+        </div>
+
+        <div class="team-member mentor">
+            <img src="mentors/mentor3.jpg" alt="Orientador 3">
+            <h3>Orientador 3</h3>
+            <p>Especialista em segurança da informação.</p>
+        </div>
+    </div>
+</section>
 </main>
 <footer id="rodapé">
   <a href="https://github.com/Codinomello/PlaMt" target="_blank"><img id="ícones" src="./imagens/github.png"></a>
@@ -50,7 +131,192 @@
 </body>
 
 <style>
+header{
+  text-align: center;
+  padding: 20px;
+  background-color: #d33215;
+  color: #fff;
+}
 
+header h1{
+  margin-bottom: 10px;
+}
+
+header p{
+  font-size: 1.2em;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+.contact-form, .contact-info{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0000001a;
+}
+
+.contact-form{
+  width: 60%;
+}
+
+.contact-info{
+  width: 30%;
+}
+
+.contact-form label{
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form input[type="submit"]{
+  background-color: #d33215;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover{
+  background-color: #eb4d0f;
+}
+
+.contact-info h2{
+  margin-bottom: 15px;
+  color: #d33215;
+}
+
+.contact-info p{
+  margin-bottom: 10px;
+}
+
+.contact-info a{
+  text-decoration: none;
+  color: #d33215;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover{
+  color: #eb4d0f;
+}
+
+.team-section{
+  text-align: center;
+  padding: 40px;
+  background-color: #ffdcdc;
+  margin-top: 40px;
+}
+
+.team-section h2{
+  font-size: 2em;
+  color: #d33215;
+  margin-bottom: 20px;
+}
+
+.team-section p{
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.creators-container{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-member.creator{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0000001a;
+  text-align: center;
+  max-width: 300px;
+}
+
+.team-member.creator img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member.creator h3{
+  font-size: 1.5em;
+  color: #d33215;
+  margin-bottom: 10px;
+}
+
+.team-member.creator p{
+  font-size: 1em;
+  color: #666;
+}
+
+.mentors-section{
+  text-align: center;
+  padding: 40px;
+  background-color: #ecfae0;
+  margin-top: 20px;
+}
+
+.mentors-section h2{
+  font-size: 2em;
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+.mentors-section p{
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.mentors-container{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-member.mentor {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0000001a;
+  text-align: center;
+  max-width: 250px;
+}
+
+.team-member.mentor img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member.mentor h3 {
+  font-size: 1.3em;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.team-member.mentor p{
+  font-size: 0.95em;
+  color: #666;
+}
 </style>
 
 <script>

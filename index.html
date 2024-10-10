@@ -27,7 +27,6 @@
     <span class="arco-íris">t</span>
   </div>
   </a>
-  <div class="nav-logo"></div>
   <div class="nav-menu" id="navMenu">
     <ul>
       <li><a href="#" class="link active">Home</a></li>
@@ -111,10 +110,6 @@
 </div>
 </div>
 </div>
-<div id="btn-dark-mode">
-  <input type="checkbox" id="darkmode-toggle"/>
-  <label for="darkmode-toggle" id="dark-mode-label">
-</div>
 </div>
 </body>
 
@@ -128,27 +123,6 @@
 
 .nav{
   position: fixed;
-}
-
-.btn:hover{
-  background: #ffffff4d;
-}
-
-#registerBtn{
-  background-color: #afafaf;
-  margin-left: 1rem;
-}
-
-#registerBtn:hover{
-  background-color: #808080;
-}
-
-#loginBtn{
-  background-color: #afafaf;
-}
-
-#loginBtn:hover{
-  background-color: #808080;
 }
 
 .nav-menu-btn{
@@ -214,11 +188,11 @@ header{
   border-radius: 30px;
   outline: none;
   transition: .2s ease;
-  background-color: #dddddd;
+  background-color: #f5f5f5;
 }
 
 .input-field:hover, .input-field:focus{
-  background-color: #cccccc;
+  background-color: #eeeeee;
 }
 
 ::-webkit-input-placeholder{
@@ -232,11 +206,6 @@ header{
   left: 17px;
 }
 
-::placeholder{
-  font-weight: 450;
-  opacity: 1;
-}
-
 .submit{
   font-size: 15px;
   font-weight: 500;
@@ -248,6 +217,7 @@ header{
   cursor: pointer;
   transition: .3s ease-in-out;
   box-shadow: 1px 5px 7px 1px #00000033;
+  background-color: #ebebeb;
 }
 
 .submit::placeholder{
@@ -255,8 +225,13 @@ header{
 }
 
 .submit:hover{
-  background: #ffffff80;
+  background: #e2e2e2;
   box-shadow: 1px 5px 7px 1px #00000033;
+}
+
+::placeholder{
+  font-weight: 450;
+  opacity: 1;
 }
 
 .two-col{

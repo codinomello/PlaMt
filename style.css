@@ -11,6 +11,12 @@ html{
   font-size: 16px;
 }
 
+body{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 a{
   text-decoration: none;
   color: inherit;
@@ -18,21 +24,68 @@ a{
 
 #mapa{
   font-weight: 500;
-  height: 66vh;
-  width: 52vw;
+  height: 50vh;
+  width: 50vw;
   max-width: 100%;
   min-height: 100%;
 }
 
-body{
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
-  opacity: 0;
+main{
+  display: flex;
+  overflow: auto;
+  min-height: 70vh;
   transform: translateX(-100px);
   transition: background-color 0.3s, color 0.3s;
   animation: fadeIn 1.5s ease forwards;
+  box-shadow: 5px 2.5px 2.5px #0000001a;
+  opacity: 0;
+}
+
+aside{
+  text-align: center;
+  height: 100%;
+  width: 25%;
+  padding: 1%;
+}
+
+section{
+  justify-content: center;
+}
+
+article{
+  height: inherit;
+  width: 25%;
+  padding: 1%;
+}
+
+#baixo{
+  width: 100%;
+  min-height: 20vh;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 5px 2.5px 2.5px #0000001a;
+}
+
+#rodapé{
+  display: flex;
+  background-color: #555555;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+
+#rodapé img{
+  width: 2rem;
+  height: 2rem;
+  margin: 0rem 1rem 0rem 0.5rem;
+  justify-content: center;
+}
+
+#rodapé p{
+  font-size: 0.9rem;
+  display: flex;
+  text-align: center;
 }
 
 .plamt-container{
@@ -66,6 +119,11 @@ body{
 }
 
 .arco-íris:nth-child(1){animation-delay: 0s;} .arco-íris:nth-child(2){animation-delay: 0.2s;} .arco-íris:nth-child(3){animation-delay: 0.4s;} .arco-íris:nth-child(4){animation-delay: 0.6s;} .arco-íris:nth-child(5){animation-delay: 0.8s;} .arco-íris:nth-child(6){animation-delay: 1s;}
+
+::placeholder {
+  color: inherit;
+  opacity: 1;
+}
 
 .nav{
   top: 0;
@@ -117,63 +175,11 @@ body{
   height: 40px;
   font-size: 0.9rem;
   font-weight: 500;
-  background: #ffffff66;
+  background: #fff;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: .3s ease;
-}
-
-main{
-  display: flex;
-  overflow: auto;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
-}
-
-aside{
-  text-align: center;
-  height: 100%;
-  width: 25%;
-  padding: 1%;
-}
-
-section{
-  justify-content: center;
-}
-
-article{
-  height: inherit;
-  width: 25%;
-  padding: 1%;
-}
-
-#baixo{
-  height: 12rem;
-  text-align: center;
-  justify-content: center;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
-}
-
-#rodapé{
-  display: flex;
-  background-color: #555555;
-  color: #ffffff;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1%;
-}
-
-#ícones{
-  width: 2rem;
-  height: 2rem;
-  margin: 0rem 1rem 0rem 0.5rem;
-  justify-content: center;
-}
-
-#copyright{
-  font-size: 0.9rem;
-  display: flex;
-  text-align: center;
 }
 
 /* sidebar */
@@ -190,7 +196,7 @@ article{
   align-items: center;
   margin-left: auto;
   border-radius: 15px;
-  padding: 2%;
+  padding: 1.5%;
 }
 
 #pesquisar input{
@@ -213,28 +219,23 @@ article{
 
 #pesquisar-lupa{
   margin-left: auto;
-  margin-right: 2.5%;
-}
-
-::placeholder {
-  color: inherit;
-  opacity: 1;
-}
-
-#reinos-container{
-  text-align: center;
-  display: inline-block;
-  padding: 1%;
+  margin-right: 5px;
 }
 
 .reinos{
   justify-content: center;
 }
 
+#reinos-contêiner{
+  text-align: center;
+  display: inline-block;
+  padding: 1%;
+}
+
 .reinos #animalia{
   height: 2.5rem;
   width: 6rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 550;
   color: #ff0000;
   border: transparent;
@@ -247,13 +248,13 @@ article{
 .reinos #animalia:hover{
   background-color: #ff0000;
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
 }
 
 .reinos #plantae{
   height: 2.5rem;
   width: 6rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 550;
   color: #008000;
   border: transparent;
@@ -266,13 +267,13 @@ article{
 .reinos #plantae:hover{
   background-color: #008000;
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
 }
 
 .reinos #fungi{
   height: 2.5rem;
   width: 6rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 550;
   color: #0000ff;
   border: transparent;
@@ -285,12 +286,12 @@ article{
 .reinos #fungi:hover{
   background-color: #0000ff;
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
 }
 
 .espécies{
-  font-size: 0.9em;
-  font-weight: 525;
+  font-size: 1rem;
+  font-weight: 500;
   justify-content: center;
   text-align: center;
 }
@@ -321,39 +322,71 @@ article{
 /* notícias */
 
 #notícias{
-  font-size: 1.2rem;
-  font-weight: 550;
   justify-content: center;
   text-align: center;
   padding: 1rem 0rem 0rem 0rem;
+  text-decoration: underline;
 }
 
-#span-notícias{
+#notícias-p{
   text-align: center;
-  padding: 0.1rem;
-  font-weight: 550;
-  text-decoration: overline;
 }
 
-#container-notícias{
+#contêiner-notícias{
+  font-size: 1rem;
+  font-weight: 500;
   padding: 2.5% 0% 0% 5%;
-  font-weight: 525;
+}
+
+#contêiner-notícias header{
+  text-align: center;
+}
+
+#news-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.news-item{
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px #0000001a;
+  margin: 1rem;
+  padding: 1rem;
+  width: 300px;
+}
+
+.news-item img{
+  max-width: 100%;
+  height: auto;
+}
+
+.news-item h2{
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.news-item p{
+  font-size: 1rem;
+
+}
+
+.news-item a{
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
 }
 
 /* baixo */
 
-#baixo-div{
-  margin-top: 15px;
-  height: 2.5px;
-  box-shadow: 2.5px 2.5px 2.5px #0000001a;
-}
-
 #legenda, #seções{
   font-size: 1.1rem;
-  font-weight: 525;
+  font-weight: 550;
   justify-content: center;
   text-align: center;
-  padding: 0.5%;
+  padding: 0.25%;
 }
 
 #imgbiomas, #imgseções{
@@ -376,7 +409,7 @@ article{
 
 #libiomas, #liseções{
   font-size: 1rem;
-  font-weight: 525;
+  font-weight: 500;
   list-style: none;
   margin: 0rem 0.5rem 0rem 0.5rem;
   clear: auto;
@@ -415,7 +448,7 @@ article{
 
 #brasil path{
   fill: #1da1f2;
-  stroke: #ffffff;
+  stroke: #fff;
   stroke-width: 1px;
 }
 
@@ -431,7 +464,7 @@ article{
   position: absolute;
   font-size: 18px;
   text-align: center;
-  background: #ffffff;
+  background: #fff;
   padding: 10px 15px;
   z-index: 5;
   height: 30px;
@@ -457,12 +490,12 @@ article{
   margin-left: -10px;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #ffffff;
+  border-top: 10px solid #fff;
 }
 
 #biomas{
   font-size: 1.6rem;
-  color: green;
+  color: #008000;
   text-align: center;
 }
 
@@ -614,19 +647,24 @@ article{
   padding-top: 1%;
 }
 
-#clima-seções{
+#clima-jogos-seções{
   box-shadow: 5px 2.5px 2.5px #0000001a;
   padding-bottom: 0.5%;
   text-align: center;
 }
 
+#clima-jogos-flex{
+  display: inline-flex;
+}
+
 #clima-btn, #jogos-btn{
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 550;
+  width: 18rem;
   border: transparent;
   border-radius: 12px;
   transition-duration: 0.4s;
-  padding: 0.5%;
+  padding: 1%;
   color: inherit;
   background-color: inherit;
   margin: 1rem 0rem 1rem 0rem;
@@ -635,7 +673,7 @@ article{
 #clima-btn:hover{
   background: linear-gradient(90deg, #4a7dff, #21d356);
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
 }
 
 #jogos{
@@ -643,18 +681,13 @@ article{
   color: #8a2be2;
   text-align: center;
   padding-top: 1%;
-}
-
-#jogos-seções{
-  box-shadow: 5px 2.5px 2.5px #0000001a;
-  padding-bottom: 0.5%;
-  text-align: center;
+  display: flex;
 }
 
 #jogos-btn:hover{
   background: linear-gradient(90deg, #4a7dff, #8a2be2);
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
 }
 
 /* cards */
@@ -701,7 +734,7 @@ article{
 
 .back{
   background-color: #000000;
-  color: #ffffff;
+  color: #fff;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -736,7 +769,7 @@ article{
   display: block;
   background: #ebebeb;
   border-radius: 100px;
-  box-shadow: inset 0rem 3rem 5rem #00000066, inset -0rem -3rem 5rem #ffffff;
+  box-shadow: inset 0rem 3rem 5rem #00000066, inset -0rem -3rem 5rem #fff;
   cursor: pointer;
 }
 
@@ -789,14 +822,14 @@ article{
 }
 
 body.light-mode{
-  background-color: #ffffff;
+  background-color: #fff;
   color: #000000;
   transition: .5s ease-in-out;
 }
 
 body.dark-mode{
   background-color: #121212;
-  color: #ffffff;
+  color: #fff;
   box-shadow: 5px 2.5px 2.5px #0000001a;
   transition: .5s ease-in-out;
 }
@@ -810,11 +843,11 @@ body.dark-mode #pesquisar{
 }
 
 body.dark-mode #pesquisar-lupa{
-  color: #ffffff;
+  color: #fff;
 }
 
 body.dark-mode #pesquisar input{
-  color: #ffffff;
+  color: #fff;
 }
 
 /* slider */
@@ -859,11 +892,11 @@ body.dark-mode #pesquisar input{
 
 #prevBtn, #nextBtn{
   background-color: #00000080;
-  color: #ffffff;
+  color: #fff;
   border: none;
   border-radius: 12px;
   padding: 1rem 1.2rem;
-  margin: 0px 8px;
+  margin: 0 8px;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease;
