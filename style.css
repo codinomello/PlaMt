@@ -642,7 +642,7 @@ article{
 
 #clima{
   font: 1.6rem;
-  color: blue;
+  color: #0000ff;
   text-align: center;
   padding-top: 1%;
 }
@@ -653,24 +653,32 @@ article{
   text-align: center;
 }
 
-#clima-jogos-flex{
-  display: inline-flex;
+#clima-jogos-contêiner{
+  display: flex;
+  justify-content: center;
+  gap: 220px;
 }
 
-#clima-btn, #jogos-btn{
+#clima-jogos-botões{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#clima-botão, #jogos-botão{
   font-size: 1rem;
   font-weight: 550;
   width: 18rem;
   border: transparent;
   border-radius: 12px;
   transition-duration: 0.4s;
-  padding: 1%;
+  padding: 0.5%;
   color: inherit;
   background-color: inherit;
   margin: 1rem 0rem 1rem 0rem;
 }
 
-#clima-btn:hover{
+#clima-botão:hover{
   background: linear-gradient(90deg, #4a7dff, #21d356);
   cursor: pointer;
   color: #fff;
@@ -681,10 +689,10 @@ article{
   color: #8a2be2;
   text-align: center;
   padding-top: 1%;
-  display: flex;
+  margin-left: 10px;
 }
 
-#jogos-btn:hover{
+#jogos-botão:hover{
   background: linear-gradient(90deg, #4a7dff, #8a2be2);
   cursor: pointer;
   color: #fff;
