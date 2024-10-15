@@ -28,26 +28,25 @@ function fetchNews() {
     return response.json();
   })
   .then(data => {
-    const newsSection = document.getElementById('news-section');
+    const newsSection = document.getElementById('notícias-seção');
     if (data.articles.length === 0) {
       newsSection.innerHTML = '<p>Não há notícias disponíveis no momento.</p>';
       return;
     }
   data.articles.forEach(article => {
     const newsItem = document.createElement('div');
-    newsItem.classList.add('news-item');
+    newsItem.classList.add('notícias-item');
     newsItem.innerHTML = `
     <img src="${article.urlToImage}" alt="Imagem da notícia">
     <h2>${article.title}</h2>
     <p>${article.description || 'Sem descrição disponível'}</p>
-    <a href="${article.url}" target="_blank">Leia mais</a>
-    `;
+    <a href="${article.url}" target="_blank">Leia mais</a>`;
     newsSection.appendChild(newsItem);
     });
   })
   .catch(error => {
     console.error('Erro ao buscar as notícias:', error);
-    const newsSection = document.getElementById('news-section');
+    const newsSection = document.getElementById('notícias-seção');
     newsSection.innerHTML = `<p>Ocorreu um erro ao carregar as notícias. Tente novamente mais tarde.</p>`;
   });
 }

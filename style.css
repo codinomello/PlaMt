@@ -58,14 +58,6 @@ article{
   padding: 1%;
 }
 
-#baixo{
-  width: 100%;
-  min-height: 20vh;
-  text-align: center;
-  justify-content: center;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
-}
-
 #rodapé{
   display: flex;
   background-color: #555555;
@@ -184,19 +176,19 @@ article{
 
 /* sidebar */
 
-#container-pesquisar{
-  border-radius: 1.2rem;
-  padding: 0.8%;
-  margin: 1rem 0rem 1rem 0rem;
-  box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
-}
-
 #pesquisar{
   display: flex;
   align-items: center;
   margin-left: auto;
   border-radius: 15px;
   padding: 1.5%;
+}
+
+#pesquisar-contêiner{
+  border-radius: 1.2rem;
+  padding: 0.8%;
+  margin: 1rem 0rem 1rem 0rem;
+  box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
 }
 
 #pesquisar input{
@@ -290,16 +282,14 @@ article{
 }
 
 .espécies{
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  justify-content: center;
-  text-align: center;
 }
 
 /* carrossel */
 
-.container-slide{
-  height: 17rem;
+.slider-contêiner{
+  height: 19rem;
   width: 100%;
   margin-top: 0.5rem;
   text-align: center;
@@ -309,12 +299,12 @@ article{
   box-shadow: 5px 2.5px 2.5px #0000001a;
 }
 
-.wrapper-slide{
+.slider-wrapper{
   display: flex;
   animation: slide 35s infinite ease-in-out;
 }
 
-.side-images{
+.slider-imagens{
   max-width: 100%;
   max-height: 100%;
 }
@@ -322,34 +312,34 @@ article{
 /* notícias */
 
 #notícias{
+  font-size: 1.2rem;
   justify-content: center;
   text-align: center;
-  padding: 1rem 0rem 0rem 0rem;
-  text-decoration: underline;
+  margin: 1rem 0rem 0rem 0rem;
 }
 
-#notícias-p{
+#notícias-versão{
   text-align: center;
 }
 
-#contêiner-notícias{
+#notícias-contêiner{
   font-size: 1rem;
   font-weight: 500;
   padding: 2.5% 0% 0% 5%;
 }
 
-#contêiner-notícias header{
+#notícias-contêiner header{
   text-align: center;
 }
 
-#news-section{
+#notícias-seção{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 2rem;
 }
 
-.news-item{
+.notícias-item{
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 2px 5px #0000001a;
@@ -358,22 +348,21 @@ article{
   width: 300px;
 }
 
-.news-item img{
+.notícias-item img{
   max-width: 100%;
   height: auto;
 }
 
-.news-item h2{
+.notícias-item h2{
   font-size: 1.2rem;
   color: #333;
 }
 
-.news-item p{
+.notícias-item p{
   font-size: 1rem;
-
 }
 
-.news-item a{
+.notícias-item a{
   text-decoration: none;
   color: #007BFF;
   font-weight: bold;
@@ -381,15 +370,32 @@ article{
 
 /* baixo */
 
+#baixo{
+  width: 100%;
+  min-height: 18vh;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 5px 2.5px 2.5px #0000001a;
+}
+
 #legenda, #seções{
   font-size: 1.1rem;
   font-weight: 550;
   justify-content: center;
   text-align: center;
-  padding: 0.25%;
+  margin: 0.5rem 0rem 0.5rem 0rem;
 }
 
-#imgbiomas, #imgseções{
+#legenda-imagens{
+  width: 1.5rem;
+  height: 1.5rem;
+  position: flex;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 100%;
+}
+
+#seções-imagens{
   width: 1.5rem;
   height: 1.5rem;
   position: flex;
@@ -397,21 +403,21 @@ article{
   margin-right: 0.25rem;
 }
 
-#ulbiomas, #ulseções{
+#legenda-ul, #seções-ul{
   font-size: 1.2rem;
-  font-weight: 550;
   display: flex;
   clear: both;
   text-decoration: none;
   justify-content: center;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
-#libiomas, #liseções{
+#legenda-li, #seções-li{
   font-size: 1rem;
   font-weight: 500;
   list-style: none;
-  margin: 0rem 0.5rem 0rem 0.5rem;
+  margin: 0rem 0.75rem 0rem 0.25rem;
   clear: auto;
 }
 
@@ -589,7 +595,7 @@ article{
   border-radius: 50px;
 }
 
-#biomas-container-texto{
+#biomas-contêiner-texto{
   display: inline-flex;
 }
 
@@ -602,8 +608,37 @@ article{
   box-shadow: 0px 0px 2.5px #0000001a;
 }
 
+#biomas-tecnologia{
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 550;
+  text-align: center;
+  padding: 1%;
+  box-shadow: 0px 0px 2.5px #0000001a;
+}
+
+#biomas-negrito{
+  font-weight: bold;
+}
+
 #biomas-itálico{
   font-style: italic;
+}
+
+.biomas-tecnologia-highlight{
+  color: #4e4e4e;
+  font-weight: bold;
+  background-color: #f4fcda;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.biomas-tecnologia-highlight:hover{
+  background-color: #88a756;
+  color: white;
+  box-shadow: 0 4px 10px #00000033;
+  transform: scale(1.1);
 }
 
 #fauna{
@@ -656,26 +691,26 @@ article{
 #clima-jogos-contêiner{
   display: flex;
   justify-content: center;
-  gap: 220px;
+  gap: 10%;
 }
 
 #clima-jogos-botões{
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1%;
 }
 
 #clima-botão, #jogos-botão{
   font-size: 1rem;
   font-weight: 550;
-  width: 18rem;
+  width: 15rem;
   border: transparent;
   border-radius: 12px;
   transition-duration: 0.4s;
   padding: 0.5%;
   color: inherit;
   background-color: inherit;
-  margin: 1rem 0rem 1rem 0rem;
+  margin-top: 1rem;
 }
 
 #clima-botão:hover{
@@ -700,13 +735,13 @@ article{
 
 /* cards */
 
-#contcards{
+#cards{
   display: flex;
   justify-content: space-evenly;
   text-align: initial;
 }
 
-.container-cards{
+.cards-contêiner{
   height: 18rem;
   width: 25rem;
   perspective: 50rem;
@@ -714,7 +749,7 @@ article{
   padding: 1%;
 }
 
-.container-cards:hover > .card{
+.cards-contêiner:hover > .card{
   cursor: pointer;
   transform: rotateY(180deg);
 }
@@ -737,7 +772,7 @@ article{
 }
 
 .front{
-  background-image: url(https://source.unsplash.com/random/350x500);
+  background-image: url();
 }
 
 .back{
@@ -760,6 +795,62 @@ article{
   font-size: 0.9rem;
   padding: 1rem 1rem 0rem 1rem;
   justify-content: center;
+}
+
+/* slider */
+
+.slider-container{
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 1rem;
+}
+
+.slider{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  overflow: hidden;
+}
+
+.slides{
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.controls{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+#prevBtn, #nextBtn{
+  background-color: #00000080;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 0 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#prevBtn:hover, #nextBtn:hover{
+  background-color: #000000b3;
 }
 
 /* modo escuro */
@@ -842,76 +933,16 @@ body.dark-mode{
   transition: .5s ease-in-out;
 }
 
-body.dark-mode #container-pesquisar{
-  background-color: white;
+body.dark-mode #pesquisar-contêiner{
+  background-color: #fff;
+}
+
+body.dark-mode #pesquisar-lupa, body.dark-mode #pesquisar input{
+  color: #fff;
 }
 
 body.dark-mode #pesquisar{
-  background-color: black;
-}
-
-body.dark-mode #pesquisar-lupa{
-  color: #fff;
-}
-
-body.dark-mode #pesquisar input{
-  color: #fff;
-}
-
-/* slider */
-
-.slider-container{
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 40px auto;
-  overflow: hidden;
-  border: 2px solid #ddd;
-  border-radius: 1rem;
-}
-
-.slider{
-  width: 100%;
-  height: 400px;
-  display: flex;
-  overflow: hidden;
-}
-
-.slides{
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slides img{
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-.controls{
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-
-#prevBtn, #nextBtn{
-  background-color: #00000080;
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  padding: 1rem 1.2rem;
-  margin: 0 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-#prevBtn:hover, #nextBtn:hover{
-  background-color: #000000b3;
+  background-color: #121212;
 }
 
 /* animações & transições */
