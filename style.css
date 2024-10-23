@@ -80,7 +80,7 @@ article{
   text-align: center;
 }
 
-.plamt-container{
+.plamt-contêiner{
   width: 3.35rem;
   height: 3.25rem;
   display: flex;
@@ -91,7 +91,7 @@ article{
   background-size: cover;
 }
 
-.plamt-container div:hover{
+.plamt-contêiner div:hover{
   background-image: url('./imagens/ícones/plamt-icon.png');
 }
 
@@ -288,7 +288,7 @@ article{
 
 /* carrossel */
 
-.slider-contêiner{
+.slider-conjunto{
   height: 19rem;
   width: 100%;
   margin-top: 0.5rem;
@@ -312,7 +312,7 @@ article{
 /* notícias */
 
 #notícias{
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   justify-content: center;
   text-align: center;
   margin: 1rem 0rem 0rem 0rem;
@@ -354,7 +354,6 @@ article{
 }
 
 .notícias-item h2{
-  font-size: 1.2rem;
   color: #333;
 }
 
@@ -428,8 +427,43 @@ article{
   box-shadow: 5px 2.5px 2.5px #0000001a;
 }
 
+#brasil-contêiner-texto{
+  padding: 1%;
+  box-shadow: 0px 0px 2.5px #0000001a;
+}
+
+#brasil-texto{
+  font-size: 1rem;
+  font-weight: 550;
+  text-align: center;
+  padding: 1%;
+}
+
+#brasil-span{
+  font-weight: 800;
+}
+
+#brasil-ul{
+  font-size: 1rem;
+  font-weight: 550;
+  text-align: justify;
+  padding: 1%;
+}
+
+#brasil-li{
+  font-size: 1rem;
+  font-weight: 550;
+  text-align: justify;
+  padding: 1%;
+}
+
+#brasil-li:nth-child(1)::marker{color: #63ab3f} #brasil-li:nth-child(2)::marker{color: #f0b541} #brasil-li:nth-child(3)::marker{color: #ffae70} #brasil-li:nth-child(4)::marker{color: #4fa4b8} #brasil-li:nth-child(4)::marker{color: #686f99}
+
 #brasil svg{
   width: 40%;
+  height: 40%;
+  margin: 1em;
+  float: left;
 }
 
 #brasil .norte{
@@ -453,7 +487,7 @@ article{
 }
 
 #brasil path{
-  fill: #1da1f2;
+  fill: #d91df2;
   stroke: #fff;
   stroke-width: 1px;
 }
@@ -559,7 +593,7 @@ article{
   text-align: center;
 }
 
-#container-biomas{
+#biomas-contêiner{
   display: flex;
   gap: 20px;
   padding: 20px;
@@ -653,6 +687,17 @@ article{
   padding-bottom: 0.5%;
 }
 
+#fauna-contêiner-texto{
+  justify-content: center;
+}
+
+#fauna-texto{
+  font-size: 1rem;
+  font-weight: 550;
+  text-align: center;
+  padding: 1%;
+}
+
 #flora{
   font: 1.6rem;
   color: gold;
@@ -662,7 +707,6 @@ article{
 
 #flora-seções{
   box-shadow: 5px 2.5px 2.5px #0000001a;
-  padding-bottom: 0.5%;
 }
 
 #flora-main{
@@ -675,11 +719,33 @@ article{
   border-radius: 2rem;
 }
 
+#flora-contêiner-texto{
+  justify-content: center;
+}
+
+#flora-texto{
+  font-size: 1rem;
+  font-weight: 550;
+  text-align: center;
+  padding: 1%;
+}
+
 #clima{
   font: 1.6rem;
   color: #0000ff;
   text-align: center;
   padding-top: 1%;
+}
+
+#jogos{
+  font: 1.6rem;
+  color: #8a2be2;
+  text-align: center;
+  padding-top: 1%;
+}
+
+#clima:hover, #jogos:hover{
+  color: #fff;
 }
 
 #clima-jogos-seções{
@@ -691,19 +757,13 @@ article{
 #clima-jogos-contêiner{
   display: flex;
   justify-content: center;
-  gap: 10%;
-}
-
-#clima-jogos-botões{
-  display: flex;
-  justify-content: center;
-  gap: 1%;
+  gap: 25%;
 }
 
 #clima-botão, #jogos-botão{
   font-size: 1rem;
   font-weight: 550;
-  width: 15rem;
+  width: 9rem;
   border: transparent;
   border-radius: 12px;
   transition-duration: 0.4s;
@@ -716,20 +776,14 @@ article{
 #clima-botão:hover{
   background: linear-gradient(90deg, #4a7dff, #21d356);
   cursor: pointer;
-  color: #fff;
-}
-
-#jogos{
-  font: 1.6rem;
-  color: #8a2be2;
-  text-align: center;
-  padding-top: 1%;
-  margin-left: 10px;
 }
 
 #jogos-botão:hover{
   background: linear-gradient(90deg, #4a7dff, #8a2be2);
   cursor: pointer;
+}
+
+#clima-botão:hover h1, #jogos-botão:hover h1{
   color: #fff;
 }
 
@@ -762,7 +816,7 @@ article{
   transform-style: preserve-3d;
 }
 
-.front, .back{
+.frente, .verso{
   height: 100%;
   width: 100%;
   border-radius: 20px;
@@ -771,11 +825,11 @@ article{
   backface-visibility: hidden;
 }
 
-.front{
+.frente{
   background-image: url();
 }
 
-.back{
+.verso{
   background-color: #000000;
   color: #fff;
   transform: rotateY(180deg);
@@ -786,12 +840,12 @@ article{
   gap: none;
 }
 
-.back h1{
+.verso h1{
   font-size: 1.4rem;
   margin-top: 1rem;
 }
 
-.back p{
+.verso p{
   font-size: 0.9rem;
   padding: 1rem 1rem 0rem 1rem;
   justify-content: center;
@@ -799,11 +853,12 @@ article{
 
 /* slider */
 
-.slider-container{
+.slider-contêiner{
   position: relative;
   width: 100%;
   max-width: 600px;
-  margin: 40px auto;
+  height: 400px;
+  margin: 15px auto 15px auto;
   overflow: hidden;
   border: 2px solid #ddd;
   border-radius: 1rem;
@@ -811,7 +866,7 @@ article{
 
 .slider{
   width: 100%;
-  height: 400px;
+  height: 100%;
   display: flex;
   overflow: hidden;
 }
@@ -827,7 +882,7 @@ article{
   object-fit: cover;
 }
 
-.controls{
+.controles{
   position: absolute;
   width: 100%;
   top: 50%;
@@ -837,7 +892,7 @@ article{
   z-index: 2;
 }
 
-#prevBtn, #nextBtn{
+#anterior, #posterior{
   background-color: #00000080;
   color: #fff;
   border: none;
@@ -849,7 +904,7 @@ article{
   transition: background-color 0.3s ease;
 }
 
-#prevBtn:hover, #nextBtn:hover{
+#anterior:hover, #posterior:hover{
   background-color: #000000b3;
 }
 

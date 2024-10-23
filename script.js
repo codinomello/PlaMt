@@ -94,8 +94,8 @@ function nextSlide(){
 // slider
 
 const slider = document.querySelector('.slides');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('anterior');
+const nextBtn = document.getElementById('posterior');
 
 let currentIndex = 0;
 const totalSlides = document.querySelectorAll('.slides img').length;
