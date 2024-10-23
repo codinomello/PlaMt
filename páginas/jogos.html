@@ -14,7 +14,7 @@
 <div class="app">
 <h1>Quiz</h1>
 <div class="quiz">
-  <h2 id="question">Questão</h2>
+  <h2 id="question">Questão</h2><br>
     <div id="answer-buttons">
     <button class="btn">Resposta 1</button>
     <button class="btn">Resposta 2</button>
@@ -28,124 +28,13 @@
 </body>
 
 <style>
-/* main */
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
-}
-
-html{
-  font-size: 16px;
-}
-
-a{
-  text-decoration: none;
-  color: inherit;
-}
-
-#mapa{
-  font-weight: 500;
-  height: 66vh;
-  width: 52vw;
-  max-width: 100%;
-  max-height: 100%;
-}
-
+/* jogos */
 body{
   background: linear-gradient(90deg, #4a7dff, #8a2be2);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.plamt-container{
-  width: 3.35rem;
-  height: 3.25rem;
-  display: flex;
-  margin-right: 1rem;
-  border: none;
-  background-image: url('./imagens/ícones/plamt-icon.png');
-  transition: background-image 0.8s ease-in-out;
-  background-size: cover;
-}
-
-.plamt-container div:hover{
-  background-image: url('./imagens/ícones/plamt-icon.png');
-}
-
-#plamt{
-  font-size: 0;
-  font-weight: 550;
-  display: inline-block;
-  margin-top: 0.5rem;
-}
-
-.arco-íris{
-  font-size: 2.8rem;
-  animation: 4s changeCor infinite ease-in-out;
-}
-
-.arco-íris:nth-child(1){animation-delay: 0s;} .arco-íris:nth-child(2){animation-delay: 0.2s;} .arco-íris:nth-child(3){animation-delay: 0.4s;} .arco-íris:nth-child(4){animation-delay: 0.6s;} .arco-íris:nth-child(5){animation-delay: 0.8s;} .arco-íris:nth-child(6){animation-delay: 1s;}
-
-.nav{
-  top: 0;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 108px;
-  line-height: 100px;
-  z-index: 100;
-  font-size: 1.2rem;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
-}
-
-.nav a{
-  height: 100%;
-  padding: 0rem 1.5rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-}
-
-.nav-logo p{
-  font-size: 2rem;
-}
-
-.nav-menu ul{
-  display: flex;
-}
-
-.nav-menu ul li{
-  margin-top: 5px;
-  list-style-type: none;
-}
-
-.nav-menu ul li .link{
-  text-decoration: none;
-  font-weight: 550;
-  padding-bottom: 0px;
-  margin: 0 25px;
-}
-
-.link:hover, .active{
-  border-bottom: 2px solid;
-}
-
-.nav-button .btn{
-  width: 120px;
-  height: 40px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  background: #ffffff66;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: .3s ease;
 }
 
 #retornar{
@@ -158,8 +47,6 @@ body{
 #retornar:hover{
   cursor: pointer;
 }
-
-/* jogos */
 
 .app{
   background: #fff;
@@ -212,19 +99,19 @@ body{
 }
 
 #next-btn{
-  background: #121212;
+  background: #1f1f1f;
   color: #fff;
   font-weight: 500;
-  border: 0;
-  padding: 10px;
+  font-size: 1rem;
+  padding: 8px;
   margin: 20px auto 0;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
   display: none;
 }
 
 .correct{
-  background: #008000;
+  background: #00be00;
 }
 
 .incorrect{
@@ -242,28 +129,28 @@ const questions = [
   { text: "Ovelha", correct: false}, ]
   },
 
-  { question: "Which of the following keywords is used to define a variable in Javascript?",
+  { question: "Qual é o bioma brasileiro caracterizado por uma vegetação predominante de florestas densas e uma alta biodiversidade?",
     answers: [
-  { text: "var", correct: false},
-  { text: "let", correct: false},
-  { text: "Both A and B", correct: true},
-  { text: "None of the above", correct: false}, ]
+  { text: "Cerrado", correct: false},
+  { text: "Caatinga", correct: false},
+  { text: "Amazônia", correct: true},
+  { text: "Pampa", correct: false}, ]
   },
 
-  { question: "What is the result of '5' + 3 in JavaScript?",
+  { question: "Qual dos seguintes animais é típico do bioma da Mata Atlântica?",
     answers: [
-  { text: "8", correct: false},
-  { text: "53", correct: true},
-  { text: "15", correct: false},
-  { text: "NaN", correct: false}, ]
+  { text: "Tamanduá-bandeira", correct: false},
+  { text: "Lobo-guará", correct: true},
+  { text: "Onça-pintada", correct: false},
+  { text: "Carcará", correct: false}, ]
   },
 
-  { question: "Which function is used to print a message to the console in JavaScript?",
+  { question: "Qual planta é um símbolo da vegetação do Cerrado, conhecida por suas adaptações ao fogo e solo ácido?",
     answers: [
-  { text: "print()", correct: false},
-  { text: "console.log()", correct: true},
-  { text: "alert()", correct: false},
-  { text: "log()", correct: false}, ]
+  { text: "Pau-brasil", correct: false},
+  { text: "Pequi", correct: true},
+  { text: "Buriti", correct: false},
+  { text: "Jequitibá", correct: false}, ]
   }
 ];
 
@@ -316,7 +203,7 @@ function selectAnswer(e) {
     selectedBtn.classList.add("incorrect");
   }
   Array.from(answerButtons.children).forEach(button => {
-  if (button.dataset.correct === "true") {
+  if (button.dataset.correct === "true"){
     button.classList.add("correct");
   }
   button.disabled = true;
@@ -324,16 +211,16 @@ function selectAnswer(e) {
   nextButton.style.display = "block";
 }
 
-function showScore() {
+function showScore(){
   resetState();
-  questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-  nextButton.innerHTML = "Play Again";
+  questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
+  nextButton.innerHTML = "Jogar novamente!";
   nextButton.style.display = "block";
 }
 
 function handleNextButton() {
   currentQuestionIndex++;
-  if (currentQuestionIndex < questions.length) {
+  if (currentQuestionIndex < questions.length){
     showQuestion();
   }
   else{
@@ -345,7 +232,7 @@ nextButton.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length){
     handleNextButton();
   } 
-  else {
+  else{
     startQuiz();
   }
 })

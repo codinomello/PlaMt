@@ -71,31 +71,7 @@
 </body>
 
 <style>
-/* main */
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', 'Inter', 'Noto Color Emoji', 'Times New Roman';
-}
-
-html{
-  font-size: 16px;
-}
-
-a{
-  text-decoration: none;
-  color: inherit;
-}
-
-#mapa{
-  font-weight: 500;
-  height: 66vh;
-  width: 52vw;
-  max-width: 100%;
-  max-height: 100%;
-}
+/* clima */
 
 body{
   background: linear-gradient(90deg, #4a7dff, #21d356);
@@ -104,94 +80,6 @@ body{
   align-items: center;
   justify-content: center;
 }
-
-.plamt-container{
-  width: 3.35rem;
-  height: 3.25rem;
-  display: flex;
-  margin-right: 1rem;
-  border: none;
-  background-image: url('./imagens/ícones/plamt-icon.png');
-  transition: background-image 0.8s ease-in-out;
-  background-size: cover;
-}
-
-.plamt-container div:hover{
-  background-image: url('./imagens/ícones/plamt-icon.png');
-}
-
-#plamt{
-  font-size: 0;
-  font-weight: 550;
-  display: inline-block;
-  margin-top: 0.5rem;
-}
-
-.arco-íris{
-  font-size: 2.8rem;
-  animation: 4s changeCor infinite ease-in-out;
-}
-
-.arco-íris:nth-child(1){animation-delay: 0s;} .arco-íris:nth-child(2){animation-delay: 0.2s;} .arco-íris:nth-child(3){animation-delay: 0.4s;} .arco-íris:nth-child(4){animation-delay: 0.6s;} .arco-íris:nth-child(5){animation-delay: 0.8s;} .arco-íris:nth-child(6){animation-delay: 1s;}
-
-.nav{
-  top: 0;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 108px;
-  line-height: 100px;
-  z-index: 100;
-  font-size: 1.2rem;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
-}
-
-.nav a{
-  height: 100%;
-  padding: 0rem 1.5rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-}
-
-.nav-logo p{
-  font-size: 2rem;
-}
-
-.nav-menu ul{
-  display: flex;
-}
-
-.nav-menu ul li{
-  margin-top: 5px;
-  list-style-type: none;
-}
-
-.nav-menu ul li .link{
-  text-decoration: none;
-  font-weight: 550;
-  padding-bottom: 0px;
-  margin: 0 25px;
-}
-
-.link:hover, .active{
-  border-bottom: 2px solid;
-}
-
-.nav-button .btn{
-  width: 120px;
-  height: 40px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  background: #ffffff66;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: .3s ease;
-}
-
-/* clima */
 
 #clima{
   font-size: 2.5rem;
@@ -227,9 +115,10 @@ body{
 }
 
 #search input{
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: inherit;
   border: none;
+  width: 90%;
   background-color: transparent;
 }
 
@@ -237,13 +126,14 @@ body{
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-left: auto;
 }
 
 #search input:focus-visible{
   outline: none;
 }
 
-::placeholder {
+::placeholder{
   color: inherit;
   opacity: 1;
 }
@@ -268,8 +158,6 @@ body{
   align-items: center;
   justify-content: space-around;
   gap: 20px;
-  background: linear-gradient(#4a7dff, #37df8b);
-  color: #ffffff;
   border-radius: 20px;
   padding: 20px;
 }
