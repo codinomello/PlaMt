@@ -525,22 +525,20 @@
 
 <section id="fauna-seções">
   <h1 id="fauna">Fauna</h1>
-  <div class="slider-contêiner">
-    <div class="slider">
-      <div class="slides">
-        <img src="./imagens/animalia/murucututu-de-barriga-amarela.jpg" alt="Slide 1">
-        <img src="./imagens/animalia/jaguatirica.jpg" alt="Slide 2">
-        <img src="./imagens/animalia/arara-canindé.jpg" alt="Slide 3">
-        <img src="./imagens/animalia/tamanduá-mirim.jpg" alt="Slide 4">
-      </div>
+  <div class="fotos-contêiner">
+    <div class="fotos">
+      <img src="./imagens/animalia/murucututu-de-barriga-amarela.jpg" alt="Slide 1">
+      <img src="./imagens/animalia/jaguatirica.jpg" alt="Slide 2">
+      <img src="./imagens/animalia/arara-canindé.jpg" alt="Slide 3">
+      <img src="./imagens/animalia/tamanduá-mirim.jpg" alt="Slide 4">
     </div>
     <div class="controles">
       <button id="anterior"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
       <button id="posterior"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
     </div>
   </div>
-  <div id="flora-contêiner-texto">
-    <p id="flora-texto">A Fauna do Brasil envolve o conjunto de espécies de animais distribuídas por todo o território brasileiro. Na selva amazônica existe uma abundante fauna de peixes e mamíferos aquáticos que habitam os rios e lagos. As espécies mais conhecidas são o pirarucu e o peixe-boi (este em via de extinção). Nas várzeas existem jacarés e tartarugas (também ameaçados de extinção), bem como algumas espécies de anfíbios, notadamente a lontra e a capivara e certas serpentes, como a sucuri. Nas florestas em geral predominam a anta, a onça, os macacos, o preguiça, o caititu, a jiboia, a sucuri, os papagaios, araras e tucanos e uma imensa variedade de insetos e aracnídeos.</p>
+  <div id="fauna-contêiner-texto">
+    <p id="fauna-texto">A Fauna do Brasil envolve o conjunto de espécies de animais distribuídas por todo o território brasileiro. Na selva amazônica existe uma abundante fauna de peixes e mamíferos aquáticos que habitam os rios e lagos. As espécies mais conhecidas são o pirarucu e o peixe-boi (este em via de extinção). Nas várzeas existem jacarés e tartarugas (também ameaçados de extinção), bem como algumas espécies de anfíbios, notadamente a lontra e a capivara e certas serpentes, como a sucuri. Nas florestas em geral predominam a anta, a onça, os macacos, o preguiça, o caititu, a jiboia, a sucuri, os papagaios, araras e tucanos e uma imensa variedade de insetos e aracnídeos.</p>
   </div>
 </section>
 
@@ -655,18 +653,16 @@
 
 <section id="flora-seções">
   <h1 id="flora">Flora</h1>
-  <div class="slider-contêiner">
-    <div class="slider">
-      <div class="slides">
-        <img src="./imagens/plantae/ipê-amarelo.jpg" alt="Slide 1">
-        <img src="./imagens/plantae/sicômoro.jpg" alt="Slide 2">
-        <img src="./imagens/plantae/órquidea-chocolate.jpg" alt="Slide 3">
-        <img src="./imagens/plantae/sicômoro.jpg" alt="Slide 4">
-      </div>
+  <div class="fotos-contêiner">
+    <div class="fotos">
+      <img src="./imagens/plantae/ipê-amarelo.jpg" alt="Slide 1">
+      <img src="./imagens/plantae/sicômoro.jpg" alt="Slide 2">
+      <img src="./imagens/plantae/órquidea-chocolate.jpg" alt="Slide 3">
+      <img src="./imagens/plantae/sicômoro.jpg" alt="Slide 4">
     </div>
     <div class="controles">
-      <button id="anterior"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-      <button id="posterior"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      <button id="anterior"><i class="fa fa-arrow-left" aria-hidden="true" onclick="fotoAnterior()"></i></button>
+      <button id="posterior"><i class="fa fa-arrow-right" aria-hidden="true" onclick="fotoPosterior()"></i></button>
     </div>
   </div>
   <div id="flora-contêiner-texto">

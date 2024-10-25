@@ -91,35 +91,52 @@ function nextSlide(){
   showSlide(slideIndex);
 }
 
-// slider
+// fotografias
 
-const slider = document.querySelector('.slides');
-const prevBtn = document.getElementById('anterior');
-const nextBtn = document.getElementById('posterior');
+const slider = document.querySelectorAll(".fotos img");
+let sliderIndex = 0;
 
-let currentIndex = 0;
-const totalSlides = document.querySelectorAll('.slides img').length;
+document.addEventListener("DOMContentLoaded", initializeSlider);
 
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
-  updateSlidePosition();
-});
+function initializeSlider(){
+  if(slider.length > 0){
+    slider[sliderIndex].classList.add("displaySlide");
+    intervalId = setInterval(nextSlide, 5000);
+  }
+}
 
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
-  updateSlidePosition();
-});
+function showSlide(index){
+  if(index >= slider.length){
+    sliderIndex = 0;
+  }
 
-function updateSlidePosition() {
-  const slideWidth = document.querySelector('.slides img').clientWidth;
-  slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+  else if(index < 0){
+    sliderIndex = slider.length - 1;
+  }
+
+  slider.forEach(slide => {
+    slide.classList.remove("displaySlide");
+  });
+  
+  slider[sliderIndex].classList.add("displaySlide");
+}
+
+function fotoAnterior(){
+  clearInterval(intervalId);
+  sliderIndex--;
+  showSlide(sliderIndex);
+}
+
+function fotoPosterior(){
+  sliderIndex++;
+  showSlide(sliderIndex);
 }
 
 // brasil
 
 const description = document.querySelector(".tooltip");
 
-document.querySelectorAll('path').forEach((el) =>
+document.querySelectorAll('.path').forEach((el) =>
   el.addEventListener('mouseover', (event) => {
     event.target.className = ("enabled");
     description.classList.add("active");
@@ -128,13 +145,13 @@ document.querySelectorAll('path').forEach((el) =>
 
 );
 
-document.querySelectorAll('path').forEach((el) =>
+document.querySelectorAll('.path').forEach((el) =>
   el.addEventListener("mouseout", () => {
     description.classList.remove("active");
   })
 );
 
-document.onmousemove = function (e) {
+document.onmousemove = function (e){
   description.style.left = e.pageX + "px";
   description.style.top = (e.pageY - 70) + "px";
 }

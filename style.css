@@ -853,7 +853,7 @@ article{
 
 /* slider */
 
-.slider-contêiner{
+.fotos-contêiner{
   position: relative;
   width: 100%;
   max-width: 600px;
@@ -864,22 +864,22 @@ article{
   border-radius: 1rem;
 }
 
-.slider{
+.fotos{
   width: 100%;
   height: 100%;
   display: flex;
   overflow: hidden;
 }
 
-.slides{
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+.fotos img{
+  width: 100%;
+  display: none;
 }
 
-.slides img{
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
+.fotos img.displaySlide{
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 .controles{
