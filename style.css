@@ -1028,67 +1028,63 @@ body.dark-mode #pesquisar{
 
 /* media querries */
 
-/* desktop */
-@media (min-width: 1920px){
-  html {
-    font-size: 16px;
-  }
-}
-
-/* laptops grandes */
-@media (min-width: 1760px) and (max-width: 1919px){
-  html {
-    font-size: 15px;
-  }
-}
-
-/* laptops médios & tablets grandes */
-@media (min-width: 1600px) and (max-width: 1759px){
-  html {
-    font-size: 14px;
-  }
-}
-
-/* laptops pequenos & tablets médios */
-@media (min-width: 1366px) and (max-width: 1599px) {
-  html {
-    font-size: 13px;
-  }
-}
-
-/* smartphones grandes & tablets pequenos */
-@media (min-width: 1280px) and (max-width: 1365px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-/* smartphones pequenos */
-@media (max-width: 575px){
-  html {
-    font-size: 11px;
-  }
-}
-
-/* alta definição */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
-
-}
-
-/* orientação */
 @media (orientation: landscape){
+  /* desktop */
+  @media (min-width: 1920px){
+    html{
+      font-size: 16px;
+    }
+  }
+
+  /* laptops grandes */
+  @media (min-width: 1760px) and (max-width: 1919px){
+    html{
+      font-size: 15px;
+    }
+  }
+
+  /* laptops médios & tablets grandes */
+  @media (min-width: 1600px) and (max-width: 1759px){
+    html{
+      font-size: 14px;
+    }
+  }
+
+  /* laptops pequenos & tablets médios */
+  @media (min-width: 1366px) and (max-width: 1599px) {
+    html{
+      font-size: 13px;
+    }
+    #mapa{
+      max-width: 100%;
+      min-height: 90%;
+    }
+    .slider-conjunto{
+      height: 17.5rem;
+    }
+  }
+
+  /* smartphones grandes & tablets pequenos */
+  @media (min-width: 1280px) and (max-width: 1365px) {
+    html{
+      font-size: 12px;
+    }
+  }
+
+  /* smartphones pequenos */
+  @media (max-width: 575px){
+    html{
+      font-size: 11px;
+    }
+  }
+
+  /* alta definição */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
+
+  }
 
 }
 
 @media (orientation: portrait){
-
-}
-
-/* tipos de dispositivos */
-@media screen{
-
-}
-
-@media print{
 
 }
