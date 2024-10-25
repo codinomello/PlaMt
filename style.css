@@ -1057,7 +1057,7 @@ body.dark-mode #pesquisar{
     }
     #mapa{
       max-width: 100%;
-      min-height: 90%;
+      min-height: 100%;
     }
     .slider-conjunto{
       height: 17.5rem;
