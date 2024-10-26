@@ -91,47 +91,6 @@ function nextSlide(){
   showSlide(slideIndex);
 }
 
-// fotografias
-
-const slider = document.querySelectorAll(".fotos img");
-let sliderIndex = 0;
-
-document.addEventListener("DOMContentLoaded", initializeSlider);
-
-function initializeSlider(){
-  if(slider.length > 0){
-    slider[sliderIndex].classList.add("displaySlide");
-    intervalId = setInterval(nextSlide, 5000);
-  }
-}
-
-function showSlide(index){
-  if(index >= slider.length){
-    sliderIndex = 0;
-  }
-
-  else if(index < 0){
-    sliderIndex = slider.length - 1;
-  }
-
-  slider.forEach(slide => {
-    slide.classList.remove("displaySlide");
-  });
-  
-  slider[sliderIndex].classList.add("displaySlide");
-}
-
-function fotoAnterior(){
-  clearInterval(intervalId);
-  sliderIndex--;
-  showSlide(sliderIndex);
-}
-
-function fotoPosterior(){
-  sliderIndex++;
-  showSlide(sliderIndex);
-}
-
 // brasil
 
 const description = document.querySelector(".tooltip");

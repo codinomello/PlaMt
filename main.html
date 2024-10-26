@@ -526,15 +526,18 @@
 <section id="fauna-seções">
   <h1 id="fauna">Fauna</h1>
   <div class="fotos-contêiner">
+    <input type="radio" name="foto-botão-radio" id="radio1" checked>
+    <input type="radio" name="foto-botão-radio" id="radio2">
+    <input type="radio" name="foto-botão-radio" id="radio3">
     <div class="fotos">
-      <img src="./imagens/animalia/murucututu-de-barriga-amarela.jpg" alt="Slide 1">
-      <img src="./imagens/animalia/jaguatirica.jpg" alt="Slide 2">
-      <img src="./imagens/animalia/arara-canindé.jpg" alt="Slide 3">
-      <img src="./imagens/animalia/tamanduá-mirim.jpg" alt="Slide 4">
+      <img class="foto" style="background: url('./imagens/animalia/murucututu-de-barriga-amarela.jpg') center/cover no-repeat;">
+      <img class="foto" style="background: url('./imagens/animalia/ariranha.jpg') center/cover no-repeat;">
+      <img class="foto" style="background: url('./imagens/animalia/tamanduá-mirim.jpg') center/cover no-repeat;">
     </div>
-    <div class="controles">
-      <button id="anterior"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-      <button id="posterior"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+    <div class="fotos-nav-manual">
+      <label for="radio1" class="foto-botão-manual"></label>
+      <label for="radio2" class="foto-botão-manual"></label>
+      <label for="radio3" class="foto-botão-manual"></label>
     </div>
   </div>
   <div id="fauna-contêiner-texto">
@@ -654,15 +657,18 @@
 <section id="flora-seções">
   <h1 id="flora">Flora</h1>
   <div class="fotos-contêiner">
+    <input type="radio" name="foto-botão-radio" id="radio4" checked>
+    <input type="radio" name="foto-botão-radio" id="radio5">
+    <input type="radio" name="foto-botão-radio" id="radio6">
     <div class="fotos">
-      <img src="./imagens/plantae/ipê-amarelo.jpg" alt="Slide 1">
-      <img src="./imagens/plantae/sicômoro.jpg" alt="Slide 2">
-      <img src="./imagens/plantae/órquidea-chocolate.jpg" alt="Slide 3">
-      <img src="./imagens/plantae/sicômoro.jpg" alt="Slide 4">
+      <img class="foto" style="background: url('./imagens/plantae/ipê-amarelo.jpg') center/cover no-repeat;">
+      <img class="foto" style="background: url('./imagens/plantae/sicômoro.jpg') center/cover no-repeat;">
+      <img class="foto" style="background: url('./imagens/plantae/órquidea-chocolate.jpg') center/cover no-repeat;">
     </div>
-    <div class="controles">
-      <button id="anterior"><i class="fa fa-arrow-left" aria-hidden="true" onclick="fotoAnterior()"></i></button>
-      <button id="posterior"><i class="fa fa-arrow-right" aria-hidden="true" onclick="fotoPosterior()"></i></button>
+    <div class="fotos-nav-manual">
+      <label for="radio4" class="foto-botão-manual"></label>
+      <label for="radio5" class="foto-botão-manual"></label>
+      <label for="radio6" class="foto-botão-manual"></label>
     </div>
   </div>
   <div id="flora-contêiner-texto">
