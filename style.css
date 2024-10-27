@@ -36,7 +36,7 @@ main{
   min-height: 70vh;
   transform: translateX(-100px);
   transition: background-color 0.3s, color 0.3s;
-  animation: fadeIn 1.5s ease forwards;
+  animation: fade 1.5s ease forwards;
   box-shadow: 5px 2.5px 2.5px #0000001a;
   opacity: 0;
 }
@@ -55,7 +55,6 @@ section{
 article{
   height: inherit;
   width: 25%;
-  padding: 1%;
 }
 
 #rodapé{
@@ -312,24 +311,12 @@ article{
 /* notícias */
 
 #notícias{
-  font-size: 1.3rem;
   justify-content: center;
   text-align: center;
-  margin: 1rem 0rem 0rem 0rem;
 }
 
-#notícias-versão{
-  text-align: center;
-}
-
-#notícias-contêiner{
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 2.5% 0% 0% 5%;
-}
-
-#notícias-contêiner header{
-  text-align: center;
+#notícias-título{
+  margin: 2rem 0rem 1rem 0rem;
 }
 
 #notícias-seção{
@@ -353,10 +340,6 @@ article{
   height: auto;
 }
 
-.notícias-item h2{
-  color: #333;
-}
-
 .notícias-item p{
   font-size: 1rem;
 }
@@ -367,11 +350,82 @@ article{
   font-weight: bold;
 }
 
+.notícias-sidebar{
+  width: 350px;
+  height: 32rem;
+  background-color: #aaa;
+  color: #fff;
+  position: fixed;
+  right: -350px;
+  transition: 0.3s;
+  padding-top: 20px;
+  z-index: 1000;
+  display: none;
+}
+
+.notícias-sidebar .active{
+  right: 0;
+}
+
+.notícias-sidebar h2{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.notícias-sidebar ul{
+  list-style: none;
+  padding: 0;
+}
+
+.notícias-sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #3a3838;
+}
+
+.notícias-sidebar ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.notícias-sidebar ul li:hover{
+  background-color: #ccc;
+}
+
+.notícias-toggle{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 1.65rem;
+  cursor: pointer;
+  color: #000000;
+  background-color: transparent;
+  border: none;
+  z-index: 1001;
+}
+
+.notícias-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+  display: none;
+  z-index: 999;
+}
+
+.notícias-conteúdo{
+  margin-right: 260px;
+  padding: 20px;
+  width: 100%;
+}
+
 /* baixo */
 
 #baixo{
   width: 100%;
-  min-height: 18vh;
+  min-height: 10rem;
   text-align: center;
   justify-content: center;
   box-shadow: 5px 2.5px 2.5px #0000001a;
@@ -414,7 +468,7 @@ article{
 
 #legenda-li, #seções-li{
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 525;
   list-style: none;
   margin: 0rem 0.75rem 0rem 0.25rem;
   clear: auto;
@@ -642,6 +696,14 @@ article{
   box-shadow: 0px 0px 2.5px #0000001a;
 }
 
+#biomas-negrito{
+  font-weight: bold;
+}
+
+#biomas-itálico{
+  font-style: italic;
+}
+
 #biomas-tecnologia{
   width: 100%;
   font-size: 1rem;
@@ -651,29 +713,9 @@ article{
   box-shadow: 0px 0px 2.5px #0000001a;
 }
 
-#biomas-negrito{
-  font-weight: bold;
-}
+#amazônia-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #f4fcda;} #caatinga-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fffed3;} #cerrado-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fddeaf;} #mata-atlântica-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #c3dfff;} #pampa-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #a1b7fd;} #pantanal-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #e4b1fc;} #zona-marinha-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #ffc0f1;}
 
-#biomas-itálico{
-  font-style: italic;
-}
-
-.biomas-tecnologia-highlight{
-  color: #4e4e4e;
-  font-weight: bold;
-  background-color: #f4fcda;
-  padding: 2px 6px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.biomas-tecnologia-highlight:hover{
-  background-color: #88a756;
-  color: white;
-  box-shadow: 0 4px 10px #00000033;
-  transform: scale(1.1);
-}
+#amazônia-tecnologia-highlight:hover{background-color: #2c922c; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #caatinga-tecnologia-highlight:hover{background-color: #ebd40b; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #cerrado-tecnologia-highlight:hover{background-color: #dd7113; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #mata-atlântica-tecnologia-highlight:hover{background-color: #2b70c0; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #pampa-tecnologia-highlight:hover{background-color: #264a80; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #pantanal-tecnologia-highlight:hover{background-color: #b90dee; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #zona-marinha-tecnologia-highlight:hover{background-color: #ee1adc; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);}
 
 #fauna{
   font: 1.6rem;
@@ -855,13 +897,13 @@ article{
 
 .fotos-contêiner{
   position: relative;
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   height: 400px;
   margin: 15px auto 15px auto;
   overflow: hidden;
   border: 2px solid #ddd;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
 }
 
 .fotos{
@@ -922,13 +964,13 @@ input[type="radio"]{
 
 /* modo escuro */
 
-#btn-dark-mode{
+#modo-escuro-botão{
   position: inherit;
   display: flex;
   justify-content: right;
 }
 
-#dark-mode-label{
+#modo-escuro-label{
   width: 2.5rem;
   height: 1.25rem;
   position: relative;
@@ -939,7 +981,7 @@ input[type="radio"]{
   cursor: pointer;
 }
 
-#dark-mode-label:after{
+#modo-escuro-label:after{
   content: "";
   width: 1rem;
   height: 1rem;
@@ -949,11 +991,11 @@ input[type="radio"]{
   box-shadow: 0rem 3rem 5rem #00000033;
 }
 
-#darkmode-toggle{
+#modo-escuro-toggle{
   visibility: hidden;
 }
 
-#dark-mode-label:after{
+#modo-escuro-label:after{
   content: "";
   width: 1rem;
   height: 1rem;
@@ -965,50 +1007,50 @@ input[type="radio"]{
   box-shadow: 0rem 0.3rem 0.5rem #00000033;
 }
 
-#darkmode-toggle:checked + label{
+#modo-escuro-toggle:checked + label{
   background: #242424;
 }
 
-#darkmode-toggle:checked + label:after{
+#modo-escuro-toggle:checked + label:after{
   left: 2.5rem;
   transform: translateX(-100%);
   background: linear-gradient(180deg,#777,#3a3a3a);
 }
 
-#dark-mode-label, #dark-mode-label:after{
+#modo-escuro-label, #modo-escuro-label:after{
   transition: 0.3s
 }
 
-#dark-mode-label:active:after{ 
+#modo-escuro-label:active:after{ 
   width: 1rem; 
 }
 
-#darkmode-toggle:checked + #dark-mode-label + .background{
+#modo-escuro-toggle:checked + #modo-escuro-label + .background{
   background: #121212;
 }
 
-body.light-mode{
+body.modo-claro{
   background-color: #fff;
   color: #000000;
   transition: .5s ease-in-out;
 }
 
-body.dark-mode{
+body.modo-escuro{
   background-color: #121212;
   color: #fff;
   box-shadow: 5px 2.5px 2.5px #0000001a;
   transition: .5s ease-in-out;
 }
 
-body.dark-mode #pesquisar-contêiner{
+body.modo-escuro #pesquisar-contêiner{
   background-color: #fff;
 }
 
-body.dark-mode #pesquisar-lupa, body.dark-mode #pesquisar input{
+body.modo-escuro #pesquisar-lupa, body.modo-escuro #pesquisar input{
   color: #fff;
 }
 
-body.dark-mode #pesquisar{
+body.modo-escuro #pesquisar{
   background-color: #121212;
 }
 
@@ -1027,7 +1069,7 @@ body.dark-mode #pesquisar{
   0%{transform: translateX(0);} 5%{transform: translateX(0);} 10%{transform: translateX(-100%);} 15%{transform: translateX(-100%);} 20%{transform: translateX(-200%);} 25%{transform: translateX(-200%);} 30%{transform: translateX(-300%);} 35%{transform: translateX(-300%);} 40%{transform: translateX(-400%);} 45%{transform: translateX(-400%);} 50%{transform: translateX(-500%);} 55%{transform: translateX(-500%);} 60%{transform: translateX(-600%);} 65%{transform: translateX(-600%);} 70%{transform: translateX(-700%);} 75%{transform: translateX(-700%);} 80%{transform: translateX(-800%);} 85%{transform: translateX(-800%);} 90%{transform: translateX(-900%);} 95%{transform: translateX(-900%);} 100%{transform: translateX(-1000%);}
 }
 
-@keyframes fadeIn{
+@keyframes fade{
   0% {
     opacity: 0; 
     transform: translateX(-100px);
@@ -1036,13 +1078,6 @@ body.dark-mode #pesquisar{
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-@keyframes fotos {
-  0%, 20%  {transform: translateX(0);}
-  33%, 53% {transform: translateX(-100%);}
-  66%, 86% {transform: translateX(-200%);}
-  100%     {transform: translateX(0);}
 }
 
 /* media querries */

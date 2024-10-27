@@ -44,72 +44,80 @@
       </button>
       </form>
     </div>
-    <div id="reinos-contêiner">
-    <h1 class="reinos"><a href="https://pt.wikipedia.org/wiki/Animalia" target="_blank"><button id="animalia">Animalia</button></a></h1>
-      <div class="espécies">
-        <p>Arara-azul</p>
-        <p>Onça-pintada</p>
-        <p>Capivara</p>
-        <p>Dourado</p>
-        <p>Sucuri </p>
-        <p>Carcará</p>
-        <p>Jaburu</p>
-      </div>
+  <div id="reinos-contêiner">
+  <h1 class="reinos"><a href="https://pt.wikipedia.org/wiki/Animalia" target="_blank"><button id="animalia">Animalia</button></a></h1>
+    <div class="espécies">
+      <p>Arara-azul</p>
+      <p>Onça-pintada</p>
+      <p>Capivara</p>
+      <p>Dourado</p>
+      <p>Sucuri </p>
+      <p>Carcará</p>
+      <p>Jaburu</p>
     </div>
-    <div id="reinos-contêiner">
-    <h1 class="reinos"><a href="https://pt.wikipedia.org/wiki/Plantae" target="_blank"><button id="plantae">Plantae</button></a></h1> 
-      <div class="espécies">
-        <p>Alamanda</p>
-        <p>Ipê-amarelo</p>
-        <p>Jacarandá</p>
-        <p>Pacová</p>
-        <p>Pitangueira</p>
-        <p>Lírio da paz</p>
-        <p>Bromélia</p>
-      </div>
+  </div>
+  <div id="reinos-contêiner">
+  <h1 class="reinos"><a href="https://pt.wikipedia.org/wiki/Plantae" target="_blank"><button id="plantae">Plantae</button></a></h1> 
+    <div class="espécies">
+      <p>Alamanda</p>
+      <p>Ipê-amarelo</p>
+      <p>Jacarandá</p>
+      <p>Pacová</p>
+      <p>Pitangueira</p>
+      <p>Lírio da paz</p>
+      <p>Bromélia</p>
     </div>
-    <div id="reinos-contêiner">
-    <h1 class="reinos"><a href="https://pt.wikipedia.org/wiki/Fungi" target="_blank"><button id="fungi">Fungi</button></a></h1>
-      <div class="espécies">
-        <p>Agárico</p>
-        <p>Cantarelo</p>
-        <p>Champignon</p>
-        <p>Amanita</p>
-        <p>Mofo-branco</p>
-        <p>Repolga</p>
-        <p>Morchella</p>
-      </div>
+  </div>
+  <div id="reinos-contêiner">
+  <h1 class="reinos"><a href="https://pt.wikipedia.org/wiki/Fungi" target="_blank"><button id="fungi">Fungi</button></a></h1>
+    <div class="espécies">
+      <p>Agárico</p>
+      <p>Cantarelo</p>
+      <p>Champignon</p>
+      <p>Amanita</p>
+      <p>Mofo-branco</p>
+      <p>Repolga</p>
+      <p>Morchella</p>
     </div>
+  </div>
     <div class="slider-conjunto">
       <div class="slider-wrapper">
         <img class="slider-imagens" src="./imagens/fungi/orelha-de-pau.jpg"><img class="slider-imagens" src="./imagens/animalia/macaco-prego.jpg"><img class="slider-imagens" src="./imagens/plantae/sicômoro.jpg"><img class="slider-imagens" src="./imagens/animalia/bicho-preguiça.jpg"><img class="slider-imagens" src="./imagens/fungi/chapéu-de-sapo.jpg"><img class="slider-imagens" src="./imagens/animalia/curicaca.jpg"><img class="slider-imagens" src="./imagens/animalia/gavião-real.jpg"><img class="slider-imagens" src="./imagens/animalia/graxaim-do-campo.jpeg"><img class="slider-imagens" src="./imagens/animalia/jaguatirica.jpg"><img class="slider-imagens" src="./imagens/animalia/paca.jpg"><img class="slider-imagens" src="./imagens/animalia/peixe-boi.jpg"><img class="slider-imagens" src="./imagens/animalia/sapo-cururu.jpg">
       </div>
-    </div>
+   </div>
   </aside>
   <section>
     <div id="mapa"></div>
   </section>
-  <article>
-    <h2 id="notícias">Novidades</h2>
-      <p id="notícias-versão">Versão 1.2v</p>
-      <div id="notícias-contêiner">
-        <ol>
-          <li>Integração: API Leaflet</li><br>
-          <li>Seções: Serviços, Contato & Sobre</li><br>
-          <li>Espécies: Cards</li><br>
-          <li>Imagens: Biomas Brasileiros</li><br>
-          <header>
-            <h3>Notícias</h3>
-          </header>
-          <section id="notícias-seção">
-            <!-- as notícias serão carregadas aqui -->
-          </section>
-        </ol>
+  <article id="notícias">
+    <!-- sidebar de notícias -->
+    <div class="notícias-sidebar" id="notícias-sidebar">
+      <h3>Notícias Ambientais</h3>
+      <ul>
+        <li><a href="#">Mudanças Climáticas: Desafios e Soluções</a></li>
+        <li><a href="#">Desmatamento da Amazônia em Alta</a></li>
+        <li><a href="#">Novas Espécies Descobertas na Antártica</a></li>
+        <li><a href="#">Iniciativas Globais para Preservação da Biodiversidade</a></li>
+        <li><a href="#">Aquecimento dos Oceanos e Impactos na Vida Marinha</a></li>
+      </ul>
+      <div id="modo-escuro-botão">
+        <input type="checkbox" id="modo-escuro-toggle"/>
+        <label for="modo-escuro-toggle" id="modo-escuro-label">
       </div>
-    <div id="btn-dark-mode">
-      <input type="checkbox" id="darkmode-toggle"/>
-      <label for="darkmode-toggle" id="dark-mode-label">
     </div>
+    <button class="notícias-toggle" onclick="toggleSidebar()">☰</button>
+      <div class="notícias-overlay" id="notícias-overlay" onclick="toggleSidebar()"></div>
+    <div class="notícias-conteúdo">
+      <h3 id="notícias-título">Bem-vindo às Notícias Ambientais</h3>
+      <p>Explore as últimas notícias e tendências sobre o meio ambiente, mudanças climáticas, biodiversidade e muito mais!</p>
+    </div>
+      <header>
+        <h3>Novidades</h3>
+      </header>
+      <section id="notícias-seção">
+        <!-- as notícias serão carregadas aqui -->
+      </section>
+      </div>
   </article>
   </main>
   <footer id="baixo">
@@ -189,7 +197,7 @@
     </div>
   </div>
 
-  <div id="biomas-tecnologia">Uso de tecnologias como <span class="biomas-tecnologia-highlight">satélites</span> e <span class="biomas-tecnologia-highlight">drones</span> para monitoramento de desmatamento e preservação da biodiversidade.</div>
+  <div id="biomas-tecnologia">Uso de tecnologias como <span id="amazônia-tecnologia-highlight">satélites</span> e <span id="amazônia-tecnologia-highlight">drones</span> para monitoramento de desmatamento e preservação da biodiversidade.</div>
 </section>
 
 
@@ -245,7 +253,7 @@
     </div>
   </div>
 
-  <div id="biomas-tecnologia">Soluções de <span class="biomas-tecnologia-highlight">dessalinização</span>, <span class="biomas-tecnologia-highlight">energia solar</span> adaptada e monitoramento de recursos hídricos.</div>
+  <div id="biomas-tecnologia">Soluções de <span id="caatinga-tecnologia-highlight">dessalinização</span>, <span id="caatinga-tecnologia-highlight">energia solar</span> adaptada e monitoramento de recursos hídricos.</div>
 </section>
 
 <!-- cerrado -->
@@ -300,7 +308,7 @@
     </div>
   </div>
   
-  <div id="biomas-tecnologia"><span class="biomas-tecnologia-highlight">Sistemas de irrigação inteligente</span> e <span class="biomas-tecnologia-highlight">drones</span> monitorando a biodiversidade em áreas ameaçadas.</div>
+  <div id="biomas-tecnologia"><span id="cerrado-tecnologia-highlight">Sistemas de irrigação inteligente</span> e <span id="cerrado-tecnologia-highlight">drones</span> monitorando a biodiversidade em áreas ameaçadas.</div>
 </section>
 
 <!-- mata atlâtica -->
@@ -355,7 +363,7 @@
     </div>
   </div>
 
-  <div id="biomas-tecnologia">Tecnologias de <span class="biomas-tecnologia-highlight">restauração florestal</span> e uso de <span class="biomas-tecnologia-highlight">big data</span> para catalogar a biodiversidade existente.</div>
+  <div id="biomas-tecnologia">Tecnologias de <span id="mata-atlântica-tecnologia-highlight">restauração florestal</span> e uso de <span id="mata-atlântica-tecnologia-highlight">big data</span> para catalogar a biodiversidade existente.</div>
 </section>
 
 <!-- pampa -->
@@ -410,7 +418,7 @@
     </div>
   </div>
 
-  <div id="biomas-tecnologia">Uso de <span class="biomas-tecnologia-highlight">sensoriamento remoto</span> para monitoramento de pastagens e biodiversidade, além de <span class="biomas-tecnologia-highlight">agricultura de precisão</span> para otimizar o uso de insumos e melhorar a sustentabilidade da produção pecuária.</div>
+  <div id="biomas-tecnologia">Uso de <span id="pampa-tecnologia-highlight">sensoriamento remoto</span> para monitoramento de pastagens e biodiversidade, além de <span id="pampa-tecnologia-highlight">agricultura de precisão</span> para otimizar o uso de insumos e melhorar a sustentabilidade da produção pecuária.</div>
 </section>
 
 <!-- pantanal -->
@@ -465,7 +473,7 @@
     </div>
   </div>
   
-  <div id="biomas-tecnologia">Monitoramento remoto de fauna e uso de <span class="biomas-tecnologia-highlight">inteligência artificial</span> para prevenção de queimadas.</div>
+  <div id="biomas-tecnologia">Monitoramento remoto de fauna e uso de <span id="pantanal-tecnologia-highlight">inteligência artificial</span> para prevenção de queimadas.</div>
 </section>
 
 <!-- zona marinha brasileira -->
@@ -520,7 +528,7 @@
     </div>
   </div>
 
-  <div id="biomas-tecnologia">Uso de <span class="biomas-tecnologia-highlight">drones subaquáticos</span> para monitorar recifes de corais e espécies ameaçadas, além de <span class="biomas-tecnologia-highlight">sensores oceânicos</span> para medir poluição e mudanças na qualidade da água.</div>
+  <div id="biomas-tecnologia">Uso de <span id="zona-marinha-tecnologia-highlight">drones subaquáticos</span> para monitorar recifes de corais e espécies ameaçadas, além de <span id="zona-marinha-tecnologia-highlight">sensores oceânicos</span> para medir poluição e mudanças na qualidade da água.</div>
 </section>
 
 <section id="fauna-seções">

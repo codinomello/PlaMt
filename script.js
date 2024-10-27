@@ -1,13 +1,13 @@
 // modo escuro
 
 document.addEventListener('DOMContentLoaded', function() {
-  const toggleButton = document.getElementById('darkmode-toggle');
+  const toggleButton = document.getElementById('modo-escuro-toggle');
   toggleButton.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
-    toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Escuro';
+    document.body.classList.toggle('modo-escuro');
+    document.body.classList.toggle('modo-claro');
+    toggleButton.textContent = document.body.classList.contains('modo-escuro') ? 'Modo Claro' : 'Modo Escuro';
   });
-document.body.classList.add('light-mode');
+document.body.classList.add('modo-claro');
 });
 
 // notícias
@@ -51,7 +51,16 @@ function fetchNews() {
   });
 }
 
-// carrossel de imagens
+// sidebar
+
+function toggleSidebar(){
+  var sidebar = document.getElementById("notícias-sidebar");
+  var overlay = document.getElementById("notícias-overlay");
+  sidebar.classList.toggle("active");
+  overlay.style.display = sidebar.classList.contains("active") ? "block" : "none";
+}
+
+// slider
 
 const slides = document.querySelectorAll(".slides img");
 let slideIndex = 0;
