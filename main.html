@@ -701,7 +701,7 @@
 </body>
 
 <script>
-const map = L.map('mapa').setView([-14.179, -53.174], 4);
+const map = L.map('mapa').setView([-14, -53], 4);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
@@ -711,8 +711,8 @@ L.marker([-23.47260, -46.53110, 19]).addTo(map)
   .openPopup();
 
 var circle = L.circle([-23.5500,-46.6347, 13], {
-  color: 'gray',
-  fillColor: 'gray',
+  color: '#808080',
+  fillColor: '#808080',
   fillOpacity: 0.5,
   radius: 50000,
 }).addTo(map);
@@ -722,7 +722,7 @@ var circle = L.circle([-3.075, -61.875, 13], {
   color: 'green',
   fillColor: 'green',
   fillOpacity: 0.5,
-  radius: 1455000,
+  radius: 1450000,
 }).addTo(map);
 circle.bindPopup("<h1 id='amazônia'>Amazônia</h1><img src='./imagens/biomas/amazônia.jpg' alt='Amazônia'>");
 
@@ -734,11 +734,11 @@ var circle = L.circle([-6.053, -42.188, 13], {
 }).addTo(map);
 circle.bindPopup("<h1 id='caatinga'>Caatinga</h1><img src='./imagens/biomas/caatinga.jpg' alt='Caatinga'>");
 
-var circle = L.circle([-14.350, -53.372, 13], {
+var circle = L.circle([-14.350, -55.372, 13], {
   color: 'orange',
   fillColor: 'orange',
   fillOpacity: 0.5,
-  radius: 900000,
+  radius: 1050000,
 }).addTo(map);
 circle.bindPopup("<h1 id='cerrado'>Cerrado</h1><img src='./imagens/biomas/cerrado.jpg' alt='Cerrado'>");
 
@@ -746,23 +746,23 @@ var circle = L.circle([-20.159, -47.153, 13], {
   color: 'blue',
   fillColor: 'blue',
   fillOpacity: 0.5,
-  radius: 1090000,
+  radius: 1000000,
 }).addTo(map);
 circle.bindPopup("<h1 id='mata-atlântica'>Mata Atlântica</h1><img src='./imagens/biomas/mata-atlântica.jpg' alt='Mata Atlântica'>");
 
-var circle = L.circle([-29.54, -53.17, 13], {
+var circle = L.circle([-30.54, -54.17, 13], {
   color: 'darkcyan',
   fillColor: 'darkcyan',
   fillOpacity: 0.5,
-  radius: 500000,
+  radius: 550000,
 }).addTo(map);
 circle.bindPopup("<h1 id='pampa'>Pampa</h1><img src='./imagens/biomas/pampa.jpg' alt='Pampa'>");
 
-var circle = L.circle([-20.838, -54.822, 13], {
-  color: 'pink',
-  fillColor: 'pink',
+var circle = L.circle([-20.223, -55.222, 13], {
+  color: 'blueviolet',
+  fillColor: 'blueviolet',
   fillOpacity: 0.5,
-  radius: 500000,
+  radius: 590000,
 }).addTo(map);
 circle.bindPopup("<h1 id='pantanal'>Pantanal</h1><img src='./imagens/biomas/pantanal.jpg' alt='Pantanal'>");
 
