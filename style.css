@@ -467,6 +467,7 @@ article{
   position: flex;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
+  image-rendering: optimizeSpeed;
 }
 
 #legenda-ul, #seções-ul{
