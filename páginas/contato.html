@@ -16,8 +16,8 @@
   <title>Contato | PlaMt</title>
 </head>
 <body>
-<nav class="nav">
-  <a><div class="plamt-container"></div>
+<nav class="navegação">
+  <a><div class="plamt-contêiner"></div>
   <div id="plamt">
     <span class="arco-íris">p</span>
     <span class="arco-íris">l</span>
@@ -26,7 +26,7 @@
     <span class="arco-íris">t</span>
   </div>
   </a>
-  <div class="nav-menu" id="navMenu">
+  <div class="navegação-menu">
     <ul>
       <li><a href="../index.html" class="link">Home</a></li>
       <li><a href="../main.html" class="link">Página</a></li>
@@ -42,8 +42,8 @@
   <p>Estamos aqui para ajudar! Preencha o formulário abaixo ou utilize as informações ao lado para nos contatar.</p>
 </header>
 
-<div class="container">
-  <div class="contact-form">
+<div class="contato-contêiner">
+  <div class="contato-formulário">
     <form action="submit_contact.php" method="post">
       <label for="name">Nome:</label>
       <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
@@ -61,7 +61,7 @@
     </form>
   </div>
 
-  <div class="contact-info">
+  <div class="contato-informação">
     <h2>Informações</h2>
     <p><strong>Telefone:</strong> (11) 91192-1772</p>
     <p><strong>E-mail:</strong> 103662024@eniac.edu.br</p>
@@ -76,16 +76,16 @@
 
 <!-- criadores -->
 
-<section class="team-section">
+<section class="desenvolvedores-seção">
   <h2>Nossa Equipe</h2>
   <p>Conheça os criadores do nosso projeto!</p>
-  <div class="creators-container">
-    <div class="team-member creator">
+  <div class="desenvolvedores-contêiner">
+    <div class="membro densenvolvedor">
       <img src="./imagens/gabriel.jpg" alt="Gabriel Mello">
       <h3>Gabriel Mello</h3>
       <p>Desenvolvedor Full-Stack e idealizador do projeto.</p>
     </div>
-  <div class="team-member creator">
+  <div class="membro densenvolvedor">
     <img src="./imagens/lucas.jpg" alt="Lucas Gabriel">
       <h3>Lucas Gabriel</h3>
       <p>Designer UI/UX e responsável pela experiência do usuário.</p>
@@ -95,21 +95,21 @@
 
 <!-- orientadores -->
 
-<section class="mentors-section">
+<section class="profesores-seção">
   <h2>Nossos Orientadores</h2>
   <p>Os especialistas que nos orientam no caminho para o sucesso!</p>
-  <div class="mentors-container">
-    <div class="team-member mentor">
+  <div class="membros-contêiner">
+    <div class="membro professor">
       <img src="./imagens/lúcio.jpg" alt="Lúcio Luzetti">
       <h3>Lúcio Luzetti</h3>
       <p>Professor e mestre em desenvolvimento de software.</p>
     </div>
-    <div class="team-member mentor">
+    <div class="membro professor">
       <img src="./imagens/lúcio.jpg" alt="Paulo Procópio">
       <h3>Paulo Procópio</h3>
       <p>Especialista em hardware e segurança da informação.</p>
     </div>
-    <div class="team-member mentor">
+    <div class="membro professor">
       <img src="./imagens/nelson.jpg" alt="Nelson Luzetti">
       <h3>Nelson Luzetti</h3>
       <p>Professor e mestre em análise de sistemas.</p>
@@ -135,42 +135,43 @@ header{
 }
 
 header h1{
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 header p{
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
-.container{
+.contato-contêiner{
   display: flex;
   justify-content: space-around;
   margin: 30px auto;
-  max-width: 1000px;
+  max-width: 75vw;
 }
 
-.contact-form, .contact-info{
+.contato-formulário, .contato-informação{
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px #0000001a;
 }
 
-.contact-form{
+.contato-formulário{
   width: 60%;
 }
 
-.contact-info{
-  width: 30%;
+.contato-informação{
+  width: 25%;
 }
 
-.contact-form label{
+.contato-formulário label{
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea{
+.contato-formulário input[type="text"], .contato-formulário input[type="email"], .contato-formulário textarea{
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -178,7 +179,7 @@ header p{
   border-radius: 4px;
 }
 
-.contact-form input[type="submit"]{
+.contato-formulário input[type="submit"]{
   background-color: #d33215;
   color: #fff;
   border: none;
@@ -188,54 +189,55 @@ header p{
   transition: background-color 0.3s ease;
 }
 
-.contact-form input[type="submit"]:hover{
+.contato-formulário input[type="submit"]:hover{
   background-color: #eb4d0f;
 }
 
-.contact-info h2{
+.contato-informação h2{
   margin-bottom: 15px;
   color: #d33215;
 }
 
-.contact-info p{
+.contato-informação p{
+  font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
-.contact-info a{
+.contato-informação a{
   text-decoration: none;
   color: #d33215;
   transition: color 0.3s ease;
 }
 
-.contact-info a:hover{
+.contato-informação a:hover{
   color: #eb4d0f;
 }
 
-.team-section{
+.desenvolvedores-seção{
   text-align: center;
   padding: 40px;
   background-color: #ffdcdc;
   margin-top: 40px;
 }
 
-.team-section h2{
+.desenvolvedores-seção h2{
   font-size: 2em;
   color: #d33215;
   margin-bottom: 20px;
 }
 
-.team-section p{
+.desenvolvedores-seção p{
   font-size: 1.2em;
   margin-bottom: 40px;
 }
 
-.creators-container{
+.desenvolvedores-contêiner{
   display: flex;
   justify-content: center;
   gap: 30px;
 }
 
-.team-member.creator{
+.membro.densenvolvedor{
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -244,50 +246,49 @@ header p{
   max-width: 300px;
 }
 
-.team-member.creator img{
+.membro.densenvolvedor img{
   width: 150px;
   height: 150px;
   border-radius: 50%;
   margin-bottom: 15px;
 }
 
-.team-member.creator h3{
+.membro.densenvolvedor h3{
   font-size: 1.5em;
   color: #d33215;
   margin-bottom: 10px;
 }
 
-.team-member.creator p{
+.membro.densenvolvedor p{
   font-size: 1em;
   color: #666;
 }
 
-.mentors-section{
+.profesores-seção{
   text-align: center;
   padding: 40px;
   background-color: #ecfae0;
-  margin-top: 20px;
 }
 
-.mentors-section h2{
+.profesores-seção h2{
   font-size: 2em;
   color: #00796b;
   margin-bottom: 20px;
 }
 
-.mentors-section p{
+.profesores-seção p{
   font-size: 1.2em;
   margin-bottom: 40px;
 }
 
-.mentors-container{
+.membros-contêiner{
   display: flex;
   justify-content: space-around;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.team-member.mentor {
+.membro.professor{
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -296,20 +297,20 @@ header p{
   max-width: 250px;
 }
 
-.team-member.mentor img{
+.membro.professor img{
   width: 120px;
   height: 120px;
   border-radius: 50%;
   margin-bottom: 15px;
 }
 
-.team-member.mentor h3 {
+.membro.professor h3{
   font-size: 1.3em;
   color: #00796b;
   margin-bottom: 10px;
 }
 
-.team-member.mentor p{
+.membro.professor p{
   font-size: 0.95em;
   color: #666;
 }
