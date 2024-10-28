@@ -15,7 +15,7 @@
   <title>PlaMt</title>
 </head>
 <body>
-<nav class="nav">
+<nav class="navegação">
   <a><div class="plamt-contêiner"></div>
     <div id="plamt">
       <span class="arco-íris">p</span>
@@ -24,7 +24,7 @@
       <span class="arco-íris">M</span>
       <span class="arco-íris">t</span>
     </div></a>
-  <div class="nav-menu" id="navMenu">
+  <div class="navegação-menu" id="navegação-Menu">
     <ul>
       <li><a href="index.html" class="link">Home</a></li>
       <li><a href="#" class="link active">Página</a></li>
@@ -707,7 +707,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.marker([-23.47260, -46.53110, 19]).addTo(map)
-  .bindPopup('ENIAC')
+  .bindPopup("<h1 id='eniac'>ENIAC</h1><img src='./imagens/eniac/eniac.png' alt='ENIAC'>")
   .openPopup();
 
 var circle = L.circle([-23.5500,-46.6347, 13], {
@@ -724,7 +724,7 @@ var circle = L.circle([-3.075, -61.875, 13], {
   fillOpacity: 0.5,
   radius: 1455000,
 }).addTo(map);
-circle.bindPopup("Amazônia");
+circle.bindPopup("<h1 id='amazônia'>Amazônia</h1><img src='./imagens/biomas/amazônia.jpg' alt='Amazônia'>");
 
 var circle = L.circle([-6.053, -42.188, 13], {
   color: 'yellow',
@@ -732,7 +732,7 @@ var circle = L.circle([-6.053, -42.188, 13], {
   fillOpacity: 0.5,
   radius: 1005000,
 }).addTo(map);
-circle.bindPopup("Caatinga");
+circle.bindPopup("<h1 id='caatinga'>Caatinga</h1><img src='./imagens/biomas/caatinga.jpg' alt='Caatinga'>");
 
 var circle = L.circle([-14.350, -53.372, 13], {
   color: 'orange',
@@ -740,7 +740,7 @@ var circle = L.circle([-14.350, -53.372, 13], {
   fillOpacity: 0.5,
   radius: 900000,
 }).addTo(map);
-circle.bindPopup("Cerrado");
+circle.bindPopup("<h1 id='cerrado'>Cerrado</h1><img src='./imagens/biomas/cerrado.jpg' alt='Cerrado'>");
 
 var circle = L.circle([-20.159, -47.153, 13], {
   color: 'blue',
@@ -748,7 +748,7 @@ var circle = L.circle([-20.159, -47.153, 13], {
   fillOpacity: 0.5,
   radius: 1090000,
 }).addTo(map);
-circle.bindPopup("Mata Atlântica");
+circle.bindPopup("<h1 id='mata-atlântica'>Mata Atlântica</h1><img src='./imagens/biomas/mata-atlântica.jpg' alt='Mata Atlântica'>");
 
 var circle = L.circle([-29.54, -53.17, 13], {
   color: 'darkcyan',
@@ -756,7 +756,7 @@ var circle = L.circle([-29.54, -53.17, 13], {
   fillOpacity: 0.5,
   radius: 500000,
 }).addTo(map);
-circle.bindPopup("Pampa");
+circle.bindPopup("<h1 id='pampa'>Pampa</h1><img src='./imagens/biomas/pampa.jpg' alt='Pampa'>");
 
 var circle = L.circle([-20.838, -54.822, 13], {
   color: 'pink',
@@ -764,7 +764,7 @@ var circle = L.circle([-20.838, -54.822, 13], {
   fillOpacity: 0.5,
   radius: 500000,
 }).addTo(map);
-circle.bindPopup("Pantanal");
+circle.bindPopup("<h1 id='pantanal'>Pantanal</h1><img src='./imagens/biomas/pantanal.jpg' alt='Pantanal'>");
 
 // índice de queimadas
 

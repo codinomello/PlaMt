@@ -11,6 +11,11 @@ html{
   font-size: 16px;
 }
 
+html ::placeholder{
+  color: inherit;
+  opacity: 1;
+}
+
 body{
   background-size: cover;
   background-repeat: no-repeat;
@@ -28,6 +33,23 @@ a{
   width: 50vw;
   max-width: 100%;
   min-height: 100%;
+}
+
+#mapa h1{
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#mapa img{
+  width: 9rem;
+  height: 6rem;
+  border-radius: 0.6rem;
+  image-rendering: optimizeSpeed;
+}
+
+#mapa #eniac{
+  font-size: 1rem;
+  color: #474747;
 }
 
 main{
@@ -101,22 +123,14 @@ article{
   margin-top: 0.5rem;
 }
 
-#plamt .arco-íris:hover{
-  animation: 4s changeCor infinite ease-in-out;
-}
-
 .arco-íris{
   font-size: 2.8rem;
+  animation: 4s cor infinite ease-in-out;
 }
 
 .arco-íris:nth-child(1){animation-delay: 0s;} .arco-íris:nth-child(2){animation-delay: 0.2s;} .arco-íris:nth-child(3){animation-delay: 0.4s;} .arco-íris:nth-child(4){animation-delay: 0.6s;} .arco-íris:nth-child(5){animation-delay: 0.8s;} .arco-íris:nth-child(6){animation-delay: 1s;}
 
-::placeholder {
-  color: inherit;
-  opacity: 1;
-}
-
-.nav{
+.navegação{
   top: 0;
   display: flex;
   justify-content: space-around;
@@ -128,7 +142,7 @@ article{
   box-shadow: 5px 2.5px 2.5px #0000001a;
 }
 
-.nav a{
+.navegação a{
   height: 100%;
   padding: 0rem 1.5rem;
   text-decoration: none;
@@ -137,20 +151,20 @@ article{
   margin-right: auto;
 }
 
-.nav-logo p{
+.navegação-logo p{
   font-size: 2rem;
 }
 
-.nav-menu ul{
+.navegação-menu ul{
   display: flex;
 }
 
-.nav-menu ul li{
+.navegação-menu ul li{
   margin-top: 5px;
   list-style-type: none;
 }
 
-.nav-menu ul li .link{
+.navegação-menu ul li .link{
   text-decoration: none;
   font-weight: 550;
   padding-bottom: 0px;
@@ -161,7 +175,7 @@ article{
   border-bottom: 2px solid;
 }
 
-.nav-button .btn{
+.navegação-botão .btn{
   width: 120px;
   height: 40px;
   font-size: 0.9rem;
@@ -281,7 +295,6 @@ article{
 }
 
 .espécies{
-  font-size: 0.95rem;
   font-weight: 500;
 }
 
@@ -468,7 +481,7 @@ article{
 
 #legenda-li, #seções-li{
   font-size: 1rem;
-  font-weight: 525;
+  font-weight: 500;
   list-style: none;
   margin: 0rem 0.75rem 0rem 0.25rem;
   clear: auto;
@@ -1056,7 +1069,7 @@ body.modo-escuro #pesquisar{
 
 /* animações & transições */
 
-@keyframes changeCor{
+@keyframes cor{
   10%{color: #ff0000;}
   20%{color: #ffa500;}
   40%{color: #ffd700;}
@@ -1070,11 +1083,11 @@ body.modo-escuro #pesquisar{
 }
 
 @keyframes fade{
-  0% {
+  0%{
     opacity: 0; 
     transform: translateX(-100px);
   }
-  100% {
+  100%{
     opacity: 1;
     transform: translateX(0);
   }
@@ -1105,7 +1118,7 @@ body.modo-escuro #pesquisar{
   }
 
   /* laptops pequenos & tablets médios */
-  @media (min-width: 1366px) and (max-width: 1599px) {
+  @media (min-width: 1366px) and (max-width: 1599px){
     html{
       font-size: 13px;
     }
@@ -1119,7 +1132,7 @@ body.modo-escuro #pesquisar{
   }
 
   /* smartphones grandes & tablets pequenos */
-  @media (min-width: 1280px) and (max-width: 1365px) {
+  @media (min-width: 1280px) and (max-width: 1365px){
     html{
       font-size: 12px;
     }
