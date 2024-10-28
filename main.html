@@ -107,21 +107,31 @@
     </div>
     <button class="notícias-toggle" onclick="toggleSidebar()">☰</button>
       <div class="notícias-overlay" id="notícias-overlay" onclick="toggleSidebar()"></div>
-    <div class="notícias-conteúdo">
+    <header class="notícias-conteúdo">
       <h3 id="notícias-título">Bem-vindo às Notícias Ambientais</h3>
       <p>Explore as últimas notícias e tendências sobre o meio ambiente, mudanças climáticas, biodiversidade e muito mais!</p>
-    </div>
-      <header>
-        <h3>Novidades</h3>
-      </header>
+    </header>
+    <hr class="notícias-linha">
+    <div id="novidades">
+      <h3>Novidades</h3>
       <section id="notícias-seção">
         <!-- as notícias serão carregadas aqui -->
       </section>
-      </div>
+    </div>
   </article>
   </main>
   <footer id="baixo">
-    <div id="legenda">Legenda:</div>
+    <div id="pesquisas">
+      <div id="pesquisa">Pesquisas</div>
+      <ol id="pesquisas-ol">
+        <li id="pesquisas-li"><i class="fa fa-file" aria-hidden="true"></i> Relatório de Pesquisa</li>
+        <li id="pesquisas-li"><i class="fas fa-search"></i> Plano de Pesquisa</li>
+        <li id="pesquisas-li"><i class="fa-solid fa-flag"></i> Banner de Pesquisa</li>
+      </ol>
+    </div>
+    <div class="baixo-linha"></div>
+    <div id="informações">
+      <p id="legenda">Legenda:</p>
       <ul id="legenda-ul">
         <img id="legenda-imagens" src="./imagens/cores/verde.png"><li id="legenda-li"><a href="#amazônia">Amazônia</a></li>
         <img id="legenda-imagens" src="./imagens/cores/amarelo.png"><li id="legenda-li"><a href="#caatinga">Caatinga</a></li>
@@ -130,7 +140,8 @@
         <img id="legenda-imagens" src="./imagens/cores/ciano.png"><li id="legenda-li"><a href="#pampa">Pampa</a></li>
         <img id="legenda-imagens" src="./imagens/cores/roxo.png"><li id="legenda-li"><a href="#pantanal">Pantanal</a></li>
       </ul>
-    <div id="seções">Seções:</div>
+
+      <p id="seções">Seções:</p>
       <ul id="seções-ul">
         <img id="seções-imagens" src="./imagens/ícones/biomas.png"><li id="seções-li"><a href="#biomas">Biomas</a></li>
         <img id="seções-imagens" src="./imagens/ícones/brasil.png"><li id="seções-li"><a href="#brasil">Brasil</a></li> 
@@ -139,6 +150,7 @@
         <img id="seções-imagens" src="./imagens/ícones/clima.png"><li id="seções-li"><a href="#clima">Clima</a></li>
         <img id="seções-imagens" src="./imagens/ícones/jogos.png"><li id="seções-li"><a href="#jogos">Jogos</a></li>
       </ul>
+    </div>
   </footer>
   
 <!-- biomas -->
