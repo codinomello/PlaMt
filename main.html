@@ -92,7 +92,6 @@
   <article id="notícias">
     <!-- sidebar de notícias -->
     <div class="notícias-sidebar" id="notícias-sidebar">
-      <h3>Notícias Ambientais</h3>
       <ul>
         <li><a href="#">Mudanças Climáticas: Desafios e Soluções</a></li>
         <li><a href="#">Desmatamento da Amazônia em Alta</a></li>
@@ -100,26 +99,25 @@
         <li><a href="#">Iniciativas Globais para Preservação da Biodiversidade</a></li>
         <li><a href="#">Aquecimento dos Oceanos e Impactos na Vida Marinha</a></li>
       </ul>
-      <div id="modo-escuro-botão">
-        <input type="checkbox" id="modo-escuro-toggle"/>
-        <label for="modo-escuro-toggle" id="modo-escuro-label">
-      </div>
     </div>
-    <button class="notícias-toggle" onclick="toggleSidebar()">☰</button>
+    <button class="notícias-toggle" style="color: inherit;" onclick="toggleSidebar()">☰</button>
       <div class="notícias-overlay" id="notícias-overlay" onclick="toggleSidebar()"></div>
     <header class="notícias-conteúdo">
       <h3 id="notícias-título">Bem-vindo às Notícias Ambientais</h3>
       <p>Explore as últimas notícias e tendências sobre o meio ambiente, mudanças climáticas, biodiversidade e muito mais!</p>
     </header>
-    <hr class="notícias-linha">
     <div id="novidades">
       <h3>Novidades</h3>
       <section id="notícias-seção">
         <!-- as notícias serão carregadas aqui -->
       </section>
+      <div id="modo-escuro-botão">
+        <input type="checkbox" id="modo-escuro-toggle"/>
+        <label for="modo-escuro-toggle" id="modo-escuro-label">
+      </div>
     </div>
   </article>
-  </main>
+</main>
   <footer id="baixo">
     <div id="pesquisas">
       <div id="pesquisa">Pesquisas</div>
@@ -716,6 +714,7 @@
 const map = L.map('mapa').setView([-14, -53], 4);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  className: 'map-tiles'
 }).addTo(map);
 
 L.marker([-23.47260, -46.53110, 19]).addTo(map)
