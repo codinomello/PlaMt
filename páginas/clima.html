@@ -12,9 +12,9 @@
 </head>
 <body>
 <h1 id="clima">Clima<i class="fa-solid fa-cloud-sun"></i></h1>
- <div id="container">
+ <div id="contêiner">
 <form id="search">
-   <i class="fa-solid fa-location-dot"></i>
+
  <input type="search" name="city_name" id="city_name" placeholder="Buscar cidade">
   <button type="submit">
    <i class="fa-solid fa-magnifying-glass"></i>
@@ -74,7 +74,7 @@
 /* clima */
 
 body{
-  background: linear-gradient(90deg, #4a7dff, #21d356);
+  background: linear-gradient(90deg, #4a7dff, #63ab3f);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -95,9 +95,10 @@ body{
   margin-left: 15px;
 }
 
-#container{
+#contêiner{
+  font-size: 0.8em;
   border-radius: 1.2rem;
-  padding: 0.8%;
+  padding: 1em;
   margin: 1rem 0rem 1rem 0rem;
   box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
   background-color: #ffffff;
@@ -112,10 +113,11 @@ body{
   align-items: center;
   gap: 8px;
   padding: 4px 12px;
+  font-size: 1.2rem;
 }
 
 #search input{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: inherit;
   border: none;
   width: 90%;
@@ -123,6 +125,7 @@ body{
 }
 
 #search button{
+  font-size: 1rem;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -150,6 +153,7 @@ body{
 #weather #title{
   text-align: center;
   margin-bottom: 5px;
+  font-size: 2rem;
   font-weight: 600;
 }
 
@@ -193,6 +197,7 @@ body{
   box-shadow: 0px 0px 5px #00000033;
   background-color: #ffffff;
   gap: 10px;
+  font-size: 1.1rem;
 }
 
 #other_infos .info h2{
