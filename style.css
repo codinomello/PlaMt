@@ -56,11 +56,13 @@ main{
   display: flex;
   overflow: auto;
   min-height: 70vh;
-  transform: translateX(-100px);
-  transition: background-color 0.3s, color 0.3s;
-  animation: fade 1.5s ease forwards;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
   opacity: 0;
+  animation: fade 1.5s ease forwards;
+  transition: background-color 0.3s, color 0.3s;
+  transform: translateX(-100px);
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 aside{
@@ -68,6 +70,7 @@ aside{
   height: 100%;
   width: 25%;
   padding: 1%;
+  border-right: 1px solid #eee;
 }
 
 section{
@@ -131,15 +134,15 @@ article{
 .arco-íris:nth-child(1){animation-delay: 0s;} .arco-íris:nth-child(2){animation-delay: 0.2s;} .arco-íris:nth-child(3){animation-delay: 0.4s;} .arco-íris:nth-child(4){animation-delay: 0.6s;} .arco-íris:nth-child(5){animation-delay: 0.8s;} .arco-íris:nth-child(6){animation-delay: 1s;}
 
 .navegação{
+  font-size: 1.2rem;
   top: 0;
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 8.5rem;
-  line-height: 8rem;
+  height: 7rem;
+  line-height: 6.5rem;
   z-index: 100;
-  font-size: 1.2rem;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
+  border: 1px solid #eee;
 }
 
 .navegação a{
@@ -194,13 +197,13 @@ article{
   align-items: center;
   margin-left: auto;
   border-radius: 15px;
-  padding: 1.5%;
+  padding: 1%;
 }
 
 #pesquisar-contêiner{
-  border-radius: 1.5rem;
-  padding: 3px;
-  margin: 1rem 0rem 1rem 0rem;
+  border-radius: 1rem;
+  padding: 2.5px;
+  margin-bottom: 0.5rem;
   box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
 }
 
@@ -245,7 +248,7 @@ article{
   font-weight: 550;
   color: #ff0000;
   border: transparent;
-  border-radius: 10px;
+  border-radius: 0.8rem;
   transition-duration: 0.4s;
   background-color: inherit;
   padding: 1%;
@@ -264,7 +267,7 @@ article{
   font-weight: 550;
   color: #008000;
   border: transparent;
-  border-radius: 10px;
+  border-radius: 0.8rem;
   transition-duration: 0.4s;
   background-color: inherit;
   padding: 1%;
@@ -283,7 +286,7 @@ article{
   font-weight: 550;
   color: #0000ff;
   border: transparent;
-  border-radius: 10px;
+  border-radius: 0.8rem;
   transition-duration: 0.4s;
   background-color: inherit;
   padding: 1%;
@@ -295,16 +298,15 @@ article{
   color: #fff;
 }
 
-.espécies p{
+.espécies{
   font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 1.5%;
+  font-weight: 500;
 }
 
 /* carrossel */
 
 .slider-conjunto{
-  height: 19rem;
+  height: 21em;
   width: 100%;
   margin-top: 0.5rem;
   text-align: center;
@@ -316,12 +318,12 @@ article{
 
 .slider-wrapper{
   display: flex;
-  animation: slide 35s infinite ease-in-out;
+  animation: slide 36s infinite ease-in-out;
 }
 
 .slider-imagens{
-  max-width: 100%;
-  max-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 /* notícias */
@@ -329,6 +331,7 @@ article{
 #notícias{
   justify-content: center;
   text-align: center;
+  border-left: 1px solid #eee;
 }
 
 #notícias-título{
@@ -342,80 +345,78 @@ article{
   margin-top: 1rem;
 }
 
-.notícias-sidebar{ 
-  width: 25%;
+#notícias-checkbox{
+  display: none;
+}
+
+.notícias-sidebar{
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
   height: 100%;
   background-color: #fff;
-  position: fixed;
-  transition: right 3s;
-  padding-top: 20px;
-  z-index: 1000;
-  display: none;
-  flex-direction: column;
-}
-
-.notícias-sidebar.active{
-  right: 0;
+  transition: right 0.3s ease;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: -4px 0 8px #00000033;
 }
 
-.notícias-sidebar h3{
-  text-align: center;
-  margin-bottom: 20px;
+#notícias-checkbox:checked ~ .notícias-sidebar{
+  right: 0;
 }
 
 .notícias-sidebar ul{
   list-style: none;
   padding: 0;
-  flex-grow: 1;
+  width: 100%;
+  margin: 20px 0;
 }
 
 .notícias-sidebar ul li{
   padding: 15px;
+  border-bottom: 1px solid #eee;
 }
 
 .notícias-sidebar ul li a{
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
+  color: black;
 }
 
 .notícias-sidebar ul li:hover{
-  box-shadow: 5px 5px 5px 3px  #0000001a;
+  background-color: #f0f0f0;
 }
 
-.notícias-toggle{
-  font-size: 1.6rem;
-  right: 20px;
-  top: 15px;
-  cursor: pointer;
-  border: none;
-  z-index: 1000;
-  position: absolute;
-  background-color: inherit;
-}
-
-.notícias-overlay{
+/* Estilo para o botão de alternância */
+.notícias-toggle {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  z-index: 999;
+  top: 50%;
+  right: 0;
+  width: 20px;
+  height: 60px;
+  background-color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 1100;
+}
+
+/* Estilo do botão de alternância ao abrir a sidebar */
+#notícias-checkbox:checked + .notícias-toggle {
+  right: 250px;
 }
 
 .notícias-conteúdo{
   padding: 20px;
   width: 100%;
-}
-
-#novidades{
-  padding: 2rem;
-}
-
-.notícias-linha{
-  border: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 .notícias-item{
@@ -441,6 +442,10 @@ article{
   font-weight: bold;
 }
 
+#novidades{
+  padding: 2rem;
+}
+
 /* baixo */
 
 #baixo{
@@ -448,21 +453,19 @@ article{
   min-height: 18vh;
   text-align: center;
   justify-content: center;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
   display: flex;
-}
-
-.baixo-linha{
-  border: 1px solid #eee;
-  min-height: 100%;
+  border-bottom: 1px solid #eee;
 }
 
 #informações{
-  width: 50vw;
+  width: 75.5vw;
+  border-left: 1px solid #eee;
 }
 
 #pesquisas{
-  width: 50vw;
+  width: 24.5vw;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
 }
 
 #legenda, #seções, #pesquisa{
@@ -529,7 +532,7 @@ article{
 
 #brasil{
   text-align: center;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
+  border: 1px solid #eee;
 }
 
 #brasil-contêiner-texto{
@@ -617,8 +620,8 @@ article{
   margin: 0 auto;
   color: #21669e;
   border-radius: 5px;
-  transform: translateX(-50%);
   display: none;
+  transform: translateX(-50%);
 }
 
 #brasil .tooltip.active{
@@ -642,6 +645,8 @@ article{
   font-size: 1.6rem;
   color: #008000;
   text-align: center;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
 }
 
 #amazônia{
@@ -694,8 +699,10 @@ article{
 }
 
 #biomas-seções{
-  box-shadow: 5px 2.5px 2.5px #0000001a;
   text-align: center;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 #biomas-contêiner{
@@ -744,7 +751,8 @@ article{
   font-weight: 550;
   text-align: center;
   padding: 1%;
-  box-shadow: 0px 0px 2.5px #0000001a;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;;
 }
 
 #biomas-negrito{
@@ -761,7 +769,7 @@ article{
   font-weight: 550;
   text-align: center;
   padding: 1%;
-  box-shadow: 0px 0px 2.5px #0000001a;
+  border-top: 1px solid #eee;
 }
 
 #amazônia-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #f4fcda;} #caatinga-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fffed3;} #cerrado-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fddeaf;} #mata-atlântica-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #c3dfff;} #pampa-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #a1b7fd;} #pantanal-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #e4b1fc;} #zona-marinha-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #ffc0f1;}
@@ -776,8 +784,9 @@ article{
 }
 
 #fauna-seções{
-  box-shadow: 5px 2.5px 2.5px #0000001a;
   padding-bottom: 0.5%;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
 }
 
 #fauna-contêiner-texto{
@@ -799,7 +808,9 @@ article{
 }
 
 #flora-seções{
-  box-shadow: 5px 2.5px 2.5px #0000001a;
+  padding-bottom: 0.5%;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
 }
 
 #flora-main{
@@ -842,9 +853,9 @@ article{
 }
 
 #clima-jogos-seções{
-  box-shadow: 5px 2.5px 2.5px #0000001a;
   padding-bottom: 0.5%;
   text-align: center;
+  border: 1px solid #eee;
 }
 
 #clima-jogos-contêiner{
@@ -1049,11 +1060,11 @@ input[type="radio"]{
 
 #modo-escuro-label:after{
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 1.125rem;
+  height: 1.125rem;
   position: flex;
-  top: 10%;
-  left: 5%;
+  top: 0.2rem;
+  left: 0.2rem;
   background: linear-gradient(180deg,#ffcc89,#d8860b);
   border-radius: 10px;
   box-shadow: 0rem 0.3rem 0.5rem #00000033;

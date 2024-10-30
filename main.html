@@ -53,7 +53,6 @@
       <p>Dourado</p>
       <p>Sucuri </p>
       <p>Carcará</p>
-      <p>Jaburu</p>
     </div>
   </div>
   <div id="reinos-contêiner">
@@ -64,7 +63,6 @@
       <p>Jacarandá</p>
       <p>Pacová</p>
       <p>Pitangueira</p>
-      <p>Lírio da paz</p>
       <p>Bromélia</p>
     </div>
   </div>
@@ -75,7 +73,6 @@
       <p>Cantarelo</p>
       <p>Champignon</p>
       <p>Amanita</p>
-      <p>Mofo-branco</p>
       <p>Repolga</p>
       <p>Morchella</p>
     </div>
@@ -91,22 +88,21 @@
   </section>
   <article id="notícias">
     <!-- sidebar de notícias -->
-    <div class="notícias-sidebar" id="notícias-sidebar">
+    <input type="checkbox" id="notícias-checkbox">
+    <label for="notícias-checkbox" class="notícias-toggle">☰</label>
+    <div class="notícias-sidebar">
       <ul>
-        <hr class="notícias-linha"><li><a href="#">Mudanças Climáticas: Desafios e Soluções</a></li><hr class="notícias-linha">
-        <li><a href="#">Desmatamento da Amazônia em Alta</a></li><hr class="notícias-linha">
-        <li><a href="#">Novas Espécies Descobertas na Antártica</a></li><hr class="notícias-linha">
-        <li><a href="#">Iniciativas Globais para Preservação da Biodiversidade</a></li><hr class="notícias-linha">
-        <li><a href="#">Aquecimento dos Oceanos e Impactos na Vida Marinha</a></li><hr class="notícias-linha">
+        <li><a href="#">Mudanças Climáticas: Desafios e Soluções</a></li>
+        <li><a href="#">Desmatamento da Amazônia em Alta</a></li>
+        <li><a href="#">Novas Espécies Descobertas na Antártica</a></li>
+        <li><a href="#">Iniciativas Globais para Preservação da Biodiversidade</a></li>
+        <li><a href="#">Aquecimento dos Oceanos e Impactos na Vida Marinha</a></li>
       </ul>
     </div>
-    <button class="notícias-toggle" style="color: inherit;" onclick="toggleSidebar()">☰</button>
-      <div class="notícias-overlay" id="notícias-overlay" onclick="toggleSidebar()"></div>
     <header class="notícias-conteúdo">
       <h3 id="notícias-título">Bem-vindo às Notícias Ambientais</h3>
       <p>Explore as últimas notícias e tendências sobre o meio ambiente, mudanças climáticas, biodiversidade e muito mais!</p>
     </header>
-    <hr class="notícias-linha">
     <div id="novidades">
       <h3>Novidades</h3>
       <section id="notícias-seção">
@@ -120,15 +116,6 @@
   </article>
 </main>
   <footer id="baixo">
-    <div id="pesquisas">
-      <div id="pesquisa">Pesquisas</div>
-      <ol id="pesquisas-ol">
-        <li id="pesquisas-li"><i class="fa fa-file" aria-hidden="true"></i> Relatório de Pesquisa</li>
-        <li id="pesquisas-li"><i class="fas fa-search"></i> Plano de Pesquisa</li>
-        <li id="pesquisas-li"><i class="fa-solid fa-flag"></i> Banner de Pesquisa</li>
-      </ol>
-    </div>
-    <div class="baixo-linha"></div>
     <div id="informações">
       <p id="legenda">Legenda:</p>
       <ul id="legenda-ul">
@@ -149,6 +136,14 @@
         <img id="seções-imagens" src="./imagens/ícones/clima.png"><li id="seções-li"><a href="#clima">Clima</a></li>
         <img id="seções-imagens" src="./imagens/ícones/jogos.png"><li id="seções-li"><a href="#jogos">Jogos</a></li>
       </ul>
+    </div>
+    <div id="pesquisas">
+      <div id="pesquisa">Pesquisas</div>
+      <ol id="pesquisas-ol">
+        <li id="pesquisas-li"><i class="fa fa-file" aria-hidden="true"></i> Relatório de Pesquisa</li>
+        <li id="pesquisas-li"><i class="fas fa-search"></i> Plano de Pesquisa</li>
+        <li id="pesquisas-li"><i class="fa-solid fa-flag"></i> Banner de Pesquisa</li>
+      </ol>
     </div>
   </footer>
   
