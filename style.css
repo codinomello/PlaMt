@@ -33,6 +33,7 @@ a{
   width: 50vw;
   max-width: 100%;
   min-height: 100%;
+  border-left: 1px solid #eee;
 }
 
 #mapa h1{
@@ -70,7 +71,6 @@ aside{
   height: 100%;
   width: 25%;
   padding: 1%;
-  border-right: 1px solid #eee;
 }
 
 section{
@@ -139,8 +139,8 @@ article{
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 7rem;
-  line-height: 6.5rem;
+  height: 12vh;
+  line-height: 11vh;
   z-index: 100;
   border: 1px solid #eee;
 }
@@ -196,14 +196,14 @@ article{
   display: flex;
   align-items: center;
   margin-left: auto;
-  border-radius: 15px;
+  border-radius: 0.8rem;
   padding: 1%;
 }
 
 #pesquisar-contêiner{
   border-radius: 1rem;
   padding: 2.5px;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0rem 0.5rem 0rem;
   box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
 }
 
@@ -303,7 +303,34 @@ article{
   font-weight: 500;
 }
 
-/* carrossel */
+.espécies p{
+  margin: 0.5vh 0 0.5vh 0;
+}
+
+/* slider */
+
+.slider-espécies-contêiner{
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  padding: 1%;
+  border-radius: 2rem;
+  border: 0.25rem solid #fff;
+  box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
+}
+
+#slider-espécies{
+  display: flex;
+  animation: espécies 36s infinite ease-in-out;
+}
+
+#slide-espécies{
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
 
 .slider-conjunto{
   height: 21em;
@@ -311,8 +338,8 @@ article{
   margin-top: 0.5rem;
   text-align: center;
   overflow: hidden;
-  border: 0.25rem solid #fff;
   border-radius: 2rem;
+  border: 0.25rem solid #fff;
   box-shadow: 5px 2.5px 2.5px #0000001a;
 }
 
@@ -335,7 +362,7 @@ article{
 }
 
 #notícias-título{
-  margin: 2rem 0rem 1rem 0rem;
+  margin: 0rem 0rem 1rem 0rem;
 }
 
 #notícias-seção{
@@ -352,8 +379,8 @@ article{
 .notícias-sidebar{
   position: fixed;
   top: 0;
-  right: -250px;
-  width: 250px;
+  right: -27.8rem;
+  width: 27.8rem;
   height: 100%;
   background-color: #fff;
   transition: right 0.3s ease;
@@ -391,14 +418,13 @@ article{
   background-color: #f0f0f0;
 }
 
-/* Estilo para o botão de alternância */
-.notícias-toggle {
+.notícias-toggle{
   position: fixed;
   top: 50%;
   right: 0;
   width: 20px;
   height: 60px;
-  background-color: #555;
+  background: linear-gradient(90deg,#999,#777);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -406,11 +432,11 @@ article{
   color: white;
   font-size: 1.5rem;
   z-index: 1100;
+  border: none;
 }
 
-/* Estilo do botão de alternância ao abrir a sidebar */
-#notícias-checkbox:checked + .notícias-toggle {
-  right: 250px;
+#notícias-checkbox:checked + .notícias-toggle{
+  right: 27.8rem;
 }
 
 .notícias-conteúdo{
@@ -458,12 +484,12 @@ article{
 }
 
 #informações{
-  width: 75.5vw;
+  width: 76.8%;
   border-left: 1px solid #eee;
 }
 
 #pesquisas{
-  width: 24.5vw;
+  width: 25%;
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
 }
@@ -473,7 +499,7 @@ article{
   font-weight: 550;
   justify-content: center;
   text-align: center;
-  margin: 0.5rem 0rem 0.5rem 0rem;
+  margin: 1rem 0rem 0.5rem 0rem;
 }
 
 #legenda-imagens{
@@ -512,6 +538,10 @@ article{
   clear: auto;
 }
 
+#pesquisa{
+  margin: 1rem 0rem 0.5rem 0rem;
+}
+
 #pesquisas-ol{
   font-size: 1.2rem;
   clear: both;
@@ -526,6 +556,10 @@ article{
   list-style: none;
   margin-bottom: 1rem;
   clear: auto;
+}
+
+#pesquisas-li a{
+  margin-right: 0.5rem;
 }
 
 /* conteúdo */
@@ -751,8 +785,7 @@ article{
   font-weight: 550;
   text-align: center;
   padding: 1%;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;;
+  border: 1px solid #eee;
 }
 
 #biomas-negrito{
@@ -772,7 +805,85 @@ article{
   border-top: 1px solid #eee;
 }
 
-#amazônia-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #f4fcda;} #caatinga-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fffed3;} #cerrado-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fddeaf;} #mata-atlântica-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #c3dfff;} #pampa-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #a1b7fd;} #pantanal-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #e4b1fc;} #zona-marinha-tecnologia-highlight{font-weight: bold; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #ffc0f1;}
+#biomas-localização{
+  text-align: center;
+  justify-content: center;
+}
+
+.biomas-localização-conteúdo{
+  text-align: center;
+  display: flex;
+  padding: 1%;
+}
+
+.biomas-localização-conteúdo div{
+  flex: 1;
+  max-width: 50vw;
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
+}
+
+.biomas-localização-conteúdo div:hover{
+  transform: translateY(-1rem);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#biomas-clima{
+  text-align: center;
+  justify-content: center;
+}
+
+.biomas-clima-conteúdo{
+  text-align: center;
+  display: flex;
+  padding: 1%;
+}
+
+.biomas-clima-conteúdo div{
+  flex: 1;
+  max-width: 50vw;
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
+}
+
+.biomas-clima-conteúdo div:hover{
+  transform: translateY(-1rem);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#biomas-importância{
+  text-align: center;
+  justify-content: center;
+}
+
+.biomas-importância-conteúdo{
+  text-align: center;
+  display: flex;
+  padding: 1%;
+}
+
+.biomas-importância-conteúdo div{
+  flex: 1;
+  max-width: 50vw;
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
+}
+
+.biomas-importância-conteúdo div:hover{
+  transform: translateY(-1rem);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#amazônia-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #f4fcda;} #caatinga-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fffed3;} #cerrado-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fddeaf;} #mata-atlântica-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #c3dfff;} #pampa-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #a1b7fd;} #pantanal-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #e4b1fc;} #zona-marinha-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #ffc0f1;}
 
 #amazônia-tecnologia-highlight:hover{background-color: #2c922c; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #caatinga-tecnologia-highlight:hover{background-color: #ebd40b; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #cerrado-tecnologia-highlight:hover{background-color: #dd7113; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #mata-atlântica-tecnologia-highlight:hover{background-color: #2b70c0; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #pampa-tecnologia-highlight:hover{background-color: #264a80; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #pantanal-tecnologia-highlight:hover{background-color: #b90dee; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #zona-marinha-tecnologia-highlight:hover{background-color: #ee1adc; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);}
 
@@ -1030,7 +1141,6 @@ input[type="radio"]{
   display: flex;
   position: inherit;
   justify-content: center;
-  padding-top: 70%;
 }
 
 #modo-escuro-label{
@@ -1156,6 +1266,10 @@ body.modo-escuro #pesquisar{
   0%{transform: translateX(0);} 5%{transform: translateX(0);} 10%{transform: translateX(-100%);} 15%{transform: translateX(-100%);} 20%{transform: translateX(-200%);} 25%{transform: translateX(-200%);} 30%{transform: translateX(-300%);} 35%{transform: translateX(-300%);} 40%{transform: translateX(-400%);} 45%{transform: translateX(-400%);} 50%{transform: translateX(-500%);} 55%{transform: translateX(-500%);} 60%{transform: translateX(-600%);} 65%{transform: translateX(-600%);} 70%{transform: translateX(-700%);} 75%{transform: translateX(-700%);} 80%{transform: translateX(-800%);} 85%{transform: translateX(-800%);} 90%{transform: translateX(-900%);} 95%{transform: translateX(-900%);} 100%{transform: translateX(-1000%);}
 }
 
+@keyframes espécies{
+  0%{transform: translateX(0);} 5%{transform: translateX(0);} 10%{transform: translateX(-100%);} 15%{transform: translateX(-100%);} 20%{transform: translateX(-200%);} 25%{transform: translateX(-200%);} 30%{transform: translateX(-300%);} 35%{transform: translateX(-300%);} 40%{transform: translateX(-400%);} 45%{transform: translateX(-400%);} 50%{transform: translateX(-500%);} 55%{transform: translateX(-500%);} 60%{transform: translateX(-600%);} 65%{transform: translateX(-600%);} 70%{transform: translateX(-700%);} 75%{transform: translateX(-700%);} 80%{transform: translateX(-800%);} 85%{transform: translateX(-800%);} 90%{transform: translateX(-900%);} 95%{transform: translateX(-900%);} 100%{transform: translateX(-1000%);}
+}
+
 @keyframes fade{
   0%{
     opacity: 0; 
@@ -1195,13 +1309,6 @@ body.modo-escuro #pesquisar{
   @media (min-width: 1366px) and (max-width: 1599px){
     html{
       font-size: 13px;
-    }
-    #mapa{
-      max-width: 100%;
-      min-height: 100%;
-    }
-    .slider-conjunto{
-      height: 17.5rem;
     }
   }
 

@@ -10,6 +10,29 @@ document.addEventListener('DOMContentLoaded', function() {
 document.body.classList.add('modo-claro');
 });
 
+var isTrueSet = (value) => value === 'true';
+
+let lightMode = false; 
+button.addEventListener('click', function () {
+  const v = localStorage.getItem('modo-claro');
+  if (!lightMode) {
+    document.body.classList.add('modo-claro')
+    lightMode = true
+    
+  } else{
+    lightMode = false
+    document.body.classList.remove('modo-claro')
+  }
+})
+
+function checkLightMode() {
+  const v = localStorage.getItem('modo-claro');
+
+  if (lightMode) { // (!v && !isTrueSet(v))
+    body.classList.add('modo-claro')
+  }
+}
+
 // notícias
 
 const apiKey = 'ad2140a21f824444b421b955f62f76df';
