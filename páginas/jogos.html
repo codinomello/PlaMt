@@ -30,16 +30,25 @@
 <style>
 /* jogos */
 body{
-  background: linear-gradient(90deg, #4a7dff, #8a2be2);
+  background-image: url("imagens/jogos-fundo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  transform: translateX(-100px);
+  transition: background-color 0.3s, color 0.3s;
+  animation: fade 1.5s ease forwards;
+  box-shadow: 5px 2.5px 2.5px #0000001a;
   min-height: 100vh;
-  display: flex;
+  opacity: 0;
   align-items: center;
   justify-content: center;
+  display: flex;
 }
 
 #retornar{
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #000;
   margin: 0rem 0rem 0rem 2rem;
   display: inline-block;
 }
@@ -50,11 +59,12 @@ body{
 
 .app{
   background: #fff;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
+  max-height: 425px;
   border-radius: 10px;
   padding: 30px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 5px #0000001a;
 }
 
 .app h1{

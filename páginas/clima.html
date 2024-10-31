@@ -35,14 +35,14 @@
   <div class="info">
     <i id="temp_max-icon" class="fa-solid fa-temperature-high"></i>
   <div>
-   <h2>Máx.</h2>
+   <h2>Máxima</h2>
     <p id="temp_max">32<sup>C°</sup></p>
   </div>
 </div>
 <div class="info">
   <i id="temp_min-icon" class="fa-solid fa-temperature-low"></i>
   <div>
-    <h2>Mín.</h2>
+    <h2>Mínima</h2>
     <p id="temp_min">12<sup>C°</sup></p>
   </div>
 </div>
@@ -74,7 +74,16 @@
 /* clima */
 
 body{
-  background: linear-gradient(90deg, #4a7dff, #63ab3f);
+  background-image: url("./imagens/clima-fundo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  transform: translateX(-100px);
+  transition: background-color 0.3s, color 0.3s;
+  animation: fade 1.5s ease forwards;
+  box-shadow: 5px 2.5px 2.5px #0000001a;
+  opacity: 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -84,11 +93,9 @@ body{
 #clima{
   font-size: 2.5rem;
   font-weight: bold;
-  color: #ffffff;
   margin-right: 2rem;
   padding: 1%;
   text-align: center;
-  position: flex;
 }
 
 #clima i{
@@ -228,7 +235,6 @@ body{
 
 #retornar{
   font-size: 1.5rem;
-  color: #ffffff;
   margin: 0rem 0rem 0rem 2rem;
   display: inline-block;
 }

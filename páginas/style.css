@@ -118,9 +118,10 @@ article{
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 7rem;
-  line-height: 6.5rem;
+  height: 12vh;
+  line-height: 11vh;
   z-index: 100;
+  border: 1px solid #eee;
   box-shadow: 5px 2.5px 2.5px #0000001a;
 }
 
