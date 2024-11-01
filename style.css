@@ -231,6 +231,8 @@ article{
   margin-right: 5px;
 }
 
+/* espécies */
+
 .reinos{
   justify-content: center;
 }
@@ -304,7 +306,7 @@ article{
 }
 
 .espécies p{
-  margin: 0.5vh 0 0.5vh 0;
+  margin: 0.25vh 0 0.25vh 0;
 }
 
 /* slider */
@@ -1311,7 +1313,7 @@ body.modo-escuro #pesquisar{
       font-size: 13px;
     }
     .slider-conjunto{
-      max-height: 19em;
+      max-height: 18.5em;
     }
   }
 
