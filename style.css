@@ -1315,6 +1315,9 @@ body.modo-escuro #pesquisar{
     .slider-conjunto{
       max-height: 18.5em;
     }
+    #informações{
+      width: 76.4%;
+    }
   }
 
   /* smartphones grandes & tablets pequenos */
