@@ -578,7 +578,7 @@ article{
 
 #brasil-texto{
   font-size: 1rem;
-  font-weight: 550;
+  font-weight: 500;
   text-align: center;
   padding: 1%;
 }
@@ -589,14 +589,14 @@ article{
 
 #brasil-ul{
   font-size: 1rem;
-  font-weight: 550;
+  font-weight: 500;
   text-align: justify;
   padding: 1%;
 }
 
 #brasil-li{
   font-size: 1rem;
-  font-weight: 550;
+  font-weight: 500;
   text-align: justify;
   padding: 1%;
 }
@@ -801,47 +801,35 @@ article{
 #biomas-tecnologia{
   width: 100%;
   font-size: 1rem;
-  font-weight: 550;
+  font-weight: 500;
   text-align: center;
   padding: 1%;
   border-top: 1px solid #eee;
 }
 
-#biomas-localização{
-  text-align: center;
-  justify-content: center;
+#biomas-compartilhar{
+  width: 6rem;
+  border: 1px solid #eee;
 }
 
-.biomas-localização-conteúdo{
-  text-align: center;
-  display: flex;
-  padding: 1%;
-}
-
-.biomas-localização-conteúdo div{
-  flex: 1;
-  max-width: 50vw;
-  margin: 1rem;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
-}
-
-.biomas-localização-conteúdo div:hover{
-  transform: translateY(-1rem);
-  transition: 0.5s;
-  cursor: pointer;
-}
+/* clima */
 
 #biomas-clima{
   text-align: center;
   justify-content: center;
+  padding: 1%;
+  border: 1px solid #eee;
+}
+
+#biomas-clima p{
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.5rem 0rem 0.5rem 0rem;
 }
 
 .biomas-clima-conteúdo{
   text-align: center;
   display: flex;
-  padding: 1%;
 }
 
 .biomas-clima-conteúdo div{
@@ -850,7 +838,8 @@ article{
   margin: 1rem;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
+  border: 1px solid #eee;
+  box-shadow: 2.5px 2.5px 2.5px #0000001a;
 }
 
 .biomas-clima-conteúdo div:hover{
@@ -859,15 +848,29 @@ article{
   cursor: pointer;
 }
 
+.biomas-clima-conteúdo div p{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* importância */
+
 #biomas-importância{
   text-align: center;
   justify-content: center;
+  padding: 1%;
+  border: 1px solid #eee;
+}
+
+#biomas-importância p{
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.5rem 0rem 0.5rem 0rem;
 }
 
 .biomas-importância-conteúdo{
   text-align: center;
   display: flex;
-  padding: 1%;
 }
 
 .biomas-importância-conteúdo div{
@@ -876,7 +879,8 @@ article{
   margin: 1rem;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
+  border: 1px solid #eee;
+  box-shadow: 2.5px 2.5px 2.5px #0000001a;
 }
 
 .biomas-importância-conteúdo div:hover{
@@ -885,7 +889,12 @@ article{
   cursor: pointer;
 }
 
-#amazônia-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #f4fcda;} #caatinga-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fffed3;} #cerrado-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fddeaf;} #mata-atlântica-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #c3dfff;} #pampa-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #a1b7fd;} #pantanal-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #e4b1fc;} #zona-marinha-tecnologia-highlight{font-weight: bold; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #ffc0f1;}
+.biomas-importância-conteúdo div p{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#amazônia-tecnologia-highlight{font-weight: 550; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #f4fcda;} #caatinga-tecnologia-highlight{font-weight: 550; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fffed3;} #cerrado-tecnologia-highlight{font-weight: 550; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #fddeaf;} #mata-atlântica-tecnologia-highlight{font-weight: 550; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #c3dfff;} #pampa-tecnologia-highlight{font-weight: 550; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #a1b7fd;} #pantanal-tecnologia-highlight{font-weight: 550; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #e4b1fc;} #zona-marinha-tecnologia-highlight{font-weight: 550; color: #000; padding: 2px 6px; border-radius: 4px; transition: all 0.3s ease; background-color: #ffc0f1;}
 
 #amazônia-tecnologia-highlight:hover{background-color: #2c922c; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #caatinga-tecnologia-highlight:hover{background-color: #ebd40b; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #cerrado-tecnologia-highlight:hover{background-color: #dd7113; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #mata-atlântica-tecnologia-highlight:hover{background-color: #2b70c0; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #pampa-tecnologia-highlight:hover{background-color: #264a80; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #pantanal-tecnologia-highlight:hover{background-color: #b90dee; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);} #zona-marinha-tecnologia-highlight:hover{background-color: #ee1adc; color: #ffffff; box-shadow: 0 4px 10px #00000033; transform: scale(1.1);}
 
@@ -908,7 +917,7 @@ article{
 
 #fauna-texto{
   font-size: 1rem;
-  font-weight: 550;
+  font-weight: 500;
   text-align: center;
   padding: 1%;
 }
@@ -942,7 +951,7 @@ article{
 
 #flora-texto{
   font-size: 1rem;
-  font-weight: 550;
+  font-weight: 500;
   text-align: center;
   padding: 1%;
 }
@@ -1175,7 +1184,7 @@ input[type="radio"]{
   width: 1.125rem;
   height: 1.125rem;
   position: flex;
-  top: 0.2rem;
+  top: 0.15rem;
   left: 0.2rem;
   background: linear-gradient(180deg,#ffcc89,#d8860b);
   border-radius: 10px;
