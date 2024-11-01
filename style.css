@@ -782,8 +782,9 @@ article{
 }
 
 #biomas-texto{
-  width: 33.33%;
   font-size: 1rem;
+  font-weight: 400;
+  width: 33.33%;
   text-align: center;
   padding: 1%;
   border: 1px solid #eee;
