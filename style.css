@@ -1310,6 +1310,9 @@ body.modo-escuro #pesquisar{
     html{
       font-size: 13px;
     }
+    .slider-conjunto{
+      max-height: 19em;
+    }
   }
 
   /* smartphones grandes & tablets pequenos */
