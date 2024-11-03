@@ -112,16 +112,10 @@
 
 <style>
 body{
-  background-image: url("imagens/fundo/fundo.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  transform: translateX(-100px);
-  transition: background-color 0.3s, color 0.3s;
-  animation: fade 1.5s ease forwards;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
-  opacity: 0;
 }
 
 .wrapper{
@@ -129,6 +123,15 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  box-shadow: 5px 2.5px 2.5px #0000001a;
+  transform: translateX(-100px);
+  transition: background-color 0.3s, color 0.3s;
+  animation: fade 1.5s ease forwards;
+  overflow: auto;
+  opacity: 0;
 }
 
 .navegação{
@@ -199,11 +202,11 @@ header{
   border-radius: 30px;
   outline: none;
   transition: .2s ease;
-  background-color: #e7ffe4;
+  background-color: #d0ffca;
 }
 
 .input-field:hover, .input-field:focus{
-  background-color: #e3ffcb;
+  background-color: #d0faab;
 }
 
 ::-webkit-input-placeholder{
@@ -228,7 +231,7 @@ header{
   cursor: pointer;
   transition: .3s ease-in-out;
   box-shadow: 1px 5px 7px 1px #00000033;
-  background-color: #5caf4b;
+  background-color: #67c055;
 }
 
 .submit::placeholder{
@@ -236,7 +239,7 @@ header{
 }
 
 .submit:hover{
-  background: #67c055;
+  background-color: #5caf4b;
   box-shadow: 1px 5px 7px 1px #00000033;
 }
 
@@ -263,6 +266,10 @@ header{
 
 .two label a:hover{
   text-decoration: underline;
+}
+
+body.modo-escuro .input-box i{
+  color: #000;
 }
 
 @media only screen and (max-width: 786px){

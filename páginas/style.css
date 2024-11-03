@@ -37,10 +37,10 @@ a{
 
 main{
   min-height: 70vh;
+  box-shadow: 5px 2.5px 2.5px #0000001a;
   transform: translateX(-100px);
   transition: background-color 0.3s, color 0.3s;
   animation: fade 1.5s ease forwards;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
   overflow: auto;
   opacity: 0;
 }

@@ -2,36 +2,29 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   const toggleButton = document.getElementById('modo-escuro-toggle');
+  const temaSalvo = localStorage.getItem('tema');
+  if (temaSalvo) {
+    document.body.classList.add(temaSalvo);
+    toggleButton.textContent = temaSalvo === 'modo-escuro' ? 'Modo Claro' : 'Modo Escuro';
+  }
+  else{
+    document.body.classList.add('modo-claro');
+    toggleButton.textContent = 'Modo Escuro';
+  }
+
   toggleButton.addEventListener('click', function() {
-    document.body.classList.toggle('modo-escuro');
-    document.body.classList.toggle('modo-claro');
-    toggleButton.textContent = document.body.classList.contains('modo-escuro') ? 'Modo Claro' : 'Modo Escuro';
+    if (document.body.classList.contains('modo-escuro')) {
+      document.body.classList.replace('modo-escuro', 'modo-claro');
+      localStorage.setItem('tema', 'modo-claro');
+      toggleButton.textContent = 'Modo Escuro';
+    } 
+    else{
+      document.body.classList.replace('modo-claro', 'modo-escuro');
+      localStorage.setItem('tema', 'modo-escuro');
+      toggleButton.textContent = 'Modo Claro';
+    }
   });
-document.body.classList.add('modo-claro');
 });
-
-var isTrueSet = (value) => value === 'true';
-
-let lightMode = false; 
-button.addEventListener('click', function () {
-  const v = localStorage.getItem('modo-claro');
-  if (!lightMode) {
-    document.body.classList.add('modo-claro')
-    lightMode = true
-    
-  } else{
-    lightMode = false
-    document.body.classList.remove('modo-claro')
-  }
-})
-
-function checkLightMode() {
-  const v = localStorage.getItem('modo-claro');
-
-  if (lightMode) { // (!v && !isTrueSet(v))
-    body.classList.add('modo-claro')
-  }
-}
 
 // notícias
 
@@ -146,11 +139,3 @@ document.onmousemove = function (e){
   description.style.left = e.pageX + "px";
   description.style.top = (e.pageY - 70) + "px";
 }
-
-// google maps layer
-
-//googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
-//maxZoom: 20,
-//subdomains:['mt0','mt1','mt2','mt3']
-//});
-//googleStreets.addTo(map);

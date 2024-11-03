@@ -1,14 +1,27 @@
 // modo escuro
 
 document.addEventListener('DOMContentLoaded', function() {
-  const toggleButton = document.getElementById('toggle-dark-mode');
-  toggleButton.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
-    toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Escuro';
-  });
-  
-// define o modo claro como padrão
+  const toggleButton = document.getElementById('modo-escuro-toggle');
+  const temaSalvo = localStorage.getItem('tema');
+  if (temaSalvo) {
+    document.body.classList.add(temaSalvo);
+    toggleButton.textContent = temaSalvo === 'modo-escuro' ? 'Modo Claro' : 'Modo Escuro';
+  }
+  else{
+    document.body.classList.add('modo-claro');
+    toggleButton.textContent = 'Modo Escuro';
+  }
 
-  document.body.classList.add('light-mode');
+  toggleButton.addEventListener('click', function() {
+    if (document.body.classList.contains('modo-escuro')) {
+      document.body.classList.replace('modo-escuro', 'modo-claro');
+      localStorage.setItem('tema', 'modo-claro');
+      toggleButton.textContent = 'Modo Escuro';
+    } 
+    else{
+      document.body.classList.replace('modo-claro', 'modo-escuro');
+      localStorage.setItem('tema', 'modo-escuro');
+      toggleButton.textContent = 'Modo Claro';
+    }
+  });
 });

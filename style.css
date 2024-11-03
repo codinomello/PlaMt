@@ -12,6 +12,7 @@ html{
 }
 
 html ::placeholder{
+  font-weight: 500;
   color: inherit;
   opacity: 1;
 }
@@ -381,8 +382,8 @@ article{
 .notícias-sidebar{
   position: fixed;
   top: 0;
-  right: -27.8rem;
-  width: 27.8rem;
+  right: -24.2vw;
+  width: 24.2vw;
   height: 100%;
   background-color: #fff;
   transition: right 0.3s ease;
@@ -401,11 +402,10 @@ article{
   list-style: none;
   padding: 0;
   width: 100%;
-  margin: 20px 0;
 }
 
 .notícias-sidebar ul li{
-  padding: 15px;
+  padding: 3.65%;
   border-bottom: 1px solid #eee;
 }
 
@@ -413,11 +413,11 @@ article{
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
-  color: black;
 }
 
 .notícias-sidebar ul li:hover{
-  background-color: #f0f0f0;
+  transform: translateY(-0.5rem);
+  box-shadow: 2.5px 2.5px 2.5px #0000001a;
 }
 
 .notícias-toggle{
@@ -426,19 +426,19 @@ article{
   right: 0;
   width: 20px;
   height: 60px;
-  background: linear-gradient(90deg,#999,#777);
+  background: linear-gradient(90deg,#999,#888);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #ffffff;
   font-size: 1.5rem;
   z-index: 1100;
   border: none;
 }
 
 #notícias-checkbox:checked + .notícias-toggle{
-  right: 27.8rem;
+  right: 23.15vw;
 }
 
 .notícias-conteúdo{
@@ -603,6 +603,10 @@ article{
 
 #brasil-li:nth-child(1)::marker{color: #63ab3f} #brasil-li:nth-child(2)::marker{color: #f0b541} #brasil-li:nth-child(3)::marker{color: #ffae70} #brasil-li:nth-child(4)::marker{color: #4fa4b8} #brasil-li:nth-child(4)::marker{color: #686f99}
 
+.brasil-contêiner{
+  text-align: center;
+}
+
 #brasil svg{
   width: 40%;
   height: 40%;
@@ -648,7 +652,7 @@ article{
   position: absolute;
   font-size: 18px;
   text-align: center;
-  background: #fff;
+  background: #ffffff;
   padding: 10px 15px;
   z-index: 5;
   height: 30px;
@@ -656,8 +660,8 @@ article{
   margin: 0 auto;
   color: #21669e;
   border-radius: 5px;
-  display: none;
   transform: translateX(-50%);
+  display: none;
 }
 
 #brasil .tooltip.active{
@@ -674,7 +678,7 @@ article{
   margin-left: -10px;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #fff;
+  border-top: 10px solid #ffffff;
 }
 
 #biomas{
@@ -960,57 +964,268 @@ article{
   font: 1.6rem;
   color: #0000ff;
   text-align: center;
-  padding-top: 1%;
+  margin-bottom: 1rem;
 }
 
 #jogos{
   font: 1.6rem;
   color: #8a2be2;
   text-align: center;
-  padding-top: 1%;
+  margin-bottom: 1rem;
 }
 
-#clima:hover, #jogos:hover{
-  color: #fff;
-}
-
-#clima-jogos-seções{
-  padding-bottom: 0.5%;
-  text-align: center;
+#clima-jogos-seção{
+  display: flex;
   border: 1px solid #eee;
 }
 
-#clima-jogos-contêiner{
-  display: flex;
+#clima-contêiner{
+  width: 50vw;
   justify-content: center;
-  gap: 25%;
+  padding: 1%;
 }
 
-#clima-botão, #jogos-botão{
+#jogos-contêiner{
+  width: 50vw;
+  justify-content: center;
+  padding: 1%;
+  border-left: 1px solid #eee;
+}
+
+/* verificador */
+
+#clima-app{
+  width: 25vw;
+  border-radius: 1.2rem;
+  padding: 1em;
+  box-shadow: 2.5px 2.5px 2.5px 2.5px #0000001a;
+  background-color: #fff;
+  color: #000;
+  margin-left: 11vw;
+  margin-bottom: 1rem;
+}
+
+#clima-pesquisar{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#clima-pesquisar input{
   font-size: 1rem;
-  font-weight: 550;
-  width: 9rem;
-  border: transparent;
-  border-radius: 12px;
-  transition-duration: 0.4s;
-  padding: 0.5%;
   color: inherit;
-  background-color: inherit;
-  margin-top: 1rem;
+  border: none;
+  width: 90%;
+  background-color: transparent;
 }
 
-#clima-botão:hover{
-  background: linear-gradient(90deg, #4a7dff, #21d356);
+#clima-pesquisar button{
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+  margin-left: auto;
 }
 
-#jogos-botão:hover{
-  background: linear-gradient(90deg, #4a7dff, #8a2be2);
+#clima-pesquisar input:focus-visible{
+  outline: none;
+}
+
+#clima-pesquisar ::placeholder{
+  font-size: 1rem;
+}
+
+#tempo{
+  display: none;
+  margin-top: 20px;   
+}
+
+#tempo.show{
+  display: block;
+}
+
+#tempo-título{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+#cidade-título{
+  font-size: 1.8rem;
+  font-weight: 550;
+  margin-top: 0.65rem;
+}
+
+#país-título{
+  padding: none;
+  margin-left: 1rem;
+}
+
+#temperatura{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 20px;
+  padding: 1.2rem;
+}
+
+#temperatura-img{
+  filter: drop-shadow(2px 2px 2px #00000033);
+}
+
+#temperatura-valor{
+  font-weight: bold;
+  font-size: 2.6rem;
+  line-height: 55px;
+}
+
+#temperatura-descrição{
+  font-weight: 550;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#informações-gerais{
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+#informações-gerais .informação{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 5%;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px #00000033;
+  background-color: #ffffff;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+#informações-gerais .informação h2{
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+
+#informações-gerais .informação i{
+  text-align: center;
+  font-size: 1.4rem;
+  width: 20%;
+}
+
+#temperatura-máxima-ícone, #temperatura-mínima-ícone, #umidade-ícone, #vento-ícone{
+  color: #000000;
+}
+
+#alerta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#alerta img{
+  width: 200px;
+  margin-top: 20px;
+}
+
+/* quiz */
+
+.quiz-contêiner{
+  background: #fff;
+  color: #121212;
+  width: 25vw;
+  padding: 1.6rem;
+  margin-left: 11vw;
+  margin-bottom: 1rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  box-shadow: 5px 5px 5px #0000001a;
+}
+
+.quiz-contêiner h2{
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.quiz{
+  padding: 20px 0;
+}
+
+.quiz-botão{
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  background: #fff;
+  width: 100%;
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 0.5rem;
   cursor: pointer;
+  box-shadow: 0 4px 8px #00000033;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#clima-botão:hover h1, #jogos-botão:hover h1{
+.quiz-botão:hover{
+  box-shadow: 0 6px 12px #0000004d;
+  transform: translateY(-2px);
+}
+
+.quiz-botão:active{
+  transform: translateY(1px);
+  box-shadow: 0 3px 6px #00000033;
+}
+
+.quiz-botão:hover:not([disabled]){
+  background: #222;
   color: #fff;
+}
+
+.quiz-botão:disabled{
+  cursor: no-drop;
+}
+
+#quiz-próximo{
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: #000;
+  border: 1px solid #eee;
+  border-radius: 1.5rem;
+  padding: 8px;
+  margin: 20px auto 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px #00000033;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: none;
+}
+
+#quiz-próximo:hover{
+  box-shadow: 0 6px 12px #0000004d;
+  transform: translateY(-1px);
+}
+
+.correto{
+  font-weight: bold;
+  background: #00be00;
+}
+
+.incorreto{
+  font-weight: bold;
+  background: #ff0000;
 }
 
 /* cards */
@@ -1222,21 +1437,18 @@ body.modo-claro{
 body.modo-escuro{
   background-color: #121212;
   color: #fff;
-  box-shadow: 5px 2.5px 2.5px #0000001a;
   transition: .5s ease-in-out;
 }
 
-body.modo-escuro #notícias-sidebar{
-  background-color: #111;
+body.modo-escuro #notícias-sidebar, body.modo-escuro .notícias-sidebar{
+  background-color: #000;
 }
 
 body.modo-escuro #pesquisar-contêiner{
-  transition: .5s;
   background-color: #fff;
 }
 
 body.modo-escuro #pesquisar-lupa, body.modo-escuro #pesquisar input{
-  transition: .5s;
   color: #fff;
 }
 
@@ -1245,7 +1457,6 @@ body.modo-escuro #pesquisar-lupa, body.modo-escuro #pesquisar input{
 }
 
 body.modo-escuro .map-tiles{
-  transition: .5s;
   filter:var(--map-tiles-filter, none);
 }
 
