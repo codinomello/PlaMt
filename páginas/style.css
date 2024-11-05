@@ -89,7 +89,7 @@ article{
   display: flex;
   margin-right: 1rem;
   border: none;
-  background-image: url('./imagens/plamt-icon.png');
+  background-image: url('./imagens/plamt.png');
   transition: background-image 0.8s ease-in-out;
   background-size: cover;
 }
