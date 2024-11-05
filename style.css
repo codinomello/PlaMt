@@ -97,6 +97,7 @@ article{
   height: 2rem;
   margin: 0rem 1rem 0rem 0.5rem;
   justify-content: center;
+  image-rendering: optimizeSpeed;
 }
 
 #rodapé p{
@@ -112,12 +113,14 @@ article{
   margin-right: 1rem;
   border: none;
   background-image: url('./imagens/ícones/plamt-icon.png');
+  image-rendering: optimizeSpeed;
   transition: background-image 0.8s ease-in-out;
   background-size: cover;
 }
 
 .plamt-contêiner div:hover{
   background-image: url('./imagens/ícones/plamt-icon.png');
+  image-rendering: optimizeSpeed;
 }
 
 #plamt{
@@ -458,6 +461,7 @@ article{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
   border-radius: 100%;
+  image-rendering: optimizeSpeed;
 }
 
 #seções-imagens{
